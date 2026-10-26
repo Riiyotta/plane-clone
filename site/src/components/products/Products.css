@@ -1,0 +1,17 @@
+/* CLONE_SPEC §3 — tab description: `md:@container` + `md:@min-[17.5rem]:block` (v4 container queries) */
+@media (min-width: 48rem) {
+  .pt-desc.pt-desc { container-type: inline-size; text-wrap: balance; }
+  @container (min-width: 17.5rem) {
+    .pt-desc-line { display: block; }
+  }
+}
+
+/* §0 Radii: stage ::after inset ring 1px rgba(0,0,0,.06), same radius */
+.pt-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}

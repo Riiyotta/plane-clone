@@ -1,0 +1,144 @@
+/* Plans group (pricing / plan / self-hosted / programs pages).
+   plane.so builds these pages from its v4 semantic tokens, which swap values under `.dark`.
+   The values below are the computed light / dark values measured on plane.so (oklch -> sRGB hex).
+   Prefix `pl-` keeps them scoped to this group. */
+
+.pl {
+  --pl-surface-1: #ffffff;
+  --pl-surface-2: #fafafa;
+  --pl-layer-1: #f4f5f5;
+  --pl-layer-1-hover: #eff0f0;
+  --pl-layer-2: #ffffff;
+  --pl-layer-2-hover: #fafafa;
+  --pl-layer-3: #eff0f0;
+  --pl-layer-inverse: #090b0c;
+  --pl-layer-inverse-hover: #1d1f20;
+  --pl-layer-inverse-active: #4e5355;
+  --pl-layer-transparent-hover: rgba(9, 11, 11, 0.05);
+  --pl-txt-primary: #1d1f20;
+  --pl-txt-secondary: #4e5355;
+  --pl-txt-tertiary: #676c6f;
+  --pl-txt-placeholder: #80868a;
+  --pl-txt-accent: #006399;
+  --pl-txt-inverse: #ffffff;
+  --pl-txt-on-color: #fafafa;
+  --pl-icon-primary: #1d1f20;
+  --pl-icon-tertiary: #80868a;
+  --pl-border-subtle: #eaebeb;
+  --pl-border-subtle-1: #e4e6e7;
+  --pl-border-strong: #dadcdd;
+  --pl-border-strong-1: #cfd2d3;
+  --pl-border-inverse: #1d1f20;
+  --pl-neutral-2: #fafafa;
+  --pl-neutral-border-2: #eff0f0;
+  /* plane.so body defaults: satoshi 400, black; text elements set inter + colour explicitly */
+  font-family: satoshi, 'satoshi Fallback', sans-serif;
+  font-weight: 400;
+  color: #000;
+}
+
+.pl-dark {
+  --pl-surface-1: #0e0f10;
+  --pl-surface-2: #141515;
+  --pl-layer-1: #181a1b;
+  --pl-layer-1-hover: #1d1f20;
+  --pl-layer-2: #1d1f20;
+  --pl-layer-2-hover: #222425;
+  --pl-layer-3: #222425;
+  --pl-layer-inverse: #f5f5f5;
+  --pl-layer-inverse-hover: #e4e6e7;
+  --pl-layer-inverse-active: #cacdce;
+  --pl-layer-transparent-hover: rgba(255, 255, 255, 0.05);
+  --pl-txt-primary: #e4e6e7;
+  --pl-txt-secondary: #cacdce;
+  --pl-txt-tertiary: #afb3b6;
+  --pl-txt-placeholder: #959a9d;
+  --pl-txt-accent: #2893cc;
+  --pl-txt-inverse: #0e0f10;
+  --pl-txt-on-color: #e4e6e7;
+  --pl-icon-primary: #e4e6e7;
+  --pl-icon-tertiary: #afb3b6;
+  --pl-border-subtle: #222425;
+  --pl-border-subtle-1: #2c2e30;
+  --pl-border-strong: #36393a;
+  --pl-border-strong-1: #45484a;
+  --pl-border-inverse: #e4e6e7;
+}
+
+/* `light` wrapper inside a dark section (CTA buttons on the dark image) */
+.pl-light {
+  --pl-layer-2: #ffffff;
+  --pl-layer-2-hover: #fafafa;
+  --pl-layer-inverse: #090b0c;
+  --pl-layer-inverse-hover: #1d1f20;
+  --pl-layer-inverse-active: #4e5355;
+  --pl-txt-secondary: #4e5355;
+  --pl-txt-inverse: #ffffff;
+  --pl-border-strong: #dadcdd;
+}
+
+/* surfaces */
+.pl-bg-surface-1 { background-color: var(--pl-surface-1); }
+.pl-bg-surface-2 { background-color: var(--pl-surface-2); }
+.pl-bg-layer-1 { background-color: var(--pl-layer-1); }
+.pl-bg-layer-2 { background-color: var(--pl-layer-2); }
+.pl-bg-layer-3 { background-color: var(--pl-layer-3); }
+
+/* text colors */
+.pl-c-primary { color: var(--pl-txt-primary); }
+.pl-c-secondary { color: var(--pl-txt-secondary); }
+.pl-c-tertiary { color: var(--pl-txt-tertiary); }
+.pl-c-placeholder { color: var(--pl-txt-placeholder); }
+.pl-c-accent { color: var(--pl-txt-accent); }
+.pl-c-icon { color: var(--pl-icon-primary); }
+.pl-c-icon-tertiary { color: var(--pl-icon-tertiary); }
+
+/* borders */
+.pl-bd-subtle { border-color: var(--pl-border-subtle); }
+.pl-bd-subtle-1 { border-color: var(--pl-border-subtle-1); }
+.pl-bd-strong { border-color: var(--pl-border-strong); }
+.pl-bd-strong-1 { border-color: var(--pl-border-strong-1); }
+.pl-bd-inverse { border-color: var(--pl-border-inverse); }
+.pl-bar-inverse { background-color: var(--pl-border-inverse); }
+
+/* Type scale (text-h1..h6: <768 / >=768) */
+.pl-h { font-family: satoshi, 'satoshi Fallback', sans-serif; font-weight: 430; line-height: 1.3; letter-spacing: -0.03em; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+.pl-h1 { font-size: 36px; }
+.pl-h2 { font-size: 32px; }
+.pl-h3 { font-size: 28px; }
+.pl-h4 { font-size: 24px; }
+.pl-h5 { font-size: 22px; }
+.pl-h6 { font-size: 20px; }
+@media (min-width: 48rem) {
+  .pl-h1 { font-size: 58px; }
+  .pl-h2 { font-size: 44px; }
+  .pl-h3 { font-size: 40px; }
+  .pl-h4 { font-size: 32px; }
+  .pl-h5 { font-size: 24px; }
+}
+.pl-body-lg { font-family: inter, 'inter Fallback', sans-serif; font-size: 18px; line-height: 1.5; }
+.pl-body-base { font-family: inter, 'inter Fallback', sans-serif; font-size: 16px; line-height: 1.5; }
+.pl-body-sm { font-family: inter, 'inter Fallback', sans-serif; font-size: 14px; line-height: 1.6; }
+.pl-body-xs { font-family: inter, 'inter Fallback', sans-serif; font-size: 13px; line-height: 1.5; }
+/* text-label-sm / text-label-xs (eyebrows): IBM Plex Mono, line-height 1, .02em */
+.pl-label-sm { font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; font-size: 15px; line-height: 1; letter-spacing: 0.02em; font-weight: 500; }
+.pl-label-xs { font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; font-size: 13px; line-height: 1; letter-spacing: 0.02em; font-weight: 500; }
+.pl-caption-md { font-family: satoshi, 'satoshi Fallback', sans-serif; font-size: 13px; line-height: 1.2; font-weight: 500; }
+
+/* Buttons (rounded-lg, transition-colors, font-medium, nowrap) */
+.pl-btn { display: inline-block; white-space: nowrap; border-radius: 8px; text-align: center; font-family: inter, 'inter Fallback', sans-serif; font-weight: 500; font-size: 16px; line-height: 24px; padding: 8px 16px; cursor: pointer; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke; transition-duration: 150ms; transition-timing-function: cubic-bezier(.4, 0, .2, 1); }
+.pl-btn:focus { outline: none; }
+.pl-btn-sm { font-size: 14px; line-height: 21px; padding: 6px 12px; }
+.pl-btn-primary { background-color: var(--pl-layer-inverse); color: var(--pl-txt-inverse); }
+.pl-btn-primary:hover { background-color: var(--pl-layer-inverse-hover); }
+.pl-btn-primary:focus-within { background-color: var(--pl-layer-inverse-active); }
+.pl-btn-secondary { background-color: var(--pl-layer-2); color: var(--pl-txt-secondary); border: 1px solid var(--pl-border-strong); }
+.pl-btn-secondary:hover { background-color: var(--pl-layer-2-hover); }
+.pl-btn-link { background-color: transparent; color: var(--pl-txt-primary); padding: 0 !important; }
+.pl-btn-link:hover { text-decoration: underline; }
+
+/* Prose for long-form placeholder pages */
+.pl-prose p + p { margin-top: 1em; }
+
+/* number-flow element box (plane.so animates prices with <number-flow-react>): inline-block, 1em line, .25em mask padding */
+.pl-nf { display: inline-block; line-height: 1em; padding: 0.25em 0; font-kerning: none; }

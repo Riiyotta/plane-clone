@@ -1,0 +1,19 @@
+/* Hero load animation — CLONE_SPEC §2 (copied from live 05rd2bydkxq3f.css) */
+.hero-word {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(14px);
+  transform: translateY(.14em);
+  animation: hero-word-in 1s cubic-bezier(.32, .72, 0, 1) forwards;
+}
+.hero-fade {
+  opacity: 0;
+  filter: blur(4px);
+  transform: translateY(8px);
+  animation: hero-fade-in .9s cubic-bezier(.32, .72, 0, 1) forwards;
+}
+@keyframes hero-word-in { to { opacity: 1; filter: blur(0); transform: none; } }
+@keyframes hero-fade-in { to { opacity: 1; filter: blur(0); transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-word, .hero-fade { opacity: 1; filter: none; animation: none; transform: none; }
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-a573a638-f7f1-476b-a398-2cf72d53e716" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.92 359.92">
+  <g id="uuid-756d9b28-49f9-41e5-8842-3395027b53ac" data-name="Layer 1">
+    <g>
+      <rect x=".5" y=".5" width="358.92" height="358.92" rx="24" ry="24" fill="#0f0f10" stroke="#1d1f20" stroke-miterlimit="10"/>
+      <g>
+        <g>
+          <g>
+            <polygon points="179.96 223.88 141.92 201.92 141.92 157.99 179.96 179.96 179.96 223.88" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="218 157.99 179.96 179.96 141.92 157.99 179.96 136.03 218 157.99" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="218 201.92 179.96 223.88 179.96 179.96 218 157.99 218 201.92" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="256.04 223.88 218 201.92 218 157.99 256.04 179.96 256.04 223.88" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="294.08 157.99 256.04 179.96 218 157.99 256.04 136.03 294.08 157.99" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="294.08 201.92 256.04 223.88 256.04 179.96 294.08 157.99 294.08 201.92" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="218 157.99 179.96 136.03 179.96 92.11 218 114.07 218 157.99" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="256.04 92.11 218 114.07 179.96 92.11 218 70.14 256.04 92.11" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="256.04 136.03 218 157.99 218 114.07 256.04 92.11 256.04 136.03" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="141.92 289.77 103.88 267.81 103.88 223.88 141.92 245.85 141.92 289.77" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="179.96 223.88 141.92 245.85 103.88 223.88 141.92 201.92 179.96 223.88" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="179.96 267.81 141.92 289.77 141.92 245.85 179.96 223.88 179.96 267.81" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="103.88 223.88 65.83 201.92 65.83 157.99 103.88 179.96 103.88 223.88" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="141.92 157.99 103.88 179.96 65.83 157.99 103.88 136.03 141.92 157.99" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="141.92 201.92 103.88 223.88 103.88 179.96 141.92 157.99 141.92 201.92" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="141.92 157.99 103.88 136.03 103.88 92.11 141.92 114.07 141.92 157.99" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="179.96 92.11 141.92 114.07 103.88 92.11 141.92 70.14 179.96 92.11" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="179.96 136.03 141.92 157.99 141.92 114.07 179.96 92.11 179.96 136.03" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="218 289.77 179.96 267.81 179.96 223.88 218 245.85 218 289.77" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="256.04 223.88 218 245.85 179.96 223.88 218 201.92 256.04 223.88" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="256.04 267.81 218 289.77 218 245.85 256.04 223.88 256.04 267.81" fill="none" stroke="#2b2f31" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <g>
+            <polygon points="179.96 311.74 65.83 245.85 65.83 114.07 179.96 179.96 179.96 311.74" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="294.08 114.07 179.96 179.96 65.83 114.07 179.96 48.18 294.08 114.07" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="294.08 245.85 179.96 311.74 179.96 179.96 294.08 114.07 294.08 245.85" fill="none" stroke="#666" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <circle cx="65.83" cy="114.07" r="5.14" fill="#fafafa"/>
+        <circle cx="179.96" cy="48.18" r="5.14" fill="#fafafa"/>
+        <circle cx="294.08" cy="114.07" r="5.14" fill="#fafafa"/>
+        <circle cx="179.96" cy="179.96" r="5.14" fill="#fafafa"/>
+        <circle cx="294.08" cy="245.85" r="5.14" fill="#fafafa"/>
+        <circle cx="179.96" cy="311.74" r="5.14" fill="#fafafa"/>
+        <circle cx="65.83" cy="245.85" r="5.14" fill="#fafafa"/>
+      </g>
+    </g>
+  </g>
+</svg>

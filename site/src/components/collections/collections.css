@@ -1,0 +1,121 @@
+/* Collections group — long-form prose variants. Values measured on plane.so (see report). */
+
+/* ---------- Legal: Tailwind Typography `prose prose-neutral` (16px base) ---------- */
+.cl-legal { color: #404040; font-size: 16px; line-height: 28px; }
+.cl-legal > :first-child { margin-top: 0; }
+.cl-legal > :last-child { margin-bottom: 0; }
+.cl-legal p { margin: 20px 0; }
+.cl-legal a { color: #171717; text-decoration: underline; font-weight: 500; }
+.cl-legal strong { color: #171717; font-weight: 600; }
+.cl-legal ul, .cl-legal ol { margin: 20px 0; padding-left: 26px; }
+.cl-legal ul { list-style: disc; }
+.cl-legal ol { list-style: decimal; }
+.cl-legal li { margin: 8px 0; padding-left: 6px; }
+.cl-legal ul > li::marker { color: #d4d4d4; }
+.cl-legal ol > li::marker { color: #737373; font-weight: 400; }
+.cl-legal li ul, .cl-legal li ol { margin: 12px 0; }
+.cl-legal hr { border: 0; border-top: 1px solid #e5e5e5; margin: 48px 0; }
+.cl-legal blockquote { font-weight: 500; font-style: italic; color: #171717; border-left: 4px solid #e5e5e5; margin: 25.6px 0; padding-left: 16px; }
+.cl-legal blockquote p::before { content: open-quote; }
+.cl-legal blockquote p::after { content: close-quote; }
+.cl-legal h2, .cl-legal h3, .cl-legal h4 { color: #171717; scroll-margin-top: 96px; }
+.cl-legal h2 { font-size: 24px; line-height: 32px; font-weight: 700; margin: 48px 0 24px; }
+.cl-legal h3 { font-size: 20px; line-height: 32px; font-weight: 600; margin: 32px 0 12px; }
+.cl-legal h4 { font-size: 16px; line-height: 24px; font-weight: 600; margin: 24px 0 8px; }
+.cl-legal h2 + *, .cl-legal h3 + *, .cl-legal h4 + *, .cl-legal hr + * { margin-top: 0; }
+.cl-legal .cl-table-wrap { margin: 32px 0; }
+.cl-legal h2 + .cl-table-wrap, .cl-legal h3 + .cl-table-wrap, .cl-legal hr + .cl-table-wrap { margin-top: 0; }
+.cl-legal table { width: 100%; table-layout: auto; text-align: left; font-size: 14px; line-height: 24px; }
+.cl-legal thead { border-bottom: 1px solid #d4d4d4; }
+.cl-legal th { color: #171717; font-weight: 600; vertical-align: bottom; padding: 0 8px 8px; }
+.cl-legal tbody tr { border-bottom: 1px solid #e5e5e5; }
+.cl-legal tbody tr:last-child { border-bottom: 0; }
+.cl-legal td { vertical-align: baseline; padding: 8px; }
+.cl-legal th:first-child, .cl-legal td:first-child { padding-left: 0; }
+.cl-legal th:last-child, .cl-legal td:last-child { padding-right: 0; }
+.cl-legal .cl-anchor { position: relative; color: inherit; text-decoration: none; font-weight: 500; }
+@media (min-width: 768px) {
+  .cl-legal .cl-anchor::before { content: "#"; position: absolute; left: -24px; color: #cad5e2; font-weight: 430; opacity: 0; transition: opacity 200ms; }
+  .cl-legal .cl-anchor:hover::before { opacity: 1; }
+}
+
+/* ---------- Blog post body (.blog-styles-init on plane.so) ---------- */
+.cl-blog { font-family: inter, 'inter Fallback', sans-serif; font-size: 16px; line-height: 27.2px; font-weight: 400; color: #000; }
+.cl-blog p { padding: 12px 0; margin: 0; }
+.cl-blog a { color: #006399; }
+.cl-blog a:hover { color: rgba(0, 99, 153, 0.8); }
+.cl-blog strong { font-weight: 700; }
+.cl-blog h2, .cl-blog h3 { font-family: satoshi, 'satoshi Fallback', sans-serif; font-weight: 430; color: #1d1f20; scroll-margin-top: 96px; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+.cl-blog h2 { font-size: 32px; line-height: 44.8px; padding: 32px 0 4px; }
+.cl-blog h3 { font-size: 24px; line-height: 33.6px; letter-spacing: 0.24px; padding: 24px 0 4px; }
+.cl-blog ul, .cl-blog ol { padding: 8px 0 8px 24px; }
+.cl-blog ul { list-style: disc; }
+.cl-blog ol { list-style: decimal; }
+.cl-blog li { margin-bottom: 8px; }
+.cl-blog li p { padding: 0; }
+.cl-blog .cl-figure > div, .cl-blog .cl-figure-box { display: flex; align-items: center; justify-content: center; border-radius: 4px; background: #fafafa; padding: 24px; }
+@media (min-width: 768px) { .cl-blog .cl-figure > div { padding: 32px; } }
+@media (min-width: 1024px) { .cl-blog .cl-figure > div { padding: 40px; } }
+.cl-blog .cl-figure img { width: 100%; height: auto; }
+.cl-blog .cl-table-wrap { padding: 16px 0; }
+.cl-blog .cl-table-wrap > div { overflow: auto; border: 1px solid #eaebeb; border-radius: 12px; }
+.cl-blog table { width: 100%; border-collapse: collapse; }
+.cl-blog thead tr { background: #f5fbff; border-bottom: 1px solid #eaebeb; }
+.cl-blog thead th { padding: 16px; text-align: left; font-size: 16px; line-height: 24px; font-weight: 500; color: #1d1f20; vertical-align: middle; }
+.cl-blog tbody tr { border-top: 1px solid #eff0f0; }
+.cl-blog tbody td { padding: 16px; vertical-align: top; color: #4e5355; }
+.cl-blog tbody td p { padding: 12px 0; }
+
+/* ---------- Changelog entry body (.blog-styles-init.changelog-styles) ---------- */
+.cl-changelog { font-family: inter, 'inter Fallback', sans-serif; font-size: 16px; line-height: 27.2px; font-weight: 430; letter-spacing: -0.176px; color: #000; }
+.cl-changelog p { padding-top: 12px; }
+.cl-changelog strong { font-weight: 600; color: #1d1f20; }
+.cl-changelog a { color: #006399; }
+.cl-changelog h2, .cl-changelog h3, .cl-changelog h4 { font-family: inter, 'inter Fallback', sans-serif; font-weight: 570; color: #1d1f20; scroll-margin-top: 96px; }
+.cl-changelog > h2 { font-size: 24px; line-height: 30px; letter-spacing: -0.36px; padding-top: 40px; }
+.cl-changelog > h3 { font-size: 20px; line-height: 26px; letter-spacing: -0.3px; padding-top: 40px; }
+.cl-changelog > h4 { font-size: 18px; line-height: 25.2px; letter-spacing: -0.18px; padding-top: 32px; }
+.cl-changelog ul, .cl-changelog ol { padding: 12px 0 8px 24px; }
+.cl-changelog ul { list-style: disc; }
+.cl-changelog ol { list-style: decimal; }
+.cl-changelog li + li { margin-top: 8px; }
+.cl-changelog code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; line-height: 22.1px; background: #f4f5f5; border-radius: 6px; padding: 4px 8px; }
+.cl-changelog .cl-figure { padding-top: 20px; }
+.cl-changelog .cl-figure img { width: 100%; height: auto; display: block; }
+.cl-changelog .cl-video video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 8px; background: transparent; }
+.cl-changelog .cl-badge { margin-top: 24px; }
+.cl-changelog .cl-badge h2 { margin: 0; padding: 0; scroll-margin-top: 96px; }
+.cl-changelog .cl-badge span { display: inline-flex; width: fit-content; max-width: 100%; align-items: center; border-radius: 8px; padding: 6px 10px; font-size: 16px; line-height: 24px; font-weight: 500; letter-spacing: normal; background: #f5fbff; color: #006399; }
+.cl-changelog .cl-acc-group { margin: 40px 0; border-bottom: 1px solid #eff0f0; }
+.cl-changelog .cl-acc { border-top: 1px solid #eff0f0; }
+.cl-changelog .cl-acc > button { display: flex; width: 100%; cursor: pointer; align-items: center; gap: 12px; padding: 20px 0; text-align: left; }
+.cl-changelog .cl-acc h2 { margin: 0; padding: 0; min-width: 0; font-size: 18px; line-height: 1.3; font-weight: 570; letter-spacing: -0.27px; overflow-wrap: anywhere; }
+.cl-changelog .cl-acc-body { color: #1d1f20; }
+.cl-changelog .cl-acc-body > :first-child { margin-top: 0; padding-top: 0; }
+.cl-changelog .cl-acc-body li + li { margin-top: 6px; }
+
+/* Marketplace detail bodies reuse .cl-blog plus these heading levels */
+.cl-blog h4, .cl-blog h6 { font-family: satoshi, 'satoshi Fallback', sans-serif; font-weight: 430; color: #1d1f20; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+.cl-blog h4 { font-size: 20px; line-height: 28px; letter-spacing: 0.2px; padding: 12px 0 2px; }
+.cl-blog h6 { font-size: 20px; line-height: 24px; letter-spacing: -0.4px; padding: 0 0 2px; }
+.cl-blog h2 strong, .cl-blog h3 strong, .cl-blog h4 strong { font-weight: 700; }
+.cl-blog h4 code, .cl-blog p code, .cl-blog li code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; line-height: 18.2px; background: #f4f5f5; border-radius: 6px; padding: 4px 8px; }
+.cl-blog .cl-codeblock pre { margin: 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 16px; line-height: 24px; color: #24292e; background: transparent; }
+.cl-blog h5 { font-family: satoshi, 'satoshi Fallback', sans-serif; font-weight: 430; color: #1d1f20; font-size: 18px; line-height: 25.2px; letter-spacing: 0.18px; padding: 12px 0 4px; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+.cl-blog .cl-callout { display: flex; gap: 16px; margin: 12px 0 16px; border-radius: 12px; background: #f5fbff; padding: 16px 24px; color: #006399; }
+.cl-blog .cl-callout p { color: #006399; }
+
+/* ---------- Job description (careers/[id]) — blog styles with tighter overrides ---------- */
+.cl-job { font-family: inter, 'inter Fallback', sans-serif; font-size: 16px; line-height: 27.2px; font-weight: 400; color: #000; }
+.cl-job a { color: #006399; }
+.cl-job a:hover { color: rgba(0, 99, 153, 0.8); }
+.cl-job h1, .cl-job h2 { font-size: 32px; line-height: 44.8px; font-weight: 600; padding-top: 16px; }
+.cl-job h3 { font-size: 24px; line-height: 33.6px; font-weight: 600; padding-top: 12px; }
+.cl-job h4 { font-weight: 600; padding-top: 8px; }
+.cl-job strong, .cl-job b { font-weight: 600; }
+.cl-job p { padding: 6px 0; }
+.cl-job ul, .cl-job ol { padding: 4px 0 4px 32px; }
+.cl-job ul { list-style: disc; }
+.cl-job ol { list-style: decimal; }
+.cl-job li { margin-bottom: 4px; padding: 6px 0; }
+.cl-job .cl-spacer { font-family: satoshi, 'satoshi Fallback', sans-serif; font-size: 16px; line-height: 24px; }

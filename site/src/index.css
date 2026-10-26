@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-feature-settings: "cv05", "cv08" 0, "ss02" 0, "ss03"; text-rendering: optimizeLegibility; }
+  button { text-rendering: auto; }
+  body { @apply bg-white font-inter font-430 text-txt-primary; }
+}
+
+@layer components {
+  /* Page container — CLONE_SPEC §0 */
+  .container-page { @apply mx-auto w-full px-4 sm:px-8 xl:px-11 xl:max-w-336 2xl:max-w-384; }
+  .h1 { @apply font-satoshi font-430 text-m-1200 md:text-1200; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+  .h2 { @apply font-satoshi font-430 text-m-1100 md:text-1100; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+  .h-inter { @apply font-inter font-430 text-m-900 md:text-900; }
+  .btn { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg px-4 py-2 text-500 font-medium transition-colors duration-150; }
+  .btn-primary { @apply btn bg-inverse text-white hover:bg-inverse-hover active:bg-inverse-active; }
+  .btn-secondary { @apply btn border border-line-strong bg-white text-txt-secondary hover:bg-surface-2; }
+  .btn-primary-dark { @apply btn bg-inverse-dark text-inverse-dark-text hover:bg-inverse-dark-hover; }
+  .btn-secondary-dark { @apply btn border border-dark-strong bg-dark-divider text-txt-d-secondary hover:bg-dark-subtle; }
+}

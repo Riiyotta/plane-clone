@@ -1,0 +1,38 @@
+/* Company-group type tokens not present in tailwind.config.js.
+   Values from plane.so theme vars (measured 2026-10-26):
+   text-900/800/700/450 swap at 48rem (768px); headings lh 1.3, ls -0.03em, weight 430. */
+.c-heading { font-family: satoshi, 'satoshi Fallback', sans-serif; font-weight: 430; line-height: 1.3; letter-spacing: -0.03em; font-feature-settings: "cv05", "cv08" 0, "ss02", "ss03"; }
+.c-h3 { font-size: 28px; }   /* text-1000: 28 / 40 */
+.c-h4 { font-size: 24px; }   /* text-900: 24 / 32 */
+.c-h5 { font-size: 22px; }   /* text-800: 22 / 24 */
+.c-h6 { font-size: 20px; }   /* text-700: 20 / 20 */
+@media (min-width: 768px) {
+  .c-h3 { font-size: 40px; }
+  .c-h4 { font-size: 32px; }
+  .c-h5 { font-size: 24px; }
+}
+/* text-label-sm eyebrow: IBM Plex Mono 15/15, 500, ls .02em, uppercase */
+.c-eyebrow { font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; font-size: 15px; line-height: 1; letter-spacing: 0.02em; font-weight: 500; text-transform: uppercase; }
+/* text-label-xs: 13/13 ls .02em */
+.c-label-xs { font-size: 13px; line-height: 1; letter-spacing: 0.02em; }
+.c-mono { font-family: 'IBM Plex Mono', 'IBM Plex Mono Fallback', monospace; }
+.c-scrollbar-none { scrollbar-width: none; }
+.c-scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* view-demo stage sizing (plane.so CSS module m694GG_*) */
+@media (min-width: 64rem) {
+  .vd-hero { display: flex; flex-direction: column; height: calc(100dvh - 58px); min-height: calc(37.5rem - 58px); }
+  .vd-container { flex: 1 1 0px; min-height: 0; container-type: size; }
+  .vd-stage { --vd-film: min(100cqw - 22rem - 1.5rem, (100cqh - var(--vd-chrome, 12rem)) * 16 / 9); grid-template-columns: var(--vd-film) minmax(22rem, 1fr); }
+}
+
+/* talk-to-sales logo marquee (animate-marquee; duration set inline) */
+@keyframes c-marquee { from { transform: translateX(0); } to { transform: translateX(calc(-100% - var(--gap))); } }
+.c-marquee { animation: c-marquee var(--duration, 40s) linear infinite; }
+.c-marquee-group:hover .c-marquee { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) { .c-marquee { animation: none; } }
+
+/* number input: hide native spinners (talk-to-sales uses custom +/- buttons) */
+.c-number::-webkit-outer-spin-button, .c-number::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.c-number { -moz-appearance: textfield; }
+.c-placeholder::placeholder { color: rgba(0, 0, 0, 0.5); }
