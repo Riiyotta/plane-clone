@@ -1,0 +1,151 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "hero.marketing",
+  "title": "Marketing page hero",
+  "category": "HERO",
+  "description": "Page opener for product, plan, solution, program, company and event pages: eyebrow, h1, subtitle, up to two actions, optional media below (centered) or beside (split).",
+  "source": {
+    "id": "src:blocks:8",
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function Hero(",
+    "lines": "8-62",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function HeroCentered",
+        "lines": "9-35"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function HeroSplit",
+        "lines": "38-62"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Hero({ b })",
+        "lines": "119-151"
+      },
+      {
+        "file": "site/src/components/company/Blocks.jsx",
+        "tag": "export function HeroCentered",
+        "lines": "36-54"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LHero",
+        "lines": "10-36"
+      },
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function HeroOld",
+        "lines": "565-599"
+      },
+      {
+        "file": "site/src/components/features/Agents.jsx",
+        "tag": "function Hero()",
+        "lines": "44-80"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "hero.marketing",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "centered",
+    "centered-media",
+    "split-media",
+    "editorial",
+    "event"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "subtitle": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "media": {
+        "type": "media",
+        "required": false
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "alignment",
+      "detail": "Hero is centered at >=768 and left aligned below (gap 24, pb 48).",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "media-swap",
+      "detail": "Mobile image variants (different aspect ratio) are used below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot",
+      "decorative-artwork",
+      "product-video"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 58,
+    "measuredHeightPx1440": {
+      "min": 430,
+      "max": 1504
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

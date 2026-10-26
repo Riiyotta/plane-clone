@@ -1,0 +1,174 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.tabbed-showcase",
+  "title": "Tabbed / accordion showcase",
+  "category": "FEATURES",
+  "description": "Header plus 2-6 selectable items (tabs or accordion rows) driving one media pane; auto-advances every 6000ms with a progress line while in view.",
+  "source": {
+    "id": "src:insight:25",
+    "file": "site/src/components/Insight.jsx",
+    "tag": "export default function Insight",
+    "lines": "25-176",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function TabsSide",
+        "lines": "320-352"
+      },
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function TabsTop",
+        "lines": "286-318"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Tabs({ b })",
+        "lines": "197-276"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function ProgressTabs",
+        "lines": "240-277"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function ProgressAccordion",
+        "lines": "194-237"
+      },
+      {
+        "file": "site/src/components/compare/ComparisonPage.jsx",
+        "tag": "export function AgentTabs",
+        "lines": "147-211"
+      },
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function AccordionOld",
+        "lines": "658-702"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LTabsAccordion",
+        "lines": "292-367"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.tabbed-showcase",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "tabs-below-media",
+    "tabs",
+    "side-tabs",
+    "top-tabs",
+    "accordion"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "tabs": {
+        "type": "items",
+        "maxItems": 6,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": true,
+            "copyBasis": "placeholder-length"
+          },
+          "media": {
+            "type": "media",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "auto-advance-tabs",
+      "accordion-expand",
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "auto-advance-tabs": "manual-tabs-first-active",
+      "accordion-expand": "instant-toggle",
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "visibility",
+      "detail": "Large tab image hidden below 768; the active tab renders a mobile image beneath it.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "alignment",
+      "detail": "Centered section headers become left aligned below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 33,
+    "measuredHeightPx1440": {
+      "min": 732,
+      "max": 1391
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

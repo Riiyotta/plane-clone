@@ -1,0 +1,15 @@
+{
+  "id": "component.role-row",
+  "title": "Role row",
+  "layer": "component",
+  "description": "Job title, team and location row.",
+  "composedOf": [
+    "primitive.body-text",
+    "primitive.icon"
+  ],
+  "source": {
+    "file": "site/src/components/collections/Careers.jsx",
+    "tag": "function RoleRow",
+    "lines": "99-117"
+  }
+}

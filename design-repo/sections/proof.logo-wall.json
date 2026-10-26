@@ -1,0 +1,113 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "proof.logo-wall",
+  "title": "Customer logo wall / strip",
+  "category": "SOCIAL_PROOF",
+  "description": "Caption plus customer logos at 75% opacity: static 6-column grid (homepage), one-row strip (inner pages; mobile marquee is static in the clone), or strip with a quote.",
+  "source": {
+    "id": "src:customers:23",
+    "file": "site/src/components/Customers.jsx",
+    "tag": "export default function Customers",
+    "lines": "23-50",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function LogoStrip",
+        "lines": "65-100"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function LogoStrip",
+        "lines": "533-544"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Logos({ b })",
+        "lines": "156-190"
+      },
+      {
+        "file": "site/src/components/compare/ComparisonPage.jsx",
+        "tag": "export function LogosQuote",
+        "lines": "55-91"
+      },
+      {
+        "file": "site/src/components/plans/Pricing.jsx",
+        "tag": "function LogoBand()",
+        "lines": "526-567"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.logo-wall",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "grid",
+    "strip",
+    "strip-with-quote",
+    "band",
+    "row"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "caption": {
+        "type": "text",
+        "maxWords": 10,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "logos": {
+        "type": "mediaList",
+        "maxItems": 18,
+        "required": true
+      },
+      "quote": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none",
+      "logo-marquee"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none",
+      "logo-marquee": "static-row"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Logo grid 6 columns at >=768, 3 columns below.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "customer-logo"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 51,
+    "measuredHeightPx1440": {
+      "min": 165,
+      "max": 859
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

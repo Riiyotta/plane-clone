@@ -1,0 +1,169 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.split-rows",
+  "title": "Split feature rows",
+  "category": "FEATURES",
+  "description": "One or more text + media rows (alternating sides, or stacked cards with a feature-chip footer).",
+  "source": {
+    "id": "src:blocks:355",
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function FeatureRows",
+    "lines": "355-395",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function SplitFeature",
+        "lines": "384-396"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function AltRows",
+        "lines": "451-482"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Rows({ b })",
+        "lines": "280-326"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Showcase({ b })",
+        "lines": "479-521"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LFeatureSplit",
+        "lines": "98-117"
+      },
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function FeatureRowOld",
+        "lines": "601-628"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.split-rows",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "alternating",
+    "single",
+    "card-stack"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "rows": {
+        "type": "items",
+        "maxItems": 6,
+        "required": true,
+        "fields": {
+          "eyebrow": {
+            "type": "text",
+            "maxWords": 5,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 14,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 50,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "bullets": {
+            "type": "textList",
+            "maxItems": 6,
+            "maxWords": 12,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "media": {
+            "type": "media",
+            "required": true
+          },
+          "actions": {
+            "type": "ctaList",
+            "maxItems": 2,
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "media-swap",
+      "detail": "Mobile image variants (different aspect ratio) are used below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 39,
+    "measuredHeightPx1440": {
+      "min": 350,
+      "max": 3166
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

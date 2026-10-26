@@ -1,0 +1,266 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.article",
+  "route": "/journal/quiet-planning",
+  "title": "Quiet planning: fewer meetings, clearer weeks",
+  "brand": {
+    "name": "Tallyfold",
+    "domain": "tallyfold.example"
+  },
+  "theme": "light",
+  "nodes": [
+    {
+      "id": "n1",
+      "section": "shell.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-mark-placeholder",
+          "alt": "Tallyfold mark"
+        },
+        "navGroups": [
+          {
+            "label": "Platform"
+          },
+          {
+            "label": "Teams"
+          },
+          {
+            "label": "Learn"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Watch a tour",
+            "href": "/tour",
+            "style": "link"
+          },
+          {
+            "label": "Open an account",
+            "href": "https://app.tallyfold.example/join",
+            "style": "primary"
+          }
+        ],
+        "links": [
+          {
+            "label": "Plans",
+            "href": "/plans"
+          },
+          {
+            "label": "Run it yourself",
+            "href": "/on-prem"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu-fade-slide",
+        "reducedMotionFallback": "near-instant"
+      }
+    },
+    {
+      "id": "n2",
+      "section": "hero.article-header",
+      "variant": "blog",
+      "content": {
+        "title": "Quiet planning: fewer meetings, clearer weeks",
+        "category": "Field notes",
+        "meta": [
+          "Ines Okafor (fictional)",
+          "4 Feb 2026"
+        ],
+        "media": {
+          "assetRole": "generated-product-visual",
+          "alt": "Illustrated calendar"
+        }
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n3",
+      "section": "nav.toc",
+      "variant": "blog-sidebar",
+      "content": {
+        "items": [
+          "Why it started",
+          "What changed",
+          "What we would keep"
+        ],
+        "title": "Table of contents"
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n4",
+      "section": "content.prose-block",
+      "variant": "article-intro",
+      "content": {
+        "paragraphs": [
+          "A small crew tried planning in writing for a month. This is what they noticed."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n5",
+      "section": "content.chapter",
+      "variant": "article",
+      "content": {
+        "heading": "Why it started",
+        "paragraphs": [
+          "Status calls kept running long, and nobody remembered the decisions a day later."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n6",
+      "section": "content.chapter",
+      "variant": "article",
+      "content": {
+        "heading": "What changed",
+        "paragraphs": [
+          "Each Monday the crew wrote a short plan; each Friday they wrote what actually happened."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n7",
+      "section": "content.chapter",
+      "variant": "article",
+      "content": {
+        "heading": "What we would keep",
+        "paragraphs": [
+          "The habit stuck because it was short."
+        ],
+        "listItems": [
+          "Written plans before meetings",
+          "One owner per task"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n8",
+      "section": "content.related-posts",
+      "variant": "blog",
+      "content": {
+        "title": "Keep reading",
+        "posts": [
+          {
+            "title": "Naming boards so people find them",
+            "href": "/journal/naming-boards"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n9",
+      "section": "cta.offer-card",
+      "variant": "compact-card",
+      "content": {
+        "title": "Try a quieter week",
+        "actions": [
+          {
+            "label": "Open a free account",
+            "href": "https://app.tallyfold.example/join",
+            "style": "primary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n10",
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-mark-placeholder",
+          "alt": "Tallyfold mark"
+        },
+        "linkGroups": [
+          {
+            "heading": "Platform",
+            "links": [
+              {
+                "label": "Boards",
+                "href": "/boards"
+              },
+              {
+                "label": "Notebooks",
+                "href": "/notebooks"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "Terms",
+                "href": "/legal/terms"
+              },
+              {
+                "label": "Privacy",
+                "href": "/legal/privacy"
+              }
+            ]
+          }
+        ],
+        "badges": [
+          {
+            "assetRole": "badge-placeholder",
+            "alt": "Security reviewed"
+          }
+        ],
+        "downloadActions": [
+          {
+            "label": "Desktop app",
+            "href": "https://get.tallyfold.example/desktop",
+            "style": "secondary-on-dark"
+          }
+        ],
+        "socialLinks": [
+          {
+            "label": "Community",
+            "href": "https://community.tallyfold.example",
+            "icon": {
+              "assetRole": "social-icon-generic",
+              "alt": "Community link"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-reveal",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

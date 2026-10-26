@@ -1,0 +1,136 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "shell.footer",
+  "title": "Global footer with wordmark reveal",
+  "category": "SHELL",
+  "description": "Dark rounded-bottom block (logo row with compliance badges, 6-column link grid, download buttons + social buttons) over a sticky wordmark band revealed at the end of the page.",
+  "source": {
+    "id": "src:footer:153",
+    "file": "site/src/components/Footer.jsx",
+    "tag": "export default function Footer",
+    "lines": "153-269",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "shell.footer",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "brandMark": {
+        "type": "media",
+        "required": true
+      },
+      "linkGroups": {
+        "type": "items",
+        "maxItems": 16,
+        "required": true,
+        "fields": {
+          "heading": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "links": {
+            "type": "linkList",
+            "maxItems": 10,
+            "required": true
+          }
+        }
+      },
+      "badges": {
+        "type": "mediaList",
+        "maxItems": 4,
+        "required": false
+      },
+      "downloadActions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "socialLinks": {
+        "type": "items",
+        "maxItems": 5,
+        "required": false,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "href": {
+            "type": "href",
+            "required": true
+          },
+          "icon": {
+            "type": "media",
+            "required": true
+          }
+        }
+      },
+      "wordmark": {
+        "type": "media",
+        "required": false
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeLast": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "sticky-reveal",
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "sticky-reveal": "unchanged",
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1280,
+      "breakpoint": "xl",
+      "change": "grid-columns",
+      "detail": "Footer link grid: 2 columns below 1024, 3 at lg, 6 at xl.",
+      "evidence": "CLONE_SPEC.md:656"
+    },
+    {
+      "minWidthPx": 1280,
+      "breakpoint": "xl",
+      "change": "padding",
+      "detail": "Container padding 16 (base) -> 32 (sm) -> 44 (xl); max width 1344 (xl) / 1536 (2xl).",
+      "evidence": "CLONE_SPEC.md:22"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "brand-wordmark",
+      "compliance-badge",
+      "app-store-mark",
+      "social-platform-icon"
+    ],
+    "generatedAssetRoles": [
+      "brand-mark-placeholder",
+      "badge-placeholder",
+      "store-mark-placeholder",
+      "social-icon-generic"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

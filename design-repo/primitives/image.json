@@ -1,0 +1,18 @@
+{
+  "id": "primitive.image",
+  "title": "Image",
+  "layer": "primitive",
+  "description": "Image with optional mobile variant (swap below 768).",
+  "variants": [
+    "default",
+    "responsive-pair"
+  ],
+  "tokens": [
+    "radius.12"
+  ],
+  "source": {
+    "file": "site/src/components/features/primitives.jsx",
+    "tag": "export function Img",
+    "lines": "97-110"
+  }
+}

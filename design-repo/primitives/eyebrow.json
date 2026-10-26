@@ -1,0 +1,20 @@
+{
+  "id": "primitive.eyebrow",
+  "title": "Eyebrow label",
+  "layer": "primitive",
+  "description": "Uppercase accent label above headings (Inter 14 on the homepage, IBM Plex Mono 15 on inner pages).",
+  "variants": [
+    "accent-sans",
+    "mono-label"
+  ],
+  "tokens": [
+    "font.size.400",
+    "font.size.label-sm",
+    "text.accent"
+  ],
+  "source": {
+    "file": "site/src/components/features/primitives.jsx",
+    "tag": "export function Eyebrow",
+    "lines": "55-63"
+  }
+}

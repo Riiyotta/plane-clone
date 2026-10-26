@@ -1,0 +1,40 @@
+{
+  "group": "icon-size",
+  "tokens": {
+    "icon.size.14": {
+      "value": "14px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:329"
+    },
+    "icon.size.16": {
+      "value": "16px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:186"
+    },
+    "icon.size.18": {
+      "value": "18px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:485"
+    },
+    "icon.size.20": {
+      "value": "20px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:454"
+    },
+    "icon.size.24": {
+      "value": "24px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:326"
+    },
+    "icon.size.40": {
+      "value": "40px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:454"
+    },
+    "icon.size.64": {
+      "value": "64px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:560"
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.legal-document",
+  "route": "/legals/cookie-policy",
+  "title": "Cookie Policy (reference reconstruction)",
+  "theme": "light",
+  "nodes": [
+    {
+      "id": "n1",
+      "section": "shell.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-wordmark",
+          "alt": "Plane",
+          "src": "/assets/logo-with-wordmark.svg"
+        },
+        "navGroups": [
+          {
+            "label": "Sample text"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Start now",
+            "href": "/start",
+            "style": "primary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n2",
+      "section": "hero.page-header",
+      "variant": "legal",
+      "content": {
+        "title": "Cookie Policy"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n3",
+      "section": "nav.toc",
+      "variant": "minimap",
+      "content": {
+        "items": [
+          "1. What Are Cookies?",
+          "2. How We Use Cookies",
+          "3. Third-Party Cookies"
+        ],
+        "title": "Contents"
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n4",
+      "section": "content.prose-block",
+      "variant": "legal-preamble",
+      "content": {
+        "paragraphs": [
+          "Placeholder preamble text of matching length."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n5",
+      "section": "content.chapter",
+      "variant": "legal",
+      "content": {
+        "heading": "1. What Are Cookies?",
+        "paragraphs": [
+          "Placeholder clause text of matching length."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n6",
+      "section": "content.chapter",
+      "variant": "legal",
+      "content": {
+        "heading": "2. How We Use Cookies",
+        "paragraphs": [
+          "Placeholder clause text of matching length."
+        ],
+        "subheadings": [
+          "2.1 Essential Cookies",
+          "2.2 Functional Cookies"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n7",
+      "section": "content.chapter",
+      "variant": "legal",
+      "content": {
+        "heading": "3. Third-Party Cookies",
+        "paragraphs": [
+          "Placeholder clause text of matching length."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n8",
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-wordmark",
+          "alt": "Plane",
+          "src": "/assets/logo-light.svg"
+        },
+        "linkGroups": [
+          {
+            "heading": "Sample text",
+            "links": [
+              {
+                "label": "Learn more",
+                "href": "/learn"
+              }
+            ]
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-reveal",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

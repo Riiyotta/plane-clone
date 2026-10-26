@@ -1,0 +1,104 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.related-posts",
+  "title": "Related posts",
+  "category": "CONTENT",
+  "description": "Three linked post cards after an article.",
+  "source": {
+    "id": "src:blogpost:168",
+    "file": "site/src/components/collections/BlogPost.jsx",
+    "tag": "Recommended for you",
+    "lines": "168-178",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/Changelog.jsx",
+        "tag": "export function ChangelogDetail",
+        "lines": "180-275"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.related-posts",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "blog",
+    "changelog"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 6,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "posts": {
+        "type": "items",
+        "maxItems": 3,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 20,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "meta": {
+            "type": "text",
+            "maxWords": 8,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "media": {
+            "type": "media",
+            "required": false
+          },
+          "href": {
+            "type": "href",
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 2,
+    "measuredHeightPx1440": {
+      "min": 276,
+      "max": 417
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

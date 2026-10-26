@@ -1,0 +1,15 @@
+{
+  "id": "component.stat-block",
+  "title": "Stat block",
+  "layer": "component",
+  "description": "Big number with label.",
+  "composedOf": [
+    "primitive.heading",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function StatCols",
+    "lines": "156-172"
+  }
+}

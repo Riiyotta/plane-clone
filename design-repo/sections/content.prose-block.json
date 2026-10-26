@@ -1,0 +1,116 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.prose-block",
+  "title": "Prose block",
+  "category": "CONTENT",
+  "description": "Editorial text block (optional heading, 1-12 paragraphs, optional image). Also used for the untitled preamble before the first heading of a legal document or article.",
+  "source": {
+    "id": "src:blocks:57",
+    "file": "site/src/components/company/Blocks.jsx",
+    "tag": "export function SectionIntro",
+    "lines": "57-67",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/pages/one/why-plane-one.jsx",
+        "tag": "export default function WhyPlaneOne",
+        "lines": "12-119"
+      },
+      {
+        "file": "site/src/pages/about.jsx",
+        "tag": "function Reason(",
+        "lines": "65-102"
+      },
+      {
+        "file": "site/src/pages/about.jsx",
+        "tag": "function Story(",
+        "lines": "105-143"
+      },
+      {
+        "file": "site/src/pages/work-trials.jsx",
+        "tag": "export default function WorkTrials",
+        "lines": "67-169"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.prose-block",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default",
+    "scroll-story",
+    "legal-preamble",
+    "article-intro",
+    "split-image",
+    "timeline"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 5,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "paragraphs": {
+        "type": "textList",
+        "maxItems": 12,
+        "maxWords": 90,
+        "required": true,
+        "copyBasis": "placeholder-length"
+      },
+      "media": {
+        "type": "media",
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "decorative-artwork",
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-background",
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 18,
+    "measuredHeightPx1440": {
+      "min": 180,
+      "max": 5805
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

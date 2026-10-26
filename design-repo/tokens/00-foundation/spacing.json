@@ -1,0 +1,102 @@
+{
+  "group": "spacing",
+  "note": "4px-based steps actually observed in CLONE_SPEC.md measurements; arbitrary values outside this scale are rejected by token-policy.json.",
+  "tokens": {
+    "space.0_5": {
+      "value": "2px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:325",
+      "scaleStep": 0.5
+    },
+    "space.1": {
+      "value": "4px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:563",
+      "scaleStep": 1
+    },
+    "space.1_5": {
+      "value": "6px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:330",
+      "scaleStep": 1.5
+    },
+    "space.2": {
+      "value": "8px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:393",
+      "scaleStep": 2
+    },
+    "space.3": {
+      "value": "12px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:260",
+      "scaleStep": 3
+    },
+    "space.4": {
+      "value": "16px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:158",
+      "scaleStep": 4
+    },
+    "space.5": {
+      "value": "20px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:517",
+      "scaleStep": 5
+    },
+    "space.6": {
+      "value": "24px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:166",
+      "scaleStep": 6
+    },
+    "space.7": {
+      "value": "28px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:494",
+      "scaleStep": 7
+    },
+    "space.8": {
+      "value": "32px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:387",
+      "scaleStep": 8
+    },
+    "space.9": {
+      "value": "36px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:496",
+      "scaleStep": 9
+    },
+    "space.10": {
+      "value": "40px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:354",
+      "scaleStep": 10
+    },
+    "space.11": {
+      "value": "44px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:411",
+      "scaleStep": 11
+    },
+    "space.12": {
+      "value": "48px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:417",
+      "scaleStep": 12
+    },
+    "space.16": {
+      "value": "64px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:557",
+      "scaleStep": 16
+    },
+    "space.20": {
+      "value": "80px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:353",
+      "scaleStep": 20
+    }
+  }
+}

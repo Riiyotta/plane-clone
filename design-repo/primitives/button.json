@@ -1,0 +1,28 @@
+{
+  "id": "primitive.button",
+  "title": "Button",
+  "layer": "primitive",
+  "description": "Rounded 8px button; 8/16 padding (40px tall) or 6/12 nav size; colour transition 150ms.",
+  "variants": [
+    "primary",
+    "secondary",
+    "primary-on-dark",
+    "secondary-on-dark",
+    "nav-transparent",
+    "nav-primary",
+    "link"
+  ],
+  "tokens": [
+    "button.cta.padding-y",
+    "button.cta.padding-x",
+    "button.cta.radius",
+    "action.primary.bg",
+    "action.secondary.border",
+    "motion.duration.fast"
+  ],
+  "source": {
+    "file": "site/src/index.css",
+    "tag": ".btn {",
+    "lines": "17-22"
+  }
+}

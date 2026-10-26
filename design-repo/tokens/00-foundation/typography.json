@@ -1,0 +1,213 @@
+{
+  "group": "typography",
+  "note": "Type switches at 768px (min-width 48rem): base = <768, md = >=768.",
+  "tokens": {
+    "font.family.display": {
+      "value": "satoshi",
+      "type": "fontFamily",
+      "source": "site/tailwind.config.js:8",
+      "usage": "h1/h2 display headings, footer column headings"
+    },
+    "font.family.body": {
+      "value": "inter",
+      "type": "fontFamily",
+      "source": "site/tailwind.config.js:9",
+      "usage": "body copy, UI labels, Inter headings"
+    },
+    "font.family.label-mono": {
+      "value": "IBM Plex Mono",
+      "type": "fontFamily",
+      "source": "site/tailwind.config.js:10",
+      "usage": "inner-page eyebrow labels (text-label-sm/xs)"
+    },
+    "font.family.code": {
+      "value": "ui-monospace",
+      "type": "fontFamily",
+      "source": "site/src/components/collections/collections.css:82",
+      "usage": "inline code and code blocks in long-form bodies"
+    },
+    "font.family.serif": {
+      "value": "sourceSerifPro",
+      "type": "fontFamily",
+      "source": "site/src/fonts.css:15",
+      "status": "loaded-unused",
+      "usage": "loaded by the site but not used on any measured page (CLONE_SPEC.md §0)"
+    },
+    "font.weight.book": {
+      "value": "400",
+      "type": "fontWeight",
+      "source": "CLONE_SPEC.md:73"
+    },
+    "font.weight.regular": {
+      "value": "430",
+      "type": "fontWeight",
+      "source": "site/tailwind.config.js:12"
+    },
+    "font.weight.medium": {
+      "value": "500",
+      "type": "fontWeight",
+      "source": "CLONE_SPEC.md:35"
+    },
+    "font.weight.semibold": {
+      "value": "570",
+      "type": "fontWeight",
+      "source": "site/tailwind.config.js:12"
+    },
+    "font.weight.heading-strong": {
+      "value": "600",
+      "type": "fontWeight",
+      "source": "CLONE_SPEC.md:35"
+    },
+    "font.weight.bold": {
+      "value": "700",
+      "type": "fontWeight",
+      "source": "site/src/components/collections/collections.css:22"
+    },
+    "font.size.1200": {
+      "value": {
+        "base": "36px",
+        "md": "58px"
+      },
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:35",
+      "lineHeight": "1.3",
+      "letterSpacing": "-0.03em",
+      "role": "h1 / display-1"
+    },
+    "font.size.1100": {
+      "value": {
+        "base": "32px",
+        "md": "44px"
+      },
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:36",
+      "lineHeight": "1.3",
+      "letterSpacing": "-0.03em",
+      "role": "h2 / display-2"
+    },
+    "font.size.1000": {
+      "value": {
+        "base": "28px",
+        "md": "40px"
+      },
+      "type": "fontSize",
+      "source": "site/src/components/company/company.css:5",
+      "lineHeight": "1.3",
+      "letterSpacing": "-0.03em",
+      "role": "h3 on inner pages"
+    },
+    "font.size.900": {
+      "value": {
+        "base": "24px",
+        "md": "32px"
+      },
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:37",
+      "lineHeight": "1.3",
+      "letterSpacing": "-0.03em",
+      "role": "Inter heading / h4"
+    },
+    "font.size.800": {
+      "value": {
+        "base": "22px",
+        "md": "24px"
+      },
+      "type": "fontSize",
+      "source": "CLONE_SPEC.md:43",
+      "lineHeight": "1.5",
+      "role": "h5 / quote"
+    },
+    "font.size.700": {
+      "value": {
+        "base": "20px",
+        "md": "20px"
+      },
+      "type": "fontSize",
+      "source": "site/src/components/company/company.css:8",
+      "lineHeight": "1.3",
+      "role": "h6"
+    },
+    "font.size.600": {
+      "value": "18px",
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:39",
+      "lineHeight": "1.5",
+      "role": "body-lg / card title"
+    },
+    "font.size.500": {
+      "value": "16px",
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:40",
+      "lineHeight": "1.5",
+      "role": "body-base / buttons"
+    },
+    "font.size.400": {
+      "value": "14px",
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:41",
+      "lineHeight": "1.6",
+      "role": "body-sm / card body / nav"
+    },
+    "font.size.300": {
+      "value": "13px",
+      "type": "fontSize",
+      "source": "site/tailwind.config.js:42",
+      "lineHeight": "1.5",
+      "role": "body-xs / caption / footer links"
+    },
+    "font.size.caption": {
+      "value": "12px",
+      "type": "fontSize",
+      "source": "CLONE_SPEC.md:76",
+      "lineHeight": "1.5",
+      "letterSpacing": "0.12em",
+      "role": "uppercase logo caption"
+    },
+    "font.size.label-sm": {
+      "value": "15px",
+      "type": "fontSize",
+      "source": "site/src/components/plans/plans.css:124",
+      "lineHeight": "1",
+      "letterSpacing": "0.02em",
+      "role": "mono eyebrow (inner pages)"
+    },
+    "font.size.label-xs": {
+      "value": "13px",
+      "type": "fontSize",
+      "source": "site/src/components/plans/plans.css:125",
+      "lineHeight": "1",
+      "letterSpacing": "0.02em",
+      "role": "mono small label"
+    },
+    "font.lineHeight.heading": {
+      "value": "1.3",
+      "type": "lineHeight",
+      "source": "CLONE_SPEC.md:49"
+    },
+    "font.lineHeight.body": {
+      "value": "1.5",
+      "type": "lineHeight",
+      "source": "CLONE_SPEC.md:49"
+    },
+    "font.lineHeight.body-sm": {
+      "value": "1.6",
+      "type": "lineHeight",
+      "source": "CLONE_SPEC.md:49"
+    },
+    "font.letterSpacing.heading": {
+      "value": "-0.03em",
+      "type": "letterSpacing",
+      "source": "CLONE_SPEC.md:49"
+    },
+    "font.letterSpacing.caption": {
+      "value": "0.12em",
+      "type": "letterSpacing",
+      "source": "CLONE_SPEC.md:76"
+    },
+    "font.letterSpacing.label": {
+      "value": "0.02em",
+      "type": "letterSpacing",
+      "source": "site/src/components/plans/plans.css:124"
+    }
+  }
+}

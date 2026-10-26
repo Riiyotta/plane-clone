@@ -1,0 +1,20 @@
+{
+  "id": "primitive.tab",
+  "title": "Tab / segmented option",
+  "layer": "primitive",
+  "description": "Selectable tab in a segmented control.",
+  "variants": [
+    "segmented",
+    "underline"
+  ],
+  "tokens": [
+    "radius.8",
+    "surface.layer",
+    "motion.duration.tab"
+  ],
+  "source": {
+    "file": "site/src/components/compare/ui.jsx",
+    "tag": "export function Segmented",
+    "lines": "129-157"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "primitive.badge",
+  "title": "Badge / chip",
+  "layer": "primitive",
+  "description": "Small pill label (category chip, release badge).",
+  "variants": [
+    "category",
+    "release"
+  ],
+  "tokens": [
+    "radius.full",
+    "surface.subtle",
+    "text.secondary"
+  ],
+  "source": {
+    "file": "site/src/components/collections/Catalog.jsx",
+    "tag": "const chip = ",
+    "lines": "33-33"
+  }
+}

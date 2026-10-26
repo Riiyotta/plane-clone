@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "note": "Closed set. A PageSpec node may only use a pattern listed in its section contract motion.allowedPatterns; liveOnlyNotReproduced entries are NOT allowed in PageSpecs.",
+  "patterns": {
+    "none": {
+      "description": "Static. Default for every section: the live site has no scroll-reveal animations (MutationObserver-verified on the homepage).",
+      "evidence": "CLONE_SPEC.md:603",
+      "reducedMotionFallback": "none",
+      "autoAdvancing": false
+    },
+    "hero-word-blur-in": {
+      "description": "Per-word blur-in of the h1, then subtitle and actions fade-in on page load.",
+      "durationToken": "motion.duration.hero-word",
+      "easingToken": "motion.easing.emphasized",
+      "params": {
+        "wordDelayMs": "80 + 70*i",
+        "blurPx": 14,
+        "translateY": "0.14em",
+        "subtitle": {
+          "durationMs": 900,
+          "delayMs": 720,
+          "blurPx": 4,
+          "translateYPx": 8
+        },
+        "actions": {
+          "durationMs": 900,
+          "delayMs": 840
+        }
+      },
+      "evidence": "site/src/components/Hero.css:2-19",
+      "reducedMotionFallback": "static-visible",
+      "reducedMotionEvidence": "site/src/components/Hero.css:17",
+      "autoAdvancing": false
+    },
+    "video-segment-tabs": {
+      "description": "One looping product video split into 16s segments; the active tab follows the video; a 2px progress bar scales per video frame; video fades in over 300ms when playing; plays at intersection >= .12, pauses <= .02.",
+      "durationToken": "motion.duration.video-segment",
+      "evidence": "CLONE_SPEC.md:310-335",
+      "reducedMotionFallback": "manual-play-button",
+      "reducedMotionEvidence": "CLONE_SPEC.md:630",
+      "autoAdvancing": true
+    },
+    "auto-advance-tabs": {
+      "description": "Tabs advance every 6000ms while the section intersects the viewport; progress recomputed every 50ms (width transition 150ms linear); active image crossfades over 300ms standard easing; click selects and restarts the cycle; leaving the viewport pauses and keeps progress.",
+      "durationToken": "motion.duration.tab-cycle",
+      "easingToken": "motion.easing.standard",
+      "evidence": "CLONE_SPEC.md:379-382",
+      "alsoIn": "site/src/components/solutions/Blocks.jsx:194-196",
+      "reducedMotionFallback": "manual-tabs-first-active",
+      "reducedMotionNote": "Policy, not a measurement: the clone does not special-case reduced motion for these tabs; generated pages must not auto-advance under prefers-reduced-motion.",
+      "autoAdvancing": true
+    },
+    "accordion-expand": {
+      "description": "Accordion body expands via grid-rows 0fr->1fr over 300ms ease-out (FAQ) or 400ms standard easing (feature accordion).",
+      "durationToken": "motion.duration.base",
+      "easingToken": "motion.easing.ease-out",
+      "evidence": "site/src/components/features/blocks.jsx:524",
+      "reducedMotionFallback": "instant-toggle",
+      "reducedMotionNote": "Policy: open/close without height animation.",
+      "autoAdvancing": false
+    },
+    "card-hover-scale": {
+      "description": "Card scales to 1.01 (store cards 1.05) on hover over 300ms standard easing.",
+      "durationToken": "motion.duration.base",
+      "easingToken": "motion.easing.standard",
+      "evidence": "CLONE_SPEC.md:621-623",
+      "reducedMotionFallback": "no-scale",
+      "reducedMotionNote": "Policy: keep hover colour change, drop the scale.",
+      "autoAdvancing": false
+    },
+    "color-transition": {
+      "description": "Background/text colour transition on hover/active: 150ms (buttons, links, nav pills) or 200ms (tabs), standard easing.",
+      "durationToken": "motion.duration.fast",
+      "easingToken": "motion.easing.standard",
+      "evidence": "CLONE_SPEC.md:613-615",
+      "reducedMotionFallback": "unchanged",
+      "autoAdvancing": false
+    },
+    "menu-fade-slide": {
+      "description": "Mega-menu panel fades in and slides from translateY(-8px) over 220ms with a rgba(9,11,11,.3) overlay fading in 220ms; switching triggers swaps content with opacity + translateX(16px) over ~230ms.",
+      "durationToken": "motion.duration.menu",
+      "easingToken": "motion.easing.standard",
+      "evidence": "site/src/components/Header.css:3-22",
+      "reducedMotionFallback": "near-instant",
+      "reducedMotionEvidence": "site/src/components/Header.css:20",
+      "autoAdvancing": false
+    },
+    "sticky-reveal": {
+      "description": "Footer wordmark sits sticky at the bottom under the rounded footer block and is uncovered as the page ends. Pure CSS, no animation.",
+      "evidence": "CLONE_SPEC.md:595-598",
+      "reducedMotionFallback": "unchanged",
+      "autoAdvancing": false
+    },
+    "logo-marquee": {
+      "description": "Infinite linear horizontal logo marquee (default 40s), paused on hover. In the clone this runs only on the sales contact page.",
+      "evidence": "site/src/components/company/company.css:30-33",
+      "reducedMotionFallback": "static-row",
+      "reducedMotionEvidence": "site/src/components/company/company.css:33",
+      "autoAdvancing": true
+    }
+  },
+  "liveOnlyNotReproduced": [
+    {
+      "id": "live.logo-cycling",
+      "description": "Desktop logo cross-fade/cycling (~3s) on self-hosted logo strips.",
+      "cloneStatus": "static",
+      "evidence": "site/src/components/plans/Blocks.jsx:527"
+    },
+    {
+      "id": "live.mobile-logo-marquee",
+      "description": "Mobile logo strips marquee on feature, solution, plan and comparison pages.",
+      "cloneStatus": "static",
+      "evidence": "site/src/components/features/blocks.jsx:83"
+    },
+    {
+      "id": "live.number-flow-prices",
+      "description": "Animated digit transitions on pricing amounts when switching billing period.",
+      "cloneStatus": "static",
+      "evidence": "site/src/components/plans/plans.css:143"
+    },
+    {
+      "id": "live.tab-pill",
+      "description": "Sliding pill behind the active segmented tab.",
+      "cloneStatus": "static",
+      "evidence": "not separately cited: listed in the extraction brief as live-only motion"
+    },
+    {
+      "id": "live.lottie",
+      "description": "Lottie animations on comparison cards.",
+      "cloneStatus": "static first frame",
+      "evidence": "site/src/components/compare/ComparisonPage.jsx:16"
+    },
+    {
+      "id": "live.agents-canvas",
+      "description": "Animated agent canvas in the agents page hero.",
+      "cloneStatus": "static",
+      "evidence": "site/src/components/features/Agents.jsx:44"
+    },
+    {
+      "id": "live.compose-terminal",
+      "description": "Typing terminal in the projects-as-code page.",
+      "cloneStatus": "static",
+      "evidence": "site/src/components/features/PlaneCompose.jsx:95"
+    },
+    {
+      "id": "live.editorial-scroll-effects",
+      "description": "Scroll-driven effects on the about, manifesto and launch-week pages.",
+      "cloneStatus": "static",
+      "evidence": "not separately cited: listed in the extraction brief as live-only motion"
+    }
+  ]
+}

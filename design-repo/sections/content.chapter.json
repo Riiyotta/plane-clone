@@ -1,0 +1,120 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.chapter",
+  "title": "Heading-bounded long-form chapter",
+  "category": "CONTENT",
+  "description": "One heading-bounded part of a long document (legal clause group, article chapter, job section, story chapter, guide chapter). Long-form pages are always split into these; one node never holds a whole document.",
+  "source": {
+    "id": "src:prose:100",
+    "file": "site/src/components/collections/Prose.jsx",
+    "tag": "export default function Prose",
+    "lines": "100-220",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/LegalPage.jsx",
+        "tag": "export default function LegalPage",
+        "lines": "78-101"
+      },
+      {
+        "file": "site/src/components/plans/Whitepaper.jsx",
+        "tag": "function Reader()",
+        "lines": "176-330"
+      },
+      {
+        "file": "site/src/pages/charter.jsx",
+        "tag": "export default function Charter",
+        "lines": "25-52"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.chapter",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "legal",
+    "article",
+    "job",
+    "customer-story",
+    "changelog",
+    "guide",
+    "principle",
+    "letter",
+    "catalog"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "heading": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "paragraphs": {
+        "type": "textList",
+        "maxItems": 40,
+        "maxWords": 120,
+        "required": true,
+        "copyBasis": "placeholder-length"
+      },
+      "subheadings": {
+        "type": "textList",
+        "maxItems": 15,
+        "maxWords": 14,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "listItems": {
+        "type": "textList",
+        "maxItems": 24,
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "media": {
+        "type": "mediaList",
+        "maxItems": 4,
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 19,
+    "measuredHeightPx1440": {
+      "min": 130,
+      "max": 2732
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

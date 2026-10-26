@@ -1,0 +1,108 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "proof.testimonial-wall",
+  "title": "Testimonial wall",
+  "category": "SOCIAL_PROOF",
+  "description": "Grid of many short quote cards (name, handle, quote, source icon).",
+  "source": {
+    "id": "src:testimonials:50",
+    "file": "site/src/pages/testimonials.jsx",
+    "tag": "export default function Testimonials",
+    "lines": "50-96",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/plans/Pricing.jsx",
+        "tag": "function Testimonials()",
+        "lines": "712-744"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.testimonial-wall",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "masonry",
+    "quote-grid"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 10,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "cards": {
+        "type": "items",
+        "maxItems": 30,
+        "required": true,
+        "fields": {
+          "name": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "handle": {
+            "type": "text",
+            "maxWords": 3,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "quote": {
+            "type": "text",
+            "maxWords": 60,
+            "required": true,
+            "copyBasis": "placeholder-length"
+          },
+          "sourceIcon": {
+            "type": "media",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "social-platform-icon",
+      "customer-logo"
+    ],
+    "generatedAssetRoles": [
+      "social-icon-generic",
+      "logo-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 2,
+    "measuredHeightPx1440": {
+      "min": 943,
+      "max": 2284
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

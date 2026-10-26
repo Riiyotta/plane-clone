@@ -1,0 +1,158 @@
+{
+  "group": "semantic",
+  "note": "Role names only; values resolve per theme in tokens/themes/*.json.",
+  "tokens": {
+    "text.primary": {
+      "type": "role",
+      "description": "Main text and headings"
+    },
+    "text.secondary": {
+      "type": "role",
+      "description": "Supporting body copy"
+    },
+    "text.tertiary": {
+      "type": "role",
+      "description": "Meta text, captions"
+    },
+    "text.placeholder": {
+      "type": "role",
+      "description": "Placeholder and disabled text"
+    },
+    "text.accent": {
+      "type": "role",
+      "description": "Eyebrows and accent links"
+    },
+    "text.inverse": {
+      "type": "role",
+      "description": "Text on inverse surfaces"
+    },
+    "text.on-color": {
+      "type": "role",
+      "description": "Text on artwork/coloured surfaces"
+    },
+    "surface.page": {
+      "type": "role",
+      "description": "Section background"
+    },
+    "surface.subtle": {
+      "type": "role",
+      "description": "Alternate section background"
+    },
+    "surface.layer": {
+      "type": "role",
+      "description": "Hover/selected layer, small panels"
+    },
+    "surface.layer-hover": {
+      "type": "role",
+      "description": "Layer hover"
+    },
+    "surface.card": {
+      "type": "role",
+      "description": "Card fill"
+    },
+    "surface.raised": {
+      "type": "role",
+      "description": "Raised card on a subtle surface"
+    },
+    "surface.inverse": {
+      "type": "role",
+      "description": "Primary button / inverse block"
+    },
+    "surface.inverse-hover": {
+      "type": "role",
+      "description": "Inverse hover"
+    },
+    "surface.inverse-active": {
+      "type": "role",
+      "description": "Inverse active"
+    },
+    "surface.stage-frame": {
+      "type": "role",
+      "description": "Product stage frame (light only)"
+    },
+    "surface.stage-window": {
+      "type": "role",
+      "description": "Product stage window (light only)"
+    },
+    "surface.chip-mention": {
+      "type": "role",
+      "description": "Mention chip fill (light only)"
+    },
+    "surface.footer-reveal": {
+      "type": "role",
+      "description": "Footer wordmark reveal band (dark only)"
+    },
+    "border.subtle": {
+      "type": "role",
+      "description": "Default hairline"
+    },
+    "border.subtle-1": {
+      "type": "role",
+      "description": "Card border"
+    },
+    "border.strong": {
+      "type": "role",
+      "description": "Secondary button border"
+    },
+    "border.strong-1": {
+      "type": "role",
+      "description": "Strong divider"
+    },
+    "border.neutral": {
+      "type": "role",
+      "description": "Neutral divider"
+    },
+    "border.tab": {
+      "type": "role",
+      "description": "Tab separators"
+    },
+    "action.primary.bg": {
+      "type": "role",
+      "description": "Primary button fill"
+    },
+    "action.primary.hover": {
+      "type": "role",
+      "description": "Primary hover"
+    },
+    "action.primary.active": {
+      "type": "role",
+      "description": "Primary active"
+    },
+    "action.primary.text": {
+      "type": "role",
+      "description": "Primary label"
+    },
+    "action.secondary.bg": {
+      "type": "role",
+      "description": "Secondary fill"
+    },
+    "action.secondary.hover": {
+      "type": "role",
+      "description": "Secondary hover"
+    },
+    "action.secondary.text": {
+      "type": "role",
+      "description": "Secondary label"
+    },
+    "action.secondary.border": {
+      "type": "role",
+      "description": "Secondary border"
+    },
+    "icon.primary": {
+      "type": "role",
+      "description": "Primary icon"
+    },
+    "icon.tertiary": {
+      "type": "role",
+      "description": "Muted icon"
+    },
+    "overlay.scrim": {
+      "type": "role",
+      "description": "Overlay behind menus"
+    },
+    "state.hover-transparent": {
+      "type": "role",
+      "description": "Transparent hover wash"
+    }
+  }
+}

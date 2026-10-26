@@ -1,0 +1,16 @@
+{
+  "id": "component.plan-card",
+  "title": "Plan card",
+  "layer": "component",
+  "description": "Plan name, price, tagline, action and feature list.",
+  "composedOf": [
+    "primitive.heading",
+    "primitive.button",
+    "primitive.check-item"
+  ],
+  "source": {
+    "file": "site/src/components/plans/Pricing.jsx",
+    "tag": "function PlanCard",
+    "lines": "154-246"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "runtime.mobile-nav",
+  "title": "Mobile navigation drawer",
+  "category": "RUNTIME",
+  "description": "In-flow panel under the mobile header with accordion rows (300ms) and full-width login/sign-up buttons.",
+  "source": {
+    "id": "src:header:172",
+    "file": "site/src/components/Header.jsx",
+    "tag": "function MobileHeader()",
+    "lines": "172-260",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "runtime.mobile-nav",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Menu drawer opened by the mobile header toggle; transient navigation UI that only exists while open.",
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "rows": {
+        "type": "textList",
+        "maxItems": 8,
+        "maxWords": 3,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": true
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "accordion-expand"
+    ],
+    "reducedMotionFallbacks": {
+      "accordion-expand": "instant-toggle"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "nav-mode",
+      "detail": "Desktop header (58px, mega-menu triggers) at >=1024; mobile header (66px) with menu drawer below.",
+      "evidence": "CLONE_SPEC.md:19"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

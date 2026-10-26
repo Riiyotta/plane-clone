@@ -1,0 +1,53 @@
+{
+  "group": "radius",
+  "tokens": {
+    "radius.4": {
+      "value": "4px",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:506",
+      "usage": "mention chip"
+    },
+    "radius.6": {
+      "value": "6px",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:135",
+      "usage": "nav pills, tab icon box"
+    },
+    "radius.8": {
+      "value": "8px",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:135",
+      "usage": "buttons, small boxes"
+    },
+    "radius.12": {
+      "value": "12px",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:135",
+      "usage": "cards, images"
+    },
+    "radius.16": {
+      "value": "16px",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:135",
+      "usage": "story cards, form card"
+    },
+    "radius.20": {
+      "value": "min(20px,1.5vw)",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:135",
+      "usage": "product stage"
+    },
+    "radius.24": {
+      "value": "24px",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:135",
+      "usage": "footer bottom corners"
+    },
+    "radius.full": {
+      "value": "9999px",
+      "type": "radius",
+      "source": "site/src/components/collections/Catalog.jsx:33",
+      "usage": "category chips (rounded-full)"
+    }
+  }
+}

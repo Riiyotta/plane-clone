@@ -1,0 +1,19 @@
+{
+  "id": "primitive.icon-box",
+  "title": "Icon box",
+  "layer": "primitive",
+  "description": "40x40 framed icon tile on cards.",
+  "variants": [
+    "default"
+  ],
+  "tokens": [
+    "icon-box.size",
+    "icon-box.radius",
+    "border.subtle"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "Icon box: 40x40 white, radius 8",
+    "lines": "454-454"
+  }
+}

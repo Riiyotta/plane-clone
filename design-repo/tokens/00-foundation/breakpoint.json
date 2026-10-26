@@ -1,0 +1,31 @@
+{
+  "group": "breakpoint",
+  "note": "Type scale switches at md (768); desktop header at lg (>=1024); container padding 44px at xl.",
+  "tokens": {
+    "breakpoint.sm": {
+      "value": "640px",
+      "type": "breakpoint",
+      "source": "CLONE_SPEC.md:17"
+    },
+    "breakpoint.md": {
+      "value": "768px",
+      "type": "breakpoint",
+      "source": "CLONE_SPEC.md:17"
+    },
+    "breakpoint.lg": {
+      "value": "1024px",
+      "type": "breakpoint",
+      "source": "CLONE_SPEC.md:17"
+    },
+    "breakpoint.xl": {
+      "value": "1280px",
+      "type": "breakpoint",
+      "source": "CLONE_SPEC.md:17"
+    },
+    "breakpoint.2xl": {
+      "value": "1536px",
+      "type": "breakpoint",
+      "source": "CLONE_SPEC.md:17"
+    }
+  }
+}

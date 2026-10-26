@@ -1,0 +1,18 @@
+{
+  "id": "primitive.mention-chip",
+  "title": "Mention chip",
+  "layer": "primitive",
+  "description": "Inline @mention chip inside body copy.",
+  "variants": [
+    "default"
+  ],
+  "tokens": [
+    "chip.mention.radius",
+    "surface.chip-mention"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "chip \"@Plane\"",
+    "lines": "506-506"
+  }
+}

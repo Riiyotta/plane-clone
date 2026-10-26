@@ -1,0 +1,54 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "runtime.lightbox",
+  "title": "Image lightbox",
+  "category": "RUNTIME",
+  "description": "Full-screen image overlay with close control.",
+  "source": {
+    "id": "src:changelog:10",
+    "file": "site/src/components/collections/Changelog.jsx",
+    "tag": "export function Lightbox",
+    "lines": "10-26",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "runtime.lightbox",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Modal opened by clicking a changelog image; overlay UI that exists only while open and carries no section content.",
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "media": {
+        "type": "media",
+        "required": true
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

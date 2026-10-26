@@ -1,0 +1,75 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "nav.catalog-subheader",
+  "title": "Catalog sub-header",
+  "category": "NAVIGATION",
+  "description": "Dark sticky bar under the global header naming the catalog (wordmark) with request/build links.",
+  "source": {
+    "id": "src:catalog:36",
+    "file": "site/src/components/collections/Catalog.jsx",
+    "tag": "export function CatalogSubHeader",
+    "lines": "36-56",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "nav.catalog-subheader",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "wordmark": {
+        "type": "media",
+        "required": true
+      },
+      "links": {
+        "type": "linkList",
+        "maxItems": 3,
+        "required": true
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "sticky",
+      "detail": "Sub-header sticks under the global header: top 66px below 1024, 58px at >=1024.",
+      "evidence": "site/src/components/collections/Catalog.jsx:39"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-wordmark"
+    ],
+    "generatedAssetRoles": [
+      "brand-mark-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 7,
+    "measuredHeightPx1440": {
+      "min": 64,
+      "max": 64
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

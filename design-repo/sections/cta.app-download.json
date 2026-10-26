@@ -1,0 +1,140 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "cta.app-download",
+  "title": "App download",
+  "category": "CTA",
+  "description": "Download conversion block: store cards (scale 1.05 on hover) with a device image, a per-platform download list, or QR codes.",
+  "source": {
+    "id": "src:download:17",
+    "file": "site/src/components/Download.jsx",
+    "tag": "export default function Download",
+    "lines": "17-62",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/pages/download.jsx",
+        "tag": "function PlatformRow",
+        "lines": "9-34"
+      },
+      {
+        "file": "site/src/pages/download.jsx",
+        "tag": "function Qr(",
+        "lines": "60-74"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "cta.app-download",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "store-cards",
+    "platform-list",
+    "qr-codes"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "platforms": {
+        "type": "items",
+        "maxItems": 8,
+        "required": true,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "icon": {
+            "type": "media",
+            "required": false
+          },
+          "action": {
+            "type": "cta",
+            "required": false
+          },
+          "qr": {
+            "type": "media",
+            "required": false
+          }
+        }
+      },
+      "media": {
+        "type": "media",
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "card-hover-scale"
+    ],
+    "reducedMotionFallbacks": {
+      "card-hover-scale": "no-scale"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "media-swap",
+      "detail": "Mobile image variants (different aspect ratio) are used below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "app-store-mark",
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "store-mark-placeholder",
+      "qr-placeholder",
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 2,
+    "measuredHeightPx1440": {
+      "min": 519,
+      "max": 832
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

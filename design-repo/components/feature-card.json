@@ -1,0 +1,16 @@
+{
+  "id": "component.feature-card",
+  "title": "Feature card",
+  "layer": "component",
+  "description": "Icon, title, short body on a card fill.",
+  "composedOf": [
+    "primitive.icon-box",
+    "primitive.heading",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function IconCards",
+    "lines": "423-442"
+  }
+}

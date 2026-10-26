@@ -1,0 +1,266 @@
+{
+  "group": "color",
+  "note": "Every value is a computed sRGB value measured on the live site (oklch converted in-browser) and present verbatim in the cited source line.",
+  "tokens": {
+    "color.neutral.0": {
+      "value": "#ffffff",
+      "type": "color",
+      "source": "site/tailwind.config.js:15"
+    },
+    "color.neutral.25": {
+      "value": "#fafafa",
+      "type": "color",
+      "source": "site/tailwind.config.js:15"
+    },
+    "color.neutral.40": {
+      "value": "#f7f7f8",
+      "type": "color",
+      "source": "site/tailwind.config.js:17"
+    },
+    "color.neutral.45": {
+      "value": "#f5f5f5",
+      "type": "color",
+      "source": "site/tailwind.config.js:31"
+    },
+    "color.neutral.50": {
+      "value": "#f4f5f5",
+      "type": "color",
+      "source": "site/tailwind.config.js:16"
+    },
+    "color.neutral.60": {
+      "value": "#f2f2f3",
+      "type": "color",
+      "source": "site/tailwind.config.js:18"
+    },
+    "color.neutral.70": {
+      "value": "#f0f1f2",
+      "type": "color",
+      "source": "site/tailwind.config.js:32"
+    },
+    "color.neutral.100": {
+      "value": "#eff0f0",
+      "type": "color",
+      "source": "site/tailwind.config.js:16"
+    },
+    "color.neutral.150": {
+      "value": "#eaebeb",
+      "type": "color",
+      "source": "site/tailwind.config.js:30"
+    },
+    "color.neutral.200": {
+      "value": "#e4e6e7",
+      "type": "color",
+      "source": "site/tailwind.config.js:27"
+    },
+    "color.neutral.210": {
+      "value": "#e4e5e6",
+      "type": "color",
+      "source": "site/tailwind.config.js:30"
+    },
+    "color.neutral.250": {
+      "value": "#dadcdd",
+      "type": "color",
+      "source": "site/tailwind.config.js:30"
+    },
+    "color.neutral.300": {
+      "value": "#cfd2d3",
+      "type": "color",
+      "source": "site/src/components/plans/plans.css:30"
+    },
+    "color.neutral.350": {
+      "value": "#cacdce",
+      "type": "color",
+      "source": "site/tailwind.config.js:27"
+    },
+    "color.neutral.400": {
+      "value": "#afb3b6",
+      "type": "color",
+      "source": "site/tailwind.config.js:27"
+    },
+    "color.neutral.450": {
+      "value": "#959a9d",
+      "type": "color",
+      "source": "site/tailwind.config.js:28"
+    },
+    "color.neutral.500": {
+      "value": "#80868a",
+      "type": "color",
+      "source": "site/tailwind.config.js:25"
+    },
+    "color.neutral.540": {
+      "value": "#6b7075",
+      "type": "color",
+      "source": "CLONE_SPEC.md:76"
+    },
+    "color.neutral.550": {
+      "value": "#6b6f74",
+      "type": "color",
+      "source": "site/tailwind.config.js:32"
+    },
+    "color.neutral.600": {
+      "value": "#676c6f",
+      "type": "color",
+      "source": "site/tailwind.config.js:25"
+    },
+    "color.neutral.650": {
+      "value": "#4e5355",
+      "type": "color",
+      "source": "site/tailwind.config.js:25"
+    },
+    "color.neutral.660": {
+      "value": "#4a4f54",
+      "type": "color",
+      "source": "site/tailwind.config.js:32"
+    },
+    "color.neutral.700": {
+      "value": "#45484a",
+      "type": "color",
+      "source": "site/src/components/plans/plans.css:64"
+    },
+    "color.neutral.750": {
+      "value": "#36393a",
+      "type": "color",
+      "source": "site/tailwind.config.js:21"
+    },
+    "color.neutral.800": {
+      "value": "#2c2e30",
+      "type": "color",
+      "source": "site/tailwind.config.js:21"
+    },
+    "color.neutral.820": {
+      "value": "#222425",
+      "type": "color",
+      "source": "site/tailwind.config.js:22"
+    },
+    "color.neutral.850": {
+      "value": "#1d1f20",
+      "type": "color",
+      "source": "site/tailwind.config.js:21"
+    },
+    "color.neutral.870": {
+      "value": "#181a1b",
+      "type": "color",
+      "source": "site/tailwind.config.js:20"
+    },
+    "color.neutral.880": {
+      "value": "#141515",
+      "type": "color",
+      "source": "site/src/components/plans/plans.css:42"
+    },
+    "color.neutral.885": {
+      "value": "#141415",
+      "type": "color",
+      "source": "site/tailwind.config.js:20"
+    },
+    "color.neutral.900": {
+      "value": "#111315",
+      "type": "color",
+      "source": "site/tailwind.config.js:32"
+    },
+    "color.neutral.920": {
+      "value": "#0f0f10",
+      "type": "color",
+      "source": "site/tailwind.config.js:20"
+    },
+    "color.neutral.930": {
+      "value": "#0e0f10",
+      "type": "color",
+      "source": "site/tailwind.config.js:31"
+    },
+    "color.neutral.950": {
+      "value": "#090b0c",
+      "type": "color",
+      "source": "site/tailwind.config.js:31"
+    },
+    "color.black": {
+      "value": "#000000",
+      "type": "color",
+      "source": "site/src/components/plans/plans.css:37"
+    },
+    "color.blue.50": {
+      "value": "#f5fbff",
+      "type": "color",
+      "source": "CLONE_SPEC.md:556"
+    },
+    "color.blue.400": {
+      "value": "#2893cc",
+      "type": "color",
+      "source": "site/tailwind.config.js:28"
+    },
+    "color.blue.600": {
+      "value": "#006399",
+      "type": "color",
+      "source": "site/tailwind.config.js:26"
+    },
+    "color.blue.700": {
+      "value": "#005685",
+      "type": "color",
+      "source": "site/src/pages/security.jsx:26"
+    },
+    "color.blue.950": {
+      "value": "#001b29",
+      "type": "color",
+      "source": "site/src/components/collections/Catalog.jsx:39"
+    },
+    "color.indigo.100": {
+      "value": "#e4ecfb",
+      "type": "color",
+      "source": "CLONE_SPEC.md:130"
+    },
+    "color.indigo.600": {
+      "value": "#2060df",
+      "type": "color",
+      "source": "CLONE_SPEC.md:130"
+    },
+    "color.sand.200": {
+      "value": "#e7e1d4",
+      "type": "color",
+      "source": "site/tailwind.config.js:18"
+    },
+    "color.prose.100": {
+      "value": "#e5e5e5",
+      "type": "color",
+      "source": "site/src/components/collections/collections.css:17"
+    },
+    "color.prose.200": {
+      "value": "#d4d4d4",
+      "type": "color",
+      "source": "site/src/components/collections/collections.css:14"
+    },
+    "color.prose.500": {
+      "value": "#737373",
+      "type": "color",
+      "source": "site/src/components/collections/collections.css:15"
+    },
+    "color.prose.700": {
+      "value": "#404040",
+      "type": "color",
+      "source": "site/src/components/collections/collections.css:4"
+    },
+    "color.prose.900": {
+      "value": "#171717",
+      "type": "color",
+      "source": "site/src/components/collections/collections.css:8"
+    },
+    "color.alpha.scrim": {
+      "value": "rgba(9,11,11,0.3)",
+      "type": "color",
+      "source": "CLONE_SPEC.md:132"
+    },
+    "color.alpha.hover-on-light": {
+      "value": "rgba(9, 11, 11, 0.05)",
+      "type": "color",
+      "source": "site/src/components/plans/plans.css:17"
+    },
+    "color.alpha.hover-on-dark": {
+      "value": "rgba(255, 255, 255, 0.05)",
+      "type": "color",
+      "source": "site/src/components/plans/plans.css:51"
+    },
+    "color.alpha.ring": {
+      "value": "rgba(0,0,0,.06)",
+      "type": "color",
+      "source": "CLONE_SPEC.md:136"
+    }
+  }
+}

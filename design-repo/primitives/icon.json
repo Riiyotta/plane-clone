@@ -1,0 +1,21 @@
+{
+  "id": "primitive.icon",
+  "title": "Line icon",
+  "layer": "primitive",
+  "description": "Stroke icon from an open icon set (currentColor).",
+  "variants": [
+    "16",
+    "20",
+    "24"
+  ],
+  "tokens": [
+    "icon.size.16",
+    "icon.size.20",
+    "icon.size.24"
+  ],
+  "source": {
+    "file": "site/src/components/features/primitives.jsx",
+    "tag": "export function LucideIcon",
+    "lines": "124-130"
+  }
+}

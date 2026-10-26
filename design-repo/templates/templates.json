@@ -1,0 +1,2691 @@
+{
+  "version": "1.0.0",
+  "nodeSlots": [
+    "shell-top",
+    "opener",
+    "body",
+    "shell-bottom"
+  ],
+  "note": "Slots order the page: shell-top, then opener (HERO / catalog sub-header), then body (any order, repeats per repeatable/maxPerPage), then shell-bottom. Templates group routes by semantic purpose, not by implementation: e.g. the data-driven feature builder, legacy feature blocks and custom product pages are one product-feature family.",
+  "templates": {
+    "template.home": {
+      "id": "template.home",
+      "purpose": "Homepage: product overview from hero to closing CTA.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.home"
+        ]
+      ],
+      "routes": [
+        "/"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.home",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "features.product-tabs",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "tabs-below-media"
+          ]
+        },
+        {
+          "section": "proof.story-cards",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "home"
+          ]
+        },
+        {
+          "section": "features.steps",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "week-columns"
+          ]
+        },
+        {
+          "section": "features.bento",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "home-capabilities"
+          ]
+        },
+        {
+          "section": "features.media-showcase",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-columns"
+          ]
+        },
+        {
+          "section": "cta.app-download",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "store-cards"
+          ]
+        },
+        {
+          "section": "features.integrations",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "home-apps"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "image-columns"
+          ]
+        },
+        {
+          "section": "features.developer-showcase",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "image-bg"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.product-feature": {
+      "id": "template.product-feature",
+      "purpose": "Product / capability marketing page (one product area or feature), including custom product pages implemented outside the data-driven builder.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/agents",
+        "/ai",
+        "/customer-requests",
+        "/cycles",
+        "/dashboards",
+        "/delights",
+        "/epics-initiatives",
+        "/intake",
+        "/mobile",
+        "/plane-compose",
+        "/project-management",
+        "/security",
+        "/semantic-diffs-by-plane",
+        "/state-of-projects-and-updates",
+        "/teamspaces",
+        "/wiki",
+        "/work-item-types",
+        "/work-items",
+        "/workflows-and-approvals"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered",
+            "centered-media",
+            "split-media"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 3,
+          "slot": "body",
+          "variants": [
+            "carousel",
+            "icon-cards",
+            "image-cards",
+            "text-cards"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "accordion",
+            "side-tabs",
+            "tabs",
+            "top-tabs"
+          ]
+        },
+        {
+          "section": "features.bento",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 3,
+          "slot": "body",
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel",
+            "image-bg"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "strip"
+          ]
+        },
+        {
+          "section": "features.media-showcase",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "wide-image"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "inline-banner",
+            "self-host",
+            "split"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "features.split-rows",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "alternating",
+            "single"
+          ]
+        },
+        {
+          "section": "comparison.feature-table",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact"
+          ]
+        },
+        {
+          "section": "features.product-demo",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "terminal"
+          ]
+        },
+        {
+          "section": "content.prose-block",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "features.steps",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "numbered"
+          ]
+        },
+        {
+          "section": "proof.stats",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "proof.compliance-badges",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.plan-offer": {
+      "id": "template.plan-offer",
+      "purpose": "Plan or edition offer page (paid plans, self-hosted and air-gapped editions, open-source edition).",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/airgapped",
+        "/business",
+        "/enterprise-grid",
+        "/open-source",
+        "/pro",
+        "/self-hosted"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered",
+            "centered-media",
+            "split-media"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "strip"
+          ]
+        },
+        {
+          "section": "features.split-rows",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "alternating",
+            "single"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "comparison.feature-table",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 5,
+          "slot": "body",
+          "variants": [
+            "check-columns",
+            "icon-cards"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "accordion",
+            "tabs"
+          ]
+        },
+        {
+          "section": "features.media-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "wide-image"
+          ]
+        },
+        {
+          "section": "features.bento",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "image-bg"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "resource-columns"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.program": {
+      "id": "template.program",
+      "purpose": "Program / partnership page with eligibility, enrollment steps and benefits.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/education",
+        "/nonprofits",
+        "/partners"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "strip"
+          ]
+        },
+        {
+          "section": "content.value-cards",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 3,
+          "slot": "body",
+          "variants": [
+            "eligibility",
+            "program-benefits",
+            "program-tracks"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "accordion"
+          ]
+        },
+        {
+          "section": "content.process-steps",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "enrollment"
+          ]
+        },
+        {
+          "section": "features.split-rows",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "alternating",
+            "single"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "stacked"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.solution": {
+      "id": "template.solution",
+      "purpose": "Use-case, team-scale or industry solution page.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/for-startups",
+        "/industries/aerospace",
+        "/industries/defense",
+        "/industries/finance",
+        "/industries/government",
+        "/industries/healthcare",
+        "/industries/manufacturing",
+        "/industries/retail",
+        "/solutions/agile",
+        "/solutions/design",
+        "/solutions/engineering",
+        "/solutions/enterprise-teams",
+        "/solutions/growing-teams",
+        "/solutions/marketing",
+        "/solutions/operations",
+        "/solutions/product",
+        "/solutions/startups"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered-media"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "strip"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 3,
+          "slot": "body",
+          "variants": [
+            "icon-cards"
+          ]
+        },
+        {
+          "section": "proof.testimonial",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "features.split-rows",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "alternating",
+            "card-stack"
+          ]
+        },
+        {
+          "section": "features.bento",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "image-bg"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "tabs"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.hub-index": {
+      "id": "template.hub-index",
+      "purpose": "Directory page listing child pages (use cases, industries, legal documents).",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.page-header"
+        ]
+      ],
+      "routes": [
+        "/industries",
+        "/legals",
+        "/solutions"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "index",
+            "legal"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "category-cards",
+            "link-list"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.comparison": {
+      "id": "template.comparison",
+      "purpose": "Head-to-head comparison with another product, or the comparison hub.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing",
+          "hero.comparison"
+        ]
+      ],
+      "routes": [
+        "/compare",
+        "/plane-vs-asana",
+        "/plane-vs-clickup",
+        "/plane-vs-clickup-deprecated",
+        "/plane-vs-jira",
+        "/plane-vs-linear",
+        "/plane-vs-monday",
+        "/plane-vs-notion",
+        "/plane-vs-shortcut"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "comparison-cards"
+          ]
+        },
+        {
+          "section": "features.split-rows",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 3,
+          "slot": "body",
+          "variants": [
+            "alternating",
+            "single"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel"
+          ]
+        },
+        {
+          "section": "hero.comparison",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "logo-pair",
+            "split"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "strip",
+            "strip-with-quote"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "text-cards"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "tabs"
+          ]
+        },
+        {
+          "section": "pricing.cost-compare",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "comparison.feature-table",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "matrix",
+            "why-table"
+          ]
+        },
+        {
+          "section": "features.steps",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "numbered"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "inline-banner"
+          ]
+        },
+        {
+          "section": "pricing.plan-tiers",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "editions"
+          ]
+        },
+        {
+          "section": "features.integrations",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "connected-tools"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.migration": {
+      "id": "template.migration",
+      "purpose": "Switch / migration landing page (moving from another tool).",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/imports",
+        "/switch",
+        "/switch-from-jira-data-center"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered",
+            "centered-media"
+          ]
+        },
+        {
+          "section": "features.steps",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "numbered"
+          ]
+        },
+        {
+          "section": "features.tabbed-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "tabs"
+          ]
+        },
+        {
+          "section": "features.split-rows",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "alternating",
+            "single"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel"
+          ]
+        },
+        {
+          "section": "features.media-showcase",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "wide-image"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "icon-cards"
+          ]
+        },
+        {
+          "section": "features.bento",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "grid"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "resource-columns",
+            "tool-picker"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "strip-with-quote"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "content.prose-block",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "timeline"
+          ]
+        },
+        {
+          "section": "comparison.feature-table",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.pricing": {
+      "id": "template.pricing",
+      "purpose": "Pricing page with plan tiers, calculator and full feature matrix.",
+      "heroPolicy": "none",
+      "requiresOneOf": [],
+      "routes": [
+        "/pricing"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "pricing.plan-tiers",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "plans"
+          ]
+        },
+        {
+          "section": "pricing.savings-calculator",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "band"
+          ]
+        },
+        {
+          "section": "comparison.feature-table",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "matrix"
+          ]
+        },
+        {
+          "section": "proof.testimonial-wall",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "quote-grid"
+          ]
+        },
+        {
+          "section": "proof.compliance-badges",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "stacked"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.download": {
+      "id": "template.download",
+      "purpose": "Download page (apps per platform, QR codes, downloadable wallpapers).",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.page-header"
+        ]
+      ],
+      "routes": [
+        "/download",
+        "/wallpapers"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "cta.app-download",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "platform-list",
+            "qr-codes"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split"
+          ]
+        },
+        {
+          "section": "media.gallery",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "desktop",
+            "mobile"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.contact": {
+      "id": "template.contact",
+      "purpose": "Conversion page whose body is a contact form, contact options or a recorded demo.",
+      "heroPolicy": "optional",
+      "requiresOneOf": [],
+      "routes": [
+        "/contact",
+        "/talk-to-sales",
+        "/view-demo"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "cta.contact-options",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "card-grid"
+          ]
+        },
+        {
+          "section": "cta.contact-form",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "split-with-intro"
+          ]
+        },
+        {
+          "section": "cta.demo-player",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "video-with-chapters"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.legal-document": {
+      "id": "template.legal-document",
+      "purpose": "Legal document: page header, floating TOC, preamble and one chapter per numbered heading.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.page-header"
+        ]
+      ],
+      "routes": [
+        "/legals/acceptable-use-policy",
+        "/legals/ai-terms",
+        "/legals/business-associate-agreement",
+        "/legals/cookie-policy",
+        "/legals/dpa",
+        "/legals/eula",
+        "/legals/privacy-policy",
+        "/legals/service-level-agreement",
+        "/legals/sub-processors",
+        "/legals/terms-and-conditions"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "legal"
+          ]
+        },
+        {
+          "section": "nav.toc",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "minimap"
+          ]
+        },
+        {
+          "section": "content.prose-block",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "legal-preamble"
+          ]
+        },
+        {
+          "section": "content.chapter",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 19,
+          "slot": "body",
+          "variants": [
+            "legal"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.blog-index": {
+      "id": "template.blog-index",
+      "purpose": "Blog index: featured post, recent cards, filters, list, pagination.",
+      "heroPolicy": "none",
+      "requiresOneOf": [],
+      "routes": [
+        "/blog"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "content.featured-post",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "card-grid",
+            "row-list"
+          ]
+        },
+        {
+          "section": "nav.filter-bar",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "tabs-search"
+          ]
+        },
+        {
+          "section": "nav.pagination",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact-card"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.article": {
+      "id": "template.article",
+      "purpose": "Single long-form post (blog post, changelog release, customer story): header, chapters, meta, related, CTA card.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.article-header"
+        ]
+      ],
+      "routes": [
+        "/blog/:slug",
+        "/changelog/:slug",
+        "/customers/:slug"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.article-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "blog",
+            "changelog",
+            "customer-story"
+          ]
+        },
+        {
+          "section": "nav.toc",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "blog-sidebar"
+          ]
+        },
+        {
+          "section": "content.prose-block",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "article-intro"
+          ]
+        },
+        {
+          "section": "content.chapter",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 5,
+          "slot": "body",
+          "variants": [
+            "article",
+            "changelog",
+            "customer-story"
+          ]
+        },
+        {
+          "section": "content.related-posts",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "blog",
+            "changelog"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact-card"
+          ]
+        },
+        {
+          "section": "content.article-meta",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "customer-facts"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.changelog-index": {
+      "id": "template.changelog-index",
+      "purpose": "Changelog index: title with product tabs, dated entries, pagination.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.page-header"
+        ]
+      ],
+      "routes": [
+        "/changelog"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "index"
+          ]
+        },
+        {
+          "section": "content.changelog-entry",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 5,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "nav.pagination",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.customer-proof-index": {
+      "id": "template.customer-proof-index",
+      "purpose": "Customer proof index: story grids and testimonials, or a testimonial wall.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.page-header",
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/customers",
+        "/testimonials"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "index"
+          ]
+        },
+        {
+          "section": "proof.story-cards",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "index-grid"
+          ]
+        },
+        {
+          "section": "proof.testimonial",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 2,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered"
+          ]
+        },
+        {
+          "section": "proof.logo-wall",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "row"
+          ]
+        },
+        {
+          "section": "proof.testimonial-wall",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "masonry"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.careers-index": {
+      "id": "template.careers-index",
+      "purpose": "Careers landing: culture, stats, hiring process, open roles, terms, FAQ.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.marketing"
+        ]
+      ],
+      "routes": [
+        "/careers"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered"
+          ]
+        },
+        {
+          "section": "content.prose-block",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "proof.stats",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "content.value-cards",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 3,
+          "slot": "body",
+          "variants": [
+            "culture",
+            "terms"
+          ]
+        },
+        {
+          "section": "content.process-steps",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "hiring"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "row-list"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "stacked"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.job-detail": {
+      "id": "template.job-detail",
+      "purpose": "Single job posting: header, heading-bounded description chapters, apply card.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.article-header"
+        ]
+      ],
+      "routes": [
+        "/careers/:slug"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.article-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "job"
+          ]
+        },
+        {
+          "section": "content.chapter",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 8,
+          "slot": "body",
+          "variants": [
+            "job"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "apply"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.catalog-index": {
+      "id": "template.catalog-index",
+      "purpose": "App / template catalog listing with category sidebar.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.page-header"
+        ]
+      ],
+      "routes": [
+        "/integrations",
+        "/marketplace",
+        "/marketplace/categories/:category",
+        "/templates",
+        "/templates/categories/:category"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "nav.catalog-subheader",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "catalog"
+          ]
+        },
+        {
+          "section": "nav.filter-bar",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "category-sidebar"
+          ]
+        },
+        {
+          "section": "index.listing",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "catalog-grid"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact-card"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.catalog-detail": {
+      "id": "template.catalog-detail",
+      "purpose": "Single catalog item (app or template) with side facts and description chapters.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.article-header"
+        ]
+      ],
+      "routes": [
+        "/marketplace/:slug",
+        "/templates/:slug"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "nav.catalog-subheader",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.article-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "catalog-item"
+          ]
+        },
+        {
+          "section": "content.article-meta",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "catalog-facts"
+          ]
+        },
+        {
+          "section": "content.chapter",
+          "required": true,
+          "repeatable": true,
+          "maxPerPage": 4,
+          "slot": "body",
+          "variants": [
+            "catalog"
+          ]
+        },
+        {
+          "section": "cta.offer-card",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "compact-card"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.guide": {
+      "id": "template.guide",
+      "purpose": "Long-form guide (whitepaper) read in a paged reader with a chapter list.",
+      "heroPolicy": "required",
+      "requiresOneOf": [
+        [
+          "hero.article-header"
+        ]
+      ],
+      "routes": [
+        "/self-hosted/whitepaper"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.article-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "guide"
+          ]
+        },
+        {
+          "section": "nav.toc",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "guide-sidebar"
+          ]
+        },
+        {
+          "section": "content.chapter",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "guide"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "stacked"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.event": {
+      "id": "template.event",
+      "purpose": "Launch event page (drops, day grid, signup).",
+      "heroPolicy": "optional",
+      "requiresOneOf": [],
+      "routes": [
+        "/launch-week-fall-2025",
+        "/launch-week/q2-2026",
+        "/ph-launch"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "event"
+          ]
+        },
+        {
+          "section": "content.launch-drop",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 5,
+          "slot": "body",
+          "variants": [
+            "day-grid",
+            "drop-row"
+          ]
+        },
+        {
+          "section": "cta.event-signup",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "icon-cards"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.company-editorial": {
+      "id": "template.company-editorial",
+      "purpose": "Company narrative page (about, manifesto, year-in-review, letter, operating manual, hiring philosophy, sunset notice).",
+      "heroPolicy": "optional",
+      "requiresOneOf": [],
+      "routes": [
+        "/about",
+        "/charter",
+        "/manifesto",
+        "/one/why-plane-one",
+        "/operating-manual",
+        "/plane-in-2025",
+        "/work-trials"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "hero.marketing",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "centered",
+            "editorial"
+          ]
+        },
+        {
+          "section": "content.principles",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "sticky-scroll"
+          ]
+        },
+        {
+          "section": "content.prose-block",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 5,
+          "slot": "body",
+          "variants": [
+            "default",
+            "scroll-story",
+            "split-image"
+          ]
+        },
+        {
+          "section": "content.chapter",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 6,
+          "slot": "body",
+          "variants": [
+            "letter",
+            "principle"
+          ]
+        },
+        {
+          "section": "nav.toc",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "anchor-index"
+          ]
+        },
+        {
+          "section": "cta.banner",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "dark-panel"
+          ]
+        },
+        {
+          "section": "hero.page-header",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "opener",
+          "variants": [
+            "notice"
+          ]
+        },
+        {
+          "section": "content.article-meta",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "byline"
+          ]
+        },
+        {
+          "section": "features.card-grid",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 5,
+          "slot": "body",
+          "variants": [
+            "icon-cards"
+          ]
+        },
+        {
+          "section": "content.timeline-milestone",
+          "required": false,
+          "repeatable": true,
+          "maxPerPage": 12,
+          "slot": "body",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "content.value-cards",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "commitments"
+          ]
+        },
+        {
+          "section": "faq.accordion",
+          "required": false,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "body",
+          "variants": [
+            "stacked"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count."
+    },
+    "template.redirect": {
+      "id": "template.redirect",
+      "purpose": "Route that only redirects client-side to another route; renders no content of its own.",
+      "heroPolicy": "none",
+      "requiresOneOf": [],
+      "routes": [
+        "/launch-week"
+      ],
+      "nodes": [
+        {
+          "section": "shell.header",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-top",
+          "variants": [
+            "default"
+          ]
+        },
+        {
+          "section": "shell.footer",
+          "required": true,
+          "repeatable": false,
+          "maxPerPage": 1,
+          "slot": "shell-bottom",
+          "variants": [
+            "default"
+          ]
+        }
+      ],
+      "evidence": "Node list = union of the measured section sequences of every route in this template (extraction/measured-values.json sectionHeights); required = present on every contentful route; maxPerPage = highest observed count.",
+      "rendersContent": false,
+      "redirectTo": "/launch-week/q2-2026"
+    }
+  }
+}

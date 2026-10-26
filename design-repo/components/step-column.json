@@ -1,0 +1,15 @@
+{
+  "id": "component.step-column",
+  "title": "Step column",
+  "layer": "component",
+  "description": "Step label, title and checklist with left rule.",
+  "composedOf": [
+    "primitive.eyebrow",
+    "primitive.check-item"
+  ],
+  "source": {
+    "file": "site/src/components/Migrate.jsx",
+    "tag": "export default function Migrate",
+    "lines": "40-91"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "cta.event-signup",
+  "title": "Event signup",
+  "category": "CTA",
+  "description": "Reminder/signup card for a launch event.",
+  "source": {
+    "id": "src:ph-launch:46",
+    "file": "site/src/pages/ph-launch.jsx",
+    "tag": "Get notified + exclusive early bird perks",
+    "lines": "46-56",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "cta.event-signup",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": true
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 338,
+      "max": 338
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

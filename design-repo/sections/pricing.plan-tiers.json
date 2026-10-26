@@ -1,0 +1,137 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "pricing.plan-tiers",
+  "title": "Plan tiers",
+  "category": "PRICING",
+  "description": "Deployment and billing toggles above 3-4 plan cards (name, price, tagline, action, feature list).",
+  "source": {
+    "id": "src:pricing:257",
+    "file": "site/src/components/plans/Pricing.jsx",
+    "tag": "function Plans({",
+    "lines": "257-338",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/compare/LegacyComparisonPage.jsx",
+        "tag": "function Editions",
+        "lines": "369-404"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "pricing.plan-tiers",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "plans",
+    "editions"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "billingOptions": {
+        "type": "textList",
+        "maxItems": 3,
+        "maxWords": 2,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "deploymentOptions": {
+        "type": "textList",
+        "maxItems": 3,
+        "maxWords": 2,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "plans": {
+        "type": "items",
+        "maxItems": 5,
+        "required": true,
+        "fields": {
+          "name": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "price": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "priceNote": {
+            "type": "text",
+            "maxWords": 8,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "tagline": {
+            "type": "text",
+            "maxWords": 16,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "action": {
+            "type": "cta",
+            "required": true
+          },
+          "features": {
+            "type": "textList",
+            "maxItems": 16,
+            "maxWords": 10,
+            "required": false,
+            "copyBasis": "real-copy"
+          }
+        }
+      },
+      "footnote": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "grid-columns",
+      "detail": "Plan cards 1 column below 768, 2 at md, 4 at lg.",
+      "evidence": "site/src/components/plans/Pricing.jsx:257"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 3,
+    "measuredHeightPx1440": {
+      "min": 917,
+      "max": 2276
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

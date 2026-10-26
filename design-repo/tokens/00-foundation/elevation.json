@@ -1,0 +1,42 @@
+{
+  "group": "elevation",
+  "note": "No glassmorphism on the header; shadows only on floating controls and the sales form card.",
+  "tokens": {
+    "shadow.floating-control": {
+      "value": "0 0 0 1px rgba(0,0,0,.05), 0 2px 8px -2px rgba(16,24,40,.25)",
+      "type": "shadow",
+      "source": "CLONE_SPEC.md:137"
+    },
+    "shadow.play-overlay": {
+      "value": "0 8px 24px -6px rgba(16,24,40,.3)",
+      "type": "shadow",
+      "source": "CLONE_SPEC.md:630"
+    },
+    "shadow.form-card": {
+      "value": "0 10px 30px rgba(17,24,39,0.08)",
+      "type": "shadow",
+      "source": "site/src/pages/talk-to-sales.jsx:139",
+      "sourceSyntax": "utility arbitrary value 0_10px_30px_rgba(17,24,39,0.08)"
+    },
+    "shadow.ring-inset": {
+      "value": "inset 0 0 0 1px rgba(0, 0, 0, 0.06)",
+      "type": "shadow",
+      "source": "site/src/components/products/Products.css:16"
+    },
+    "blur.floating-control": {
+      "value": "8px",
+      "type": "blur",
+      "source": "CLONE_SPEC.md:137"
+    },
+    "blur.glass-chip": {
+      "value": "24px",
+      "type": "blur",
+      "source": "CLONE_SPEC.md:138"
+    },
+    "opacity.logo": {
+      "value": "0.75",
+      "type": "opacity",
+      "source": "CLONE_SPEC.md:348"
+    }
+  }
+}

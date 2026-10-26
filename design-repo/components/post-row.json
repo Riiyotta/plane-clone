@@ -1,0 +1,15 @@
+{
+  "id": "component.post-row",
+  "title": "Post row",
+  "layer": "component",
+  "description": "Compact list row for a post.",
+  "composedOf": [
+    "primitive.badge",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/collections/BlogCards.jsx",
+    "tag": "export function PostRow",
+    "lines": "62-90"
+  }
+}

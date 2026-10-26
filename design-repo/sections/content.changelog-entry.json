@@ -1,0 +1,93 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.changelog-entry",
+  "title": "Changelog entry",
+  "category": "CONTENT",
+  "description": "One dated release entry in the changelog index (title, badge, highlights, images).",
+  "source": {
+    "id": "src:changelog:46",
+    "file": "site/src/components/collections/Changelog.jsx",
+    "tag": "function Entry({ entry, first, onImage })",
+    "lines": "46-67",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "content.changelog-entry",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "date": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 20,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "badge": {
+        "type": "text",
+        "maxWords": 3,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "highlights": {
+        "type": "textList",
+        "maxItems": 10,
+        "maxWords": 14,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "paragraphs": {
+        "type": "textList",
+        "maxItems": 20,
+        "maxWords": 80,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "media": {
+        "type": "mediaList",
+        "maxItems": 6,
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 2568,
+      "max": 6813
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

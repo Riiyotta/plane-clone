@@ -1,0 +1,15 @@
+{
+  "id": "component.quote-block",
+  "title": "Quote block",
+  "layer": "component",
+  "description": "Quote text with attribution row.",
+  "composedOf": [
+    "primitive.body-text",
+    "primitive.logo-slot"
+  ],
+  "source": {
+    "file": "site/src/components/plans/Blocks.jsx",
+    "tag": "export function Testimonial",
+    "lines": "399-447"
+  }
+}

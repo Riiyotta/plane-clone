@@ -1,0 +1,497 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.home",
+  "route": "/",
+  "title": "Tallyfold - shared planning for crews and their assistants",
+  "brand": {
+    "name": "Tallyfold",
+    "domain": "tallyfold.example"
+  },
+  "theme": "light",
+  "nodes": [
+    {
+      "id": "n1",
+      "section": "shell.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-mark-placeholder",
+          "alt": "Tallyfold mark"
+        },
+        "navGroups": [
+          {
+            "label": "Platform"
+          },
+          {
+            "label": "Teams"
+          },
+          {
+            "label": "Learn"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Watch a tour",
+            "href": "/tour",
+            "style": "link"
+          },
+          {
+            "label": "Open an account",
+            "href": "https://app.tallyfold.example/join",
+            "style": "primary"
+          }
+        ],
+        "links": [
+          {
+            "label": "Plans",
+            "href": "/plans"
+          },
+          {
+            "label": "Run it yourself",
+            "href": "/on-prem"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu-fade-slide",
+        "reducedMotionFallback": "near-instant"
+      }
+    },
+    {
+      "id": "n2",
+      "section": "hero.home",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Hosted, on your servers, or offline",
+        "title": "One calm place to plan the work and write it down",
+        "subtitle": "Tallyfold keeps boards, notebooks and helper bots side by side, so a crew can agree on the next step and see it through.",
+        "actions": [
+          {
+            "label": "Open a free account",
+            "href": "https://app.tallyfold.example/join",
+            "style": "primary"
+          },
+          {
+            "label": "Ask our team",
+            "href": "/contact",
+            "style": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hero-word-blur-in",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "id": "n3",
+      "section": "features.product-tabs",
+      "variant": "default",
+      "content": {
+        "tabs": [
+          {
+            "title": "Boards",
+            "description": "Line up tasks, pick owners and watch them move.",
+            "media": {
+              "assetRole": "generated-product-visual",
+              "alt": "Illustrated board"
+            }
+          },
+          {
+            "title": "Notebooks",
+            "description": "Keep briefs and decisions next to the tasks they shape.",
+            "media": {
+              "assetRole": "generated-product-visual",
+              "alt": "Illustrated notebook"
+            }
+          },
+          {
+            "title": "Helpers",
+            "description": "Hand routine chores to assistants you can review.",
+            "media": {
+              "assetRole": "generated-product-visual",
+              "alt": "Illustrated helper panel"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "video-segment-tabs",
+        "reducedMotionFallback": "manual-play-button"
+      }
+    },
+    {
+      "id": "n4",
+      "section": "proof.logo-wall",
+      "variant": "grid",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "logo-placeholder",
+            "alt": "Harbor & Pine (fictional)"
+          },
+          {
+            "assetRole": "logo-placeholder",
+            "alt": "Quillmark Studio (fictional)"
+          }
+        ],
+        "caption": "Crews already planning here"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n5",
+      "section": "features.tabbed-showcase",
+      "variant": "tabs-below-media",
+      "content": {
+        "title": "Helpers that read the same notes your crew does",
+        "tabs": [
+          {
+            "title": "Ask about any board",
+            "body": "Get a short status note for any board without opening five tabs.",
+            "media": {
+              "assetRole": "generated-product-visual",
+              "alt": "Illustrated answer card"
+            }
+          },
+          {
+            "title": "Delegate the chores",
+            "body": "Sorting, tagging and reminders run on their own and wait for approval.",
+            "media": {
+              "assetRole": "generated-product-visual",
+              "alt": "Illustrated queue"
+            }
+          }
+        ],
+        "eyebrow": "Assistants"
+      },
+      "motion": {
+        "pattern": "auto-advance-tabs",
+        "reducedMotionFallback": "manual-tabs-first-active"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n6",
+      "section": "proof.story-cards",
+      "variant": "home",
+      "content": {
+        "cards": [
+          {
+            "title": "How a fictional ferry co-op cut its weekly planning call in half",
+            "logo": {
+              "assetRole": "logo-placeholder",
+              "alt": "Ferry co-op (fictional)"
+            },
+            "href": "/stories/ferry-coop",
+            "quote": "We stopped chasing updates and started reading them.",
+            "attribution": "Mara Lindqvist (fictional)"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "card-hover-scale",
+        "reducedMotionFallback": "no-scale"
+      }
+    },
+    {
+      "id": "n7",
+      "section": "features.steps",
+      "variant": "week-columns",
+      "content": {
+        "title": "Move over in three relaxed weeks",
+        "steps": [
+          {
+            "label": "Week one",
+            "title": "Map what you have"
+          },
+          {
+            "label": "Week two",
+            "title": "Try both side by side"
+          },
+          {
+            "label": "Week three",
+            "title": "Switch and settle in"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n8",
+      "section": "features.bento",
+      "variant": "home-capabilities",
+      "content": {
+        "title": "Pieces that fit how each crew already works",
+        "cards": [
+          {
+            "title": "Pick the view you like",
+            "media": {
+              "assetRole": "generated-product-visual",
+              "alt": "Illustrated views"
+            }
+          },
+          {
+            "title": "Sprints with a finish line"
+          }
+        ],
+        "eyebrow": "What you get"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n9",
+      "section": "features.media-showcase",
+      "variant": "dark-columns",
+      "content": {
+        "title": "Run it on hardware you control",
+        "media": {
+          "assetRole": "generated-product-visual",
+          "alt": "Illustrated server rack"
+        },
+        "columns": [
+          {
+            "title": "One-line installer",
+            "body": "Set up, update and back up from a single command."
+          },
+          {
+            "title": "Container friendly",
+            "body": "Ship it with the container tools you already use."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n10",
+      "section": "cta.app-download",
+      "variant": "store-cards",
+      "content": {
+        "platforms": [
+          {
+            "label": "Phone app",
+            "icon": {
+              "assetRole": "store-mark-placeholder",
+              "alt": "Download glyph"
+            },
+            "action": {
+              "label": "Get the phone app",
+              "href": "https://get.tallyfold.example/phone"
+            }
+          },
+          {
+            "label": "Tablet app",
+            "icon": {
+              "assetRole": "store-mark-placeholder",
+              "alt": "Download glyph"
+            },
+            "qr": {
+              "assetRole": "qr-placeholder",
+              "alt": "QR code to a placeholder address"
+            }
+          }
+        ],
+        "title": "Take your boards on the road"
+      },
+      "motion": {
+        "pattern": "card-hover-scale",
+        "reducedMotionFallback": "no-scale"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n11",
+      "section": "features.integrations",
+      "variant": "home-apps",
+      "content": {
+        "title": "Connect the tools your crew opens every morning",
+        "cards": [
+          {
+            "title": "Write your own connector",
+            "link": {
+              "label": "Read the builder notes",
+              "href": "https://docs.tallyfold.example/connectors"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n12",
+      "section": "features.card-grid",
+      "variant": "image-columns",
+      "content": {
+        "cards": [
+          {
+            "title": "Single sign-on everywhere",
+            "icon": {
+              "assetRole": "ui-icon",
+              "alt": "Key icon"
+            }
+          }
+        ],
+        "title": "Controls your security lead will like"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n13",
+      "section": "features.developer-showcase",
+      "variant": "default",
+      "content": {
+        "title": "Keep board settings in version control",
+        "featureTitle": "Settings as files",
+        "featureBody": "Describe boards in plain text and review changes like code.",
+        "featureMedia": {
+          "assetRole": "generated-product-visual",
+          "alt": "Illustrated settings file"
+        },
+        "linkCards": [
+          {
+            "title": "Open API",
+            "href": "https://docs.tallyfold.example/api"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "card-hover-scale",
+        "reducedMotionFallback": "no-scale"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n14",
+      "section": "cta.banner",
+      "variant": "image-bg",
+      "content": {
+        "title": "Start planning together today",
+        "actions": [
+          {
+            "label": "Open a free account",
+            "href": "https://app.tallyfold.example/join",
+            "style": "primary-on-dark"
+          },
+          {
+            "label": "Book a walkthrough",
+            "href": "/contact",
+            "style": "secondary-on-dark"
+          }
+        ],
+        "background": {
+          "assetRole": "generated-background",
+          "alt": "Soft abstract gradient"
+        }
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n15",
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-mark-placeholder",
+          "alt": "Tallyfold mark"
+        },
+        "linkGroups": [
+          {
+            "heading": "Platform",
+            "links": [
+              {
+                "label": "Boards",
+                "href": "/boards"
+              },
+              {
+                "label": "Notebooks",
+                "href": "/notebooks"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "Terms",
+                "href": "/legal/terms"
+              },
+              {
+                "label": "Privacy",
+                "href": "/legal/privacy"
+              }
+            ]
+          }
+        ],
+        "badges": [
+          {
+            "assetRole": "badge-placeholder",
+            "alt": "Security reviewed"
+          }
+        ],
+        "downloadActions": [
+          {
+            "label": "Desktop app",
+            "href": "https://get.tallyfold.example/desktop",
+            "style": "secondary-on-dark"
+          }
+        ],
+        "socialLinks": [
+          {
+            "label": "Community",
+            "href": "https://community.tallyfold.example",
+            "icon": {
+              "assetRole": "social-icon-generic",
+              "alt": "Community link"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-reveal",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ],
+  "runtime": [
+    {
+      "section": "runtime.mega-menu",
+      "retrievalEligible": false,
+      "attachedTo": "n1"
+    }
+  ]
+}

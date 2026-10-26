@@ -1,0 +1,638 @@
+{
+  "version": "1.0.0",
+  "routeSource": "site/src/App.jsx file-based routing over site/src/pages/**/*.jsx (files/folders starting with _ excluded; index -> folder root; [param] -> :param)",
+  "routeCount": 105,
+  "routes": {
+    "/": {
+      "template": "template.home",
+      "pageFile": "site/src/pages/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/"
+    },
+    "/about": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/about.jsx",
+      "dynamic": false,
+      "measuredPath": "/about"
+    },
+    "/agents": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/agents.jsx",
+      "dynamic": false,
+      "measuredPath": "/agents"
+    },
+    "/ai": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/ai.jsx",
+      "dynamic": false,
+      "measuredPath": "/ai"
+    },
+    "/airgapped": {
+      "template": "template.plan-offer",
+      "pageFile": "site/src/pages/airgapped.jsx",
+      "dynamic": false,
+      "measuredPath": "/airgapped"
+    },
+    "/blog": {
+      "template": "template.blog-index",
+      "pageFile": "site/src/pages/blog/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/blog"
+    },
+    "/blog/:slug": {
+      "template": "template.article",
+      "pageFile": "site/src/pages/blog/[slug].jsx",
+      "dynamic": true,
+      "measuredPath": "/blog/essential-agents-and-skills-for-your-plane-workspace"
+    },
+    "/business": {
+      "template": "template.plan-offer",
+      "pageFile": "site/src/pages/business.jsx",
+      "dynamic": false,
+      "measuredPath": "/business"
+    },
+    "/careers": {
+      "template": "template.careers-index",
+      "pageFile": "site/src/pages/careers/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/careers"
+    },
+    "/careers/:slug": {
+      "template": "template.job-detail",
+      "pageFile": "site/src/pages/careers/[slug].jsx",
+      "dynamic": true,
+      "measuredPath": "/careers/c1bd8436-d469-4d16-878c-2b41c8dfb82c"
+    },
+    "/changelog": {
+      "template": "template.changelog-index",
+      "pageFile": "site/src/pages/changelog/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/changelog"
+    },
+    "/changelog/:slug": {
+      "template": "template.article",
+      "pageFile": "site/src/pages/changelog/[slug].jsx",
+      "dynamic": true,
+      "measuredPath": "/changelog/2026-10-15-page-comments-dashboard-custom-properties"
+    },
+    "/charter": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/charter.jsx",
+      "dynamic": false,
+      "measuredPath": "/charter"
+    },
+    "/compare": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/compare.jsx",
+      "dynamic": false,
+      "measuredPath": "/compare"
+    },
+    "/contact": {
+      "template": "template.contact",
+      "pageFile": "site/src/pages/contact.jsx",
+      "dynamic": false,
+      "measuredPath": "/contact"
+    },
+    "/customer-requests": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/customer-requests.jsx",
+      "dynamic": false,
+      "measuredPath": "/customer-requests"
+    },
+    "/customers": {
+      "template": "template.customer-proof-index",
+      "pageFile": "site/src/pages/customers/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/customers"
+    },
+    "/customers/:slug": {
+      "template": "template.article",
+      "pageFile": "site/src/pages/customers/[slug].jsx",
+      "dynamic": true,
+      "measuredPath": "/customers/fortyau"
+    },
+    "/cycles": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/cycles.jsx",
+      "dynamic": false,
+      "measuredPath": "/cycles"
+    },
+    "/dashboards": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/dashboards.jsx",
+      "dynamic": false,
+      "measuredPath": "/dashboards"
+    },
+    "/delights": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/delights.jsx",
+      "dynamic": false,
+      "measuredPath": "/delights"
+    },
+    "/download": {
+      "template": "template.download",
+      "pageFile": "site/src/pages/download.jsx",
+      "dynamic": false,
+      "measuredPath": "/download"
+    },
+    "/education": {
+      "template": "template.program",
+      "pageFile": "site/src/pages/education.jsx",
+      "dynamic": false,
+      "measuredPath": "/education"
+    },
+    "/enterprise-grid": {
+      "template": "template.plan-offer",
+      "pageFile": "site/src/pages/enterprise-grid.jsx",
+      "dynamic": false,
+      "measuredPath": "/enterprise-grid"
+    },
+    "/epics-initiatives": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/epics-initiatives.jsx",
+      "dynamic": false,
+      "measuredPath": "/epics-initiatives"
+    },
+    "/for-startups": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/for-startups.jsx",
+      "dynamic": false,
+      "measuredPath": "/for-startups"
+    },
+    "/imports": {
+      "template": "template.migration",
+      "pageFile": "site/src/pages/imports.jsx",
+      "dynamic": false,
+      "measuredPath": "/imports"
+    },
+    "/industries": {
+      "template": "template.hub-index",
+      "pageFile": "site/src/pages/industries/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries"
+    },
+    "/industries/aerospace": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/aerospace.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/aerospace"
+    },
+    "/industries/defense": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/defense.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/defense"
+    },
+    "/industries/finance": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/finance.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/finance"
+    },
+    "/industries/government": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/government.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/government"
+    },
+    "/industries/healthcare": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/healthcare.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/healthcare"
+    },
+    "/industries/manufacturing": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/manufacturing.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/manufacturing"
+    },
+    "/industries/retail": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/industries/retail.jsx",
+      "dynamic": false,
+      "measuredPath": "/industries/retail"
+    },
+    "/intake": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/intake.jsx",
+      "dynamic": false,
+      "measuredPath": "/intake"
+    },
+    "/integrations": {
+      "template": "template.catalog-index",
+      "pageFile": "site/src/pages/integrations.jsx",
+      "dynamic": false,
+      "measuredPath": "/integrations"
+    },
+    "/launch-week": {
+      "template": "template.redirect",
+      "pageFile": "site/src/pages/launch-week/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/launch-week",
+      "redirectTo": "/launch-week/q2-2026"
+    },
+    "/launch-week-fall-2025": {
+      "template": "template.event",
+      "pageFile": "site/src/pages/launch-week-fall-2025.jsx",
+      "dynamic": false,
+      "measuredPath": "/launch-week-fall-2025"
+    },
+    "/launch-week/q2-2026": {
+      "template": "template.event",
+      "pageFile": "site/src/pages/launch-week/q2-2026.jsx",
+      "dynamic": false,
+      "measuredPath": "/launch-week/q2-2026"
+    },
+    "/legals": {
+      "template": "template.hub-index",
+      "pageFile": "site/src/pages/legals/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals"
+    },
+    "/legals/acceptable-use-policy": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/acceptable-use-policy.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/acceptable-use-policy"
+    },
+    "/legals/ai-terms": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/ai-terms.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/ai-terms"
+    },
+    "/legals/business-associate-agreement": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/business-associate-agreement.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/business-associate-agreement"
+    },
+    "/legals/cookie-policy": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/cookie-policy.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/cookie-policy"
+    },
+    "/legals/dpa": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/dpa.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/dpa"
+    },
+    "/legals/eula": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/eula.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/eula"
+    },
+    "/legals/privacy-policy": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/privacy-policy.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/privacy-policy"
+    },
+    "/legals/service-level-agreement": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/service-level-agreement.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/service-level-agreement"
+    },
+    "/legals/sub-processors": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/sub-processors.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/sub-processors"
+    },
+    "/legals/terms-and-conditions": {
+      "template": "template.legal-document",
+      "pageFile": "site/src/pages/legals/terms-and-conditions.jsx",
+      "dynamic": false,
+      "measuredPath": "/legals/terms-and-conditions"
+    },
+    "/manifesto": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/manifesto.jsx",
+      "dynamic": false,
+      "measuredPath": "/manifesto"
+    },
+    "/marketplace": {
+      "template": "template.catalog-index",
+      "pageFile": "site/src/pages/marketplace/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/marketplace"
+    },
+    "/marketplace/:slug": {
+      "template": "template.catalog-detail",
+      "pageFile": "site/src/pages/marketplace/[slug].jsx",
+      "dynamic": true,
+      "measuredPath": "/marketplace/claude"
+    },
+    "/marketplace/categories/:category": {
+      "template": "template.catalog-index",
+      "pageFile": "site/src/pages/marketplace/categories/[category].jsx",
+      "dynamic": true,
+      "measuredPath": "/marketplace/categories/agents"
+    },
+    "/mobile": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/mobile.jsx",
+      "dynamic": false,
+      "measuredPath": "/mobile"
+    },
+    "/nonprofits": {
+      "template": "template.program",
+      "pageFile": "site/src/pages/nonprofits.jsx",
+      "dynamic": false,
+      "measuredPath": "/nonprofits"
+    },
+    "/one/why-plane-one": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/one/why-plane-one.jsx",
+      "dynamic": false,
+      "measuredPath": "/one/why-plane-one"
+    },
+    "/open-source": {
+      "template": "template.plan-offer",
+      "pageFile": "site/src/pages/open-source.jsx",
+      "dynamic": false,
+      "measuredPath": "/open-source"
+    },
+    "/operating-manual": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/operating-manual.jsx",
+      "dynamic": false,
+      "measuredPath": "/operating-manual"
+    },
+    "/partners": {
+      "template": "template.program",
+      "pageFile": "site/src/pages/partners.jsx",
+      "dynamic": false,
+      "measuredPath": "/partners"
+    },
+    "/ph-launch": {
+      "template": "template.event",
+      "pageFile": "site/src/pages/ph-launch.jsx",
+      "dynamic": false,
+      "measuredPath": "/ph-launch"
+    },
+    "/plane-compose": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/plane-compose.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-compose"
+    },
+    "/plane-in-2025": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/plane-in-2025.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-in-2025"
+    },
+    "/plane-vs-asana": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-asana.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-asana"
+    },
+    "/plane-vs-clickup": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-clickup.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-clickup"
+    },
+    "/plane-vs-clickup-deprecated": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-clickup-deprecated.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-clickup-deprecated"
+    },
+    "/plane-vs-jira": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-jira.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-jira"
+    },
+    "/plane-vs-linear": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-linear.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-linear"
+    },
+    "/plane-vs-monday": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-monday.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-monday"
+    },
+    "/plane-vs-notion": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-notion.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-notion"
+    },
+    "/plane-vs-shortcut": {
+      "template": "template.comparison",
+      "pageFile": "site/src/pages/plane-vs-shortcut.jsx",
+      "dynamic": false,
+      "measuredPath": "/plane-vs-shortcut"
+    },
+    "/pricing": {
+      "template": "template.pricing",
+      "pageFile": "site/src/pages/pricing.jsx",
+      "dynamic": false,
+      "measuredPath": "/pricing"
+    },
+    "/pro": {
+      "template": "template.plan-offer",
+      "pageFile": "site/src/pages/pro.jsx",
+      "dynamic": false,
+      "measuredPath": "/pro"
+    },
+    "/project-management": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/project-management.jsx",
+      "dynamic": false,
+      "measuredPath": "/project-management"
+    },
+    "/security": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/security.jsx",
+      "dynamic": false,
+      "measuredPath": "/security"
+    },
+    "/self-hosted": {
+      "template": "template.plan-offer",
+      "pageFile": "site/src/pages/self-hosted.jsx",
+      "dynamic": false,
+      "measuredPath": "/self-hosted"
+    },
+    "/self-hosted/whitepaper": {
+      "template": "template.guide",
+      "pageFile": "site/src/pages/self-hosted/whitepaper.jsx",
+      "dynamic": false,
+      "measuredPath": "/self-hosted/whitepaper"
+    },
+    "/semantic-diffs-by-plane": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/semantic-diffs-by-plane.jsx",
+      "dynamic": false,
+      "measuredPath": "/semantic-diffs-by-plane"
+    },
+    "/solutions": {
+      "template": "template.hub-index",
+      "pageFile": "site/src/pages/solutions/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions"
+    },
+    "/solutions/agile": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/agile.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/agile"
+    },
+    "/solutions/design": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/design.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/design"
+    },
+    "/solutions/engineering": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/engineering.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/engineering"
+    },
+    "/solutions/enterprise-teams": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/enterprise-teams.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/enterprise-teams"
+    },
+    "/solutions/growing-teams": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/growing-teams.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/growing-teams"
+    },
+    "/solutions/marketing": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/marketing.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/marketing"
+    },
+    "/solutions/operations": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/operations.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/operations"
+    },
+    "/solutions/product": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/product.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/product"
+    },
+    "/solutions/startups": {
+      "template": "template.solution",
+      "pageFile": "site/src/pages/solutions/startups.jsx",
+      "dynamic": false,
+      "measuredPath": "/solutions/startups"
+    },
+    "/state-of-projects-and-updates": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/state-of-projects-and-updates.jsx",
+      "dynamic": false,
+      "measuredPath": "/state-of-projects-and-updates"
+    },
+    "/switch": {
+      "template": "template.migration",
+      "pageFile": "site/src/pages/switch.jsx",
+      "dynamic": false,
+      "measuredPath": "/switch"
+    },
+    "/switch-from-jira-data-center": {
+      "template": "template.migration",
+      "pageFile": "site/src/pages/switch-from-jira-data-center.jsx",
+      "dynamic": false,
+      "measuredPath": "/switch-from-jira-data-center"
+    },
+    "/talk-to-sales": {
+      "template": "template.contact",
+      "pageFile": "site/src/pages/talk-to-sales.jsx",
+      "dynamic": false,
+      "measuredPath": "/talk-to-sales"
+    },
+    "/teamspaces": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/teamspaces.jsx",
+      "dynamic": false,
+      "measuredPath": "/teamspaces"
+    },
+    "/templates": {
+      "template": "template.catalog-index",
+      "pageFile": "site/src/pages/templates/index.jsx",
+      "dynamic": false,
+      "measuredPath": "/templates"
+    },
+    "/templates/:slug": {
+      "template": "template.catalog-detail",
+      "pageFile": "site/src/pages/templates/[slug].jsx",
+      "dynamic": true,
+      "measuredPath": "/templates/content-calendar"
+    },
+    "/templates/categories/:category": {
+      "template": "template.catalog-index",
+      "pageFile": "site/src/pages/templates/categories/[category].jsx",
+      "dynamic": true,
+      "measuredPath": "/templates/categories/software-and-technology"
+    },
+    "/testimonials": {
+      "template": "template.customer-proof-index",
+      "pageFile": "site/src/pages/testimonials.jsx",
+      "dynamic": false,
+      "measuredPath": "/testimonials"
+    },
+    "/view-demo": {
+      "template": "template.contact",
+      "pageFile": "site/src/pages/view-demo.jsx",
+      "dynamic": false,
+      "measuredPath": "/view-demo"
+    },
+    "/wallpapers": {
+      "template": "template.download",
+      "pageFile": "site/src/pages/wallpapers.jsx",
+      "dynamic": false,
+      "measuredPath": "/wallpapers"
+    },
+    "/wiki": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/wiki.jsx",
+      "dynamic": false,
+      "measuredPath": "/wiki"
+    },
+    "/work-item-types": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/work-item-types.jsx",
+      "dynamic": false,
+      "measuredPath": "/work-item-types"
+    },
+    "/work-items": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/work-items.jsx",
+      "dynamic": false,
+      "measuredPath": "/work-items"
+    },
+    "/work-trials": {
+      "template": "template.company-editorial",
+      "pageFile": "site/src/pages/work-trials.jsx",
+      "dynamic": false,
+      "measuredPath": "/work-trials"
+    },
+    "/workflows-and-approvals": {
+      "template": "template.product-feature",
+      "pageFile": "site/src/pages/workflows-and-approvals.jsx",
+      "dynamic": false,
+      "measuredPath": "/workflows-and-approvals"
+    }
+  }
+}

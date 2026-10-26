@@ -1,0 +1,116 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "hero.comparison",
+  "title": "Comparison hero",
+  "category": "HERO",
+  "description": "Opener of a head-to-head comparison page: the two products named (logo pair) or a split hero with an image.",
+  "source": {
+    "id": "src:comparisonpage:18",
+    "file": "site/src/components/compare/ComparisonPage.jsx",
+    "tag": "function Hero({ d })",
+    "lines": "18-45",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/compare/LegacyComparisonPage.jsx",
+        "tag": "function SplitHero",
+        "lines": "73-91"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "hero.comparison",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "logo-pair",
+    "split"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "subtitle": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "competitorName": {
+        "type": "text",
+        "maxWords": 3,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "logos": {
+        "type": "mediaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "alignment",
+      "detail": "Hero is centered at >=768 and left aligned below (gap 24, pb 48).",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "brand-wordmark",
+      "competitor-logo"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder",
+      "brand-mark-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 8,
+    "measuredHeightPx1440": {
+      "min": 439,
+      "max": 611
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

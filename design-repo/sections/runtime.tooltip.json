@@ -1,0 +1,56 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "runtime.tooltip",
+  "title": "Feature tooltip",
+  "category": "RUNTIME",
+  "description": "Small inverse tooltip above a feature label (opacity 200ms).",
+  "source": {
+    "id": "src:blocks:470",
+    "file": "site/src/components/solutions/Blocks.jsx",
+    "tag": "role=\"tooltip\"",
+    "lines": "470-475",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "runtime.tooltip",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Hover tooltip attached to a feature chip; a transient overlay with no standalone meaning outside its trigger.",
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "text": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

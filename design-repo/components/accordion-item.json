@@ -1,0 +1,15 @@
+{
+  "id": "component.accordion-item",
+  "title": "Accordion item",
+  "layer": "component",
+  "description": "Question row with chevron and expanding answer.",
+  "composedOf": [
+    "primitive.body-text",
+    "primitive.icon"
+  ],
+  "source": {
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function Faq",
+    "lines": "499-538"
+  }
+}

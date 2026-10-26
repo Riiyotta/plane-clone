@@ -1,0 +1,145 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.bento",
+  "title": "Bento grid",
+  "category": "FEATURES",
+  "description": "Header and a mixed-size card grid (large media cards + small icon cards) describing capabilities.",
+  "source": {
+    "id": "src:capabilities:9",
+    "file": "site/src/components/Capabilities.jsx",
+    "tag": "export default function Capabilities",
+    "lines": "9-83",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function Bento",
+        "lines": "244-258"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function Bento",
+        "lines": "320-341"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Bento({ b })",
+        "lines": "369-409"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.bento",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "home-capabilities",
+    "grid"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "cards": {
+        "type": "items",
+        "maxItems": 30,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "media": {
+            "type": "media",
+            "required": false
+          },
+          "link": {
+            "type": "link",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none",
+      "card-hover-scale"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none",
+      "card-hover-scale": "no-scale"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "grid-columns",
+      "detail": "Small feature cards: 2 columns from 768, 4 columns from 1024.",
+      "evidence": "CLONE_SPEC.md:654"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot",
+      "decorative-artwork",
+      "ui-icon"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "generated-background",
+      "ui-icon"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 33,
+    "measuredHeightPx1440": {
+      "min": 630,
+      "max": 6275
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

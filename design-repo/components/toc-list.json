@@ -1,0 +1,14 @@
+{
+  "id": "component.toc-list",
+  "title": "TOC list",
+  "layer": "component",
+  "description": "Indented heading links with active state.",
+  "composedOf": [
+    "primitive.text-link"
+  ],
+  "source": {
+    "file": "site/src/components/collections/BlogPost.jsx",
+    "tag": "function TocList",
+    "lines": "45-68"
+  }
+}

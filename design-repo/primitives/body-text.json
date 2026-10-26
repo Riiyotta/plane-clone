@@ -1,0 +1,24 @@
+{
+  "id": "primitive.body-text",
+  "title": "Body text",
+  "layer": "primitive",
+  "description": "Inter body copy at 18/16/14/13px.",
+  "variants": [
+    "lg",
+    "base",
+    "sm",
+    "xs"
+  ],
+  "tokens": [
+    "font.size.600",
+    "font.size.500",
+    "font.size.400",
+    "font.size.300",
+    "text.secondary"
+  ],
+  "source": {
+    "file": "site/src/components/features/primitives.jsx",
+    "tag": "export function Body",
+    "lines": "43-52"
+  }
+}

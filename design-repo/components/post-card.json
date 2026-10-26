@@ -1,0 +1,16 @@
+{
+  "id": "component.post-card",
+  "title": "Post card",
+  "layer": "component",
+  "description": "Cover image, category, title, meta.",
+  "composedOf": [
+    "primitive.image",
+    "primitive.badge",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/collections/BlogCards.jsx",
+    "tag": "export function PostCard",
+    "lines": "41-59"
+  }
+}

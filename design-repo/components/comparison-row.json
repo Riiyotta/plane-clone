@@ -1,0 +1,15 @@
+{
+  "id": "component.comparison-row",
+  "title": "Comparison row",
+  "layer": "component",
+  "description": "Feature label with per-column status cells.",
+  "composedOf": [
+    "primitive.icon",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/compare/FeatureTable.jsx",
+    "tag": "function Cell({ icon, text })",
+    "lines": "4-19"
+  }
+}

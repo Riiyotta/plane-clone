@@ -1,0 +1,18 @@
+{
+  "id": "primitive.divider",
+  "title": "Divider / ruler",
+  "layer": "primitive",
+  "description": "Hairline divider or the 16px-tick ruler.",
+  "variants": [
+    "hairline",
+    "ruler"
+  ],
+  "tokens": [
+    "border.neutral"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "- Ruler: `div.relative.h-7`",
+    "lines": "416-416"
+  }
+}

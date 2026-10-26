@@ -1,0 +1,111 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "hero.page-header",
+  "title": "Page title header",
+  "category": "HERO",
+  "description": "Compact title block for index, legal, utility and download pages (h1 + one supporting line). 89-313px tall at 1440.",
+  "source": {
+    "id": "src:legalpage:65",
+    "file": "site/src/components/collections/LegalPage.jsx",
+    "tag": "export function LegalHeader",
+    "lines": "65-76",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/pages/download.jsx",
+        "tag": "export default function Download",
+        "lines": "89-145"
+      },
+      {
+        "file": "site/src/pages/contact.jsx",
+        "tag": "export default function Contact",
+        "lines": "15-54"
+      },
+      {
+        "file": "site/src/components/collections/Catalog.jsx",
+        "tag": "export function CatalogListing",
+        "lines": "136-231"
+      },
+      {
+        "file": "site/src/components/collections/Changelog.jsx",
+        "tag": "export function ChangelogIndex",
+        "lines": "69-111"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "hero.page-header",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default",
+    "legal",
+    "catalog",
+    "notice",
+    "index"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "subtitle": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "meta": {
+        "type": "text",
+        "maxWords": 8,
+        "required": false,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 24,
+    "measuredHeightPx1440": {
+      "min": 89,
+      "max": 313
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

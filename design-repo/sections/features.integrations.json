@@ -1,0 +1,131 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.integrations",
+  "title": "Integrations and extensibility",
+  "category": "FEATURES",
+  "description": "Cards about the app marketplace, building your own integrations and a chat integration.",
+  "source": {
+    "id": "src:apps:30",
+    "file": "site/src/components/Apps.jsx",
+    "tag": "export default function Apps",
+    "lines": "30-100",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/compare/LegacyComparisonPage.jsx",
+        "tag": "function Integrations",
+        "lines": "406-427"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.integrations",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "home-apps",
+    "connected-tools"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "cards": {
+        "type": "items",
+        "maxItems": 4,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "link": {
+            "type": "link",
+            "required": false
+          },
+          "media": {
+            "type": "media",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "grid-columns",
+      "detail": "Card rows stay single-column until 1024 (lg grids).",
+      "evidence": "CLONE_SPEC.md:654"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "media-swap",
+      "detail": "Mobile image variants (different aspect ratio) are used below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot",
+      "integration-logo",
+      "product-wordmark"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "logo-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 3,
+    "measuredHeightPx1440": {
+      "min": 760,
+      "max": 1184
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

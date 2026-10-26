@@ -1,0 +1,14 @@
+{
+  "id": "component.footer-link-group",
+  "title": "Footer link group",
+  "layer": "component",
+  "description": "Heading and stacked links.",
+  "composedOf": [
+    "primitive.text-link"
+  ],
+  "source": {
+    "file": "site/src/components/Footer.jsx",
+    "tag": "export default function Footer",
+    "lines": "153-269"
+  }
+}

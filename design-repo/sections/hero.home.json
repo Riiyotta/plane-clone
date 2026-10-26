@@ -1,0 +1,95 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "hero.home",
+  "title": "Homepage hero",
+  "category": "HERO",
+  "description": "Centered eyebrow, two-line h1 (per-word blur-in), subtitle and two actions. 495px tall at 1440; white background, no media.",
+  "source": {
+    "id": "src:hero:32",
+    "file": "site/src/components/Hero.jsx",
+    "tag": "export default function Hero",
+    "lines": "32-61",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "hero.home",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 7,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "subtitle": {
+        "type": "text",
+        "maxWords": 28,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": true
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "homeRouteOnly": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "hero-word-blur-in",
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "hero-word-blur-in": "static-visible",
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "alignment",
+      "detail": "Hero is centered at >=768 and left aligned below (gap 24, pb 48).",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 495,
+      "max": 495
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

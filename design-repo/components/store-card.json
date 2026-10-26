@@ -1,0 +1,15 @@
+{
+  "id": "component.store-card",
+  "title": "Store card",
+  "layer": "component",
+  "description": "Dark card with store glyph and label; scale 1.05 on hover.",
+  "composedOf": [
+    "primitive.icon",
+    "primitive.text-link"
+  ],
+  "source": {
+    "file": "site/src/components/Download.jsx",
+    "tag": "export default function Download",
+    "lines": "17-62"
+  }
+}

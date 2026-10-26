@@ -1,0 +1,88 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "media.gallery",
+  "title": "Downloadable media gallery",
+  "category": "MEDIA",
+  "description": "Grid of downloadable artwork with a download button per item.",
+  "source": {
+    "id": "src:wallpapers:50",
+    "file": "site/src/pages/wallpapers.jsx",
+    "tag": "export default function Wallpapers",
+    "lines": "50-86",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "media.gallery",
+    "category": "MEDIA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "desktop",
+    "mobile"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "items": {
+        "type": "items",
+        "maxItems": 60,
+        "required": true,
+        "fields": {
+          "media": {
+            "type": "media",
+            "required": true
+          },
+          "downloadLabel": {
+            "type": "text",
+            "maxWords": 3,
+            "required": false,
+            "copyBasis": "real-copy"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "wallpaper-artwork"
+    ],
+    "generatedAssetRoles": [
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 5113,
+      "max": 7128
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

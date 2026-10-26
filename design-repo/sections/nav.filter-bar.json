@@ -1,0 +1,94 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "nav.filter-bar",
+  "title": "Filter bar (tabs, search, categories)",
+  "category": "NAVIGATION",
+  "description": "Index filtering controls: segmented tabs plus search (blog), or a category sidebar (catalogs).",
+  "source": {
+    "id": "src:index:45",
+    "file": "site/src/pages/blog/index.jsx",
+    "tag": "role=\"tablist\" aria-label=\"Blog navigation\"",
+    "lines": "45-76",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/Changelog.jsx",
+        "tag": "function Tabs({ value, onChange })",
+        "lines": "28-44"
+      },
+      {
+        "file": "site/src/components/collections/Catalog.jsx",
+        "tag": "export function CatalogListing",
+        "lines": "136-231"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "nav.filter-bar",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "tabs-search",
+    "category-sidebar"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "tabs": {
+        "type": "textList",
+        "maxItems": 6,
+        "maxWords": 3,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "searchPlaceholder": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "categories": {
+        "type": "textList",
+        "maxItems": 24,
+        "maxWords": 4,
+        "required": false,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "stack-to-row",
+      "detail": "Tabs and search stack below 1024 and sit in one row at >=1024; catalog category list is a sticky sidebar at lg.",
+      "evidence": "site/src/pages/blog/index.jsx:44"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 6,
+    "measuredHeightPx1440": {
+      "min": 48,
+      "max": 3638
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

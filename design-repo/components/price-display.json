@@ -1,0 +1,14 @@
+{
+  "id": "component.price-display",
+  "title": "Price display",
+  "layer": "component",
+  "description": "Large price with unit caption.",
+  "composedOf": [
+    "primitive.heading"
+  ],
+  "source": {
+    "file": "site/src/components/compare/ui.jsx",
+    "tag": "export function Price",
+    "lines": "120-126"
+  }
+}

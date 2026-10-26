@@ -1,0 +1,140 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.steps",
+  "title": "Process steps",
+  "category": "FEATURES",
+  "description": "Header and 3-4 sequential step columns (label, title, checklist or short body) describing how adoption or migration works.",
+  "source": {
+    "id": "src:migrate:40",
+    "file": "site/src/components/Migrate.jsx",
+    "tag": "export default function Migrate",
+    "lines": "40-91",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/compare/ComparisonPage.jsx",
+        "tag": "function Switch({ d })",
+        "lines": "276-298"
+      },
+      {
+        "file": "site/src/components/compare/LegacyComparisonPage.jsx",
+        "tag": "function SwitchSteps",
+        "lines": "232-285"
+      },
+      {
+        "file": "site/src/pages/imports.jsx",
+        "tag": "export default function ImportsPage",
+        "lines": "133-245"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.steps",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "week-columns",
+    "numbered"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "steps": {
+        "type": "items",
+        "maxItems": 6,
+        "required": true,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "items": {
+            "type": "textList",
+            "maxItems": 4,
+            "maxWords": 14,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "alignment",
+      "detail": "Centered section headers become left aligned below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 13,
+    "measuredHeightPx1440": {
+      "min": 584,
+      "max": 1217
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

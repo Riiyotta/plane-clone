@@ -1,0 +1,113 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "shell.header",
+  "title": "Global sticky header",
+  "category": "SHELL",
+  "description": "Sticky (top 0, z-50) white bar with 1px bottom border; brand mark, three menu triggers, two links, right-aligned actions. No blur, shadow or size change on scroll.",
+  "source": {
+    "id": "src:header:262",
+    "file": "site/src/components/Header.jsx",
+    "tag": "export default function Header",
+    "lines": "262-269",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/Header.jsx",
+        "tag": "function DesktopHeader()",
+        "lines": "17-156"
+      },
+      {
+        "file": "site/src/components/header/navData.js",
+        "tag": "export",
+        "lines": "4-14"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "shell.header",
+    "category": "SHELL"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "brandMark": {
+        "type": "media",
+        "required": true
+      },
+      "navGroups": {
+        "type": "items",
+        "maxItems": 5,
+        "required": true,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true,
+            "copyBasis": "real-copy"
+          }
+        }
+      },
+      "links": {
+        "type": "linkList",
+        "maxItems": 4,
+        "required": false
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 3,
+        "required": true
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true,
+    "mustBeFirst": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "color-transition",
+      "menu-fade-slide"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged",
+      "menu-fade-slide": "near-instant"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "nav-mode",
+      "detail": "Desktop header (58px, mega-menu triggers) at >=1024; mobile header (66px) with menu drawer below.",
+      "evidence": "CLONE_SPEC.md:19"
+    },
+    {
+      "minWidthPx": 1280,
+      "breakpoint": "xl",
+      "change": "padding",
+      "detail": "Container padding 16 (base) -> 32 (sm) -> 44 (xl); max width 1344 (xl) / 1536 (2xl).",
+      "evidence": "CLONE_SPEC.md:22"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "brand-wordmark",
+      "ui-icon"
+    ],
+    "generatedAssetRoles": [
+      "brand-mark-placeholder",
+      "ui-icon"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

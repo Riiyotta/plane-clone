@@ -1,0 +1,90 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.product-demo",
+  "title": "Product demo stage",
+  "category": "FEATURES",
+  "description": "Header and one demo surface (terminal or video). Animated on live, static in the clone.",
+  "source": {
+    "id": "src:planecompose:95",
+    "file": "site/src/components/features/PlaneCompose.jsx",
+    "tag": "function Terminal()",
+    "lines": "95-147",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "features.product-demo",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "terminal"
+  ],
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "media": {
+        "type": "media",
+        "required": true
+      },
+      "caption": {
+        "type": "text",
+        "maxWords": 20,
+        "required": false,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-video",
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 833,
+      "max": 833
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

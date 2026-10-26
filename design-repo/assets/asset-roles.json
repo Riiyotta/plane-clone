@@ -1,0 +1,312 @@
+{
+  "version": "1.0.0",
+  "note": "Closed assetRole vocabulary. availability is ALSO pinned in code (PINNED_AVAILABILITY in extraction/verify_all.py and schema/semantic_validate.py); editing this file alone cannot loosen it. The source is a real, live commercial company: real logos, wordmarks, customer logos, compliance badges, store marks, product screenshots/videos, testimonials and named people are reference-only or blocked-for-generation.",
+  "roles": [
+    {
+      "id": "brand-wordmark",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Source company trademark (logo, wordmark, footer wordmark). Never reproduced, imitated or traced in generated output.",
+      "evidence": [
+        "ASSET_MANIFEST.md:12",
+        "ASSET_MANIFEST.md:131"
+      ],
+      "generationSafeSubstitutes": [
+        "brand-mark-placeholder"
+      ]
+    },
+    {
+      "id": "product-wordmark",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Source product/catalog wordmarks (marketplace, templates, product names set as logos).",
+      "evidence": [
+        "ASSET_MANIFEST.md:97"
+      ],
+      "generationSafeSubstitutes": [
+        "brand-mark-placeholder"
+      ]
+    },
+    {
+      "id": "customer-logo",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-fabricate",
+      "licensing": "Real customer trademarks (e.g. the 18 homepage logos). Generated pages must not show, imitate or invent real company logos or imply endorsement.",
+      "evidence": [
+        "ASSET_MANIFEST.md:46"
+      ],
+      "generationSafeSubstitutes": [
+        "logo-placeholder"
+      ]
+    },
+    {
+      "id": "competitor-logo",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-fabricate",
+      "licensing": "Third-party product marks used in comparisons and nav chips.",
+      "evidence": [
+        "ASSET_MANIFEST.md:18"
+      ],
+      "generationSafeSubstitutes": [
+        "logo-placeholder"
+      ]
+    },
+    {
+      "id": "integration-logo",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-fabricate",
+      "licensing": "Third-party integration marks (chat, code hosting, error tracking).",
+      "evidence": [
+        "ASSET_MANIFEST.md:17"
+      ],
+      "generationSafeSubstitutes": [
+        "logo-placeholder",
+        "ui-icon"
+      ]
+    },
+    {
+      "id": "compliance-badge",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-fabricate",
+      "licensing": "Certification marks imply a real audit; generated pages must not display them or claim certifications.",
+      "evidence": [
+        "ASSET_MANIFEST.md:130"
+      ],
+      "generationSafeSubstitutes": [
+        "badge-placeholder"
+      ]
+    },
+    {
+      "id": "app-store-mark",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "App store / OS marks and QR codes that point at real store listings.",
+      "evidence": [
+        "ASSET_MANIFEST.md:88"
+      ],
+      "generationSafeSubstitutes": [
+        "store-mark-placeholder",
+        "qr-placeholder"
+      ]
+    },
+    {
+      "id": "social-platform-icon",
+      "kind": "media",
+      "availability": "reference-only",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Social platform glyphs linked to the source company profiles.",
+      "evidence": [
+        "ASSET_MANIFEST.md:133"
+      ],
+      "generationSafeSubstitutes": [
+        "social-icon-generic"
+      ]
+    },
+    {
+      "id": "product-screenshot",
+      "kind": "media",
+      "availability": "reference-only",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Proprietary product UI captures. Generated pages use newly generated UI illustrations of the fictional product.",
+      "evidence": [
+        "ASSET_MANIFEST.md:32",
+        "ASSET_MANIFEST.md:75"
+      ],
+      "generationSafeSubstitutes": [
+        "generated-product-visual"
+      ]
+    },
+    {
+      "id": "product-video",
+      "kind": "media",
+      "availability": "reference-only",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Proprietary product walkthrough video.",
+      "evidence": [
+        "ASSET_MANIFEST.md:35"
+      ],
+      "generationSafeSubstitutes": [
+        "generated-product-visual"
+      ]
+    },
+    {
+      "id": "decorative-artwork",
+      "kind": "media",
+      "availability": "reference-only",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Proprietary illustration/texture artwork (stage texture, CTA background, card backgrounds, menu backgrounds).",
+      "evidence": [
+        "ASSET_MANIFEST.md:31",
+        "ASSET_MANIFEST.md:124"
+      ],
+      "generationSafeSubstitutes": [
+        "generated-background"
+      ]
+    },
+    {
+      "id": "person-photo",
+      "kind": "media",
+      "availability": "blocked-for-generation",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-fabricate",
+      "licensing": "Photos or likenesses of real customers, employees or authors. Never generated, imitated or attached to fictional names.",
+      "evidence": [
+        "site/src/pages/testimonials.jsx:17"
+      ],
+      "generationSafeSubstitutes": [
+        "fictional-avatar"
+      ]
+    },
+    {
+      "id": "wallpaper-artwork",
+      "kind": "media",
+      "availability": "reference-only",
+      "referenceModePolicy": "must-reuse-exact",
+      "generatedModePolicy": "must-not-reuse",
+      "licensing": "Brand wallpaper artwork offered for download on the source site.",
+      "evidence": [
+        "site/src/pages/wallpapers.jsx:50"
+      ],
+      "generationSafeSubstitutes": [
+        "generated-background"
+      ]
+    },
+    {
+      "id": "ui-icon",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Generic line icons drawn from an open icon set (the clone uses inline lucide-style paths). Not a trademark.",
+      "evidence": [
+        "site/src/components/features/primitives.jsx:124"
+      ]
+    },
+    {
+      "id": "brand-mark-placeholder",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "User-supplied or newly generated mark for the fictional/target brand.",
+      "evidence": []
+    },
+    {
+      "id": "logo-placeholder",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Neutral logo tile with a fictional company name; never shaped like a real mark.",
+      "evidence": []
+    },
+    {
+      "id": "fictional-avatar",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Illustrated or generated avatar of a fictional person; must not resemble a real individual.",
+      "evidence": []
+    },
+    {
+      "id": "rating-placeholder",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Placeholder rating graphic with no real review-platform mark or score.",
+      "evidence": []
+    },
+    {
+      "id": "generated-product-visual",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Newly generated UI illustration of the fictional product.",
+      "evidence": []
+    },
+    {
+      "id": "generated-background",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Newly generated abstract background or texture.",
+      "evidence": []
+    },
+    {
+      "id": "badge-placeholder",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Plain text badge (e.g. \"Security reviewed\") with no certification body mark.",
+      "evidence": []
+    },
+    {
+      "id": "store-mark-placeholder",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Generic download glyph; no app-store trademark.",
+      "evidence": []
+    },
+    {
+      "id": "qr-placeholder",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "QR code encoding a placeholder (.example / .invalid) URL.",
+      "evidence": []
+    },
+    {
+      "id": "social-icon-generic",
+      "kind": "media",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Generic share/link glyph.",
+      "evidence": []
+    },
+    {
+      "id": "placeholder-url",
+      "kind": "url",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Links in generated pages use relative paths or reserved .example / .invalid domains only.",
+      "evidence": []
+    },
+    {
+      "id": "original-copy",
+      "kind": "copy",
+      "availability": "generation-safe",
+      "referenceModePolicy": "may-generate-new",
+      "generatedModePolicy": "may-generate-new",
+      "licensing": "Copy written fresh for the generated brand; never source headings, taglines, claims, statistics or testimonials.",
+      "evidence": []
+    }
+  ]
+}

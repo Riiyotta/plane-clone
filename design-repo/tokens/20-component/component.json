@@ -1,0 +1,139 @@
+{
+  "group": "component",
+  "note": "Component-scoped tokens; values reference foundation tokens where one exists.",
+  "tokens": {
+    "button.cta.padding-y": {
+      "value": "{space.2}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:144"
+    },
+    "button.cta.padding-x": {
+      "value": "{space.4}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:144"
+    },
+    "button.cta.height": {
+      "value": "40px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:144"
+    },
+    "button.cta.radius": {
+      "value": "{radius.8}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:141"
+    },
+    "button.cta.font-size": {
+      "value": "{font.size.500}",
+      "type": "fontSize",
+      "source": "CLONE_SPEC.md:144"
+    },
+    "button.cta.font-weight": {
+      "value": "{font.weight.medium}",
+      "type": "fontWeight",
+      "source": "CLONE_SPEC.md:144"
+    },
+    "button.cta-row.gap": {
+      "value": "{space.4}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:158"
+    },
+    "button.nav.padding-y": {
+      "value": "6px",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:149"
+    },
+    "button.nav.padding-x": {
+      "value": "{space.3}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:149"
+    },
+    "button.nav.font-size": {
+      "value": "{font.size.400}",
+      "type": "fontSize",
+      "source": "CLONE_SPEC.md:149"
+    },
+    "card.story.padding": {
+      "value": "{space.8}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:387"
+    },
+    "card.story.radius": {
+      "value": "{radius.16}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:387"
+    },
+    "card.feature.radius": {
+      "value": "{radius.12}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:443"
+    },
+    "card.feature.padding": {
+      "value": "{space.6}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:443"
+    },
+    "card.small.padding": {
+      "value": "{space.5}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:453"
+    },
+    "card.small.radius": {
+      "value": "{radius.12}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:453"
+    },
+    "icon-box.size": {
+      "value": "{icon.size.40}",
+      "type": "size",
+      "source": "CLONE_SPEC.md:454"
+    },
+    "icon-box.radius": {
+      "value": "{radius.8}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:454"
+    },
+    "chip.mention.radius": {
+      "value": "{radius.4}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:506"
+    },
+    "tab.product.min-height": {
+      "value": "128px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:323"
+    },
+    "tab.progress.height": {
+      "value": "{space.0_5}",
+      "type": "size",
+      "source": "CLONE_SPEC.md:325"
+    },
+    "header.height.desktop": {
+      "value": "58px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:165"
+    },
+    "header.height.mobile": {
+      "value": "66px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:259"
+    },
+    "footer.badge.size": {
+      "value": "{icon.size.64}",
+      "type": "size",
+      "source": "CLONE_SPEC.md:560"
+    },
+    "logo-tile.height": {
+      "value": {
+        "base": "64px",
+        "md": "84px"
+      },
+      "type": "size",
+      "source": "CLONE_SPEC.md:347"
+    },
+    "stage.radius": {
+      "value": "{radius.20}",
+      "type": "radius",
+      "source": "CLONE_SPEC.md:301"
+    }
+  }
+}

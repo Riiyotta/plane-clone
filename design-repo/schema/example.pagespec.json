@@ -1,0 +1,481 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "reference",
+  "template": "template.home",
+  "route": "/",
+  "title": "Plane homepage (reference reconstruction)",
+  "theme": "light",
+  "nodes": [
+    {
+      "id": "n1",
+      "section": "shell.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-wordmark",
+          "alt": "Plane",
+          "src": "/assets/logo-with-wordmark.svg"
+        },
+        "navGroups": [
+          {
+            "label": "Product"
+          },
+          {
+            "label": "Solutions"
+          },
+          {
+            "label": "Resources"
+          }
+        ],
+        "actions": [
+          {
+            "label": "View demo",
+            "href": "/view-demo",
+            "style": "link"
+          },
+          {
+            "label": "Contact sales",
+            "href": "/talk-to-sales",
+            "style": "link"
+          },
+          {
+            "label": "Get started free",
+            "href": "https://app.plane.so/sign-up",
+            "style": "primary"
+          }
+        ],
+        "links": [
+          {
+            "label": "Pricing",
+            "href": "/pricing"
+          },
+          {
+            "label": "Self-host Plane",
+            "href": "/self-hosted"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu-fade-slide",
+        "reducedMotionFallback": "near-instant"
+      }
+    },
+    {
+      "id": "n2",
+      "section": "hero.home",
+      "variant": "default",
+      "content": {
+        "eyebrow": "Cloud, self-hosted and air-gapped ready",
+        "title": "Project management and knowledge management for teams and agents",
+        "subtitle": "Plane brings projects, docs, and AI-powered workflows into one unified workspace so teams and agents can plan, execute, and stay aligned.",
+        "actions": [
+          {
+            "label": "Try Plane Business for 14 days",
+            "href": "https://app.plane.so/sign-up/",
+            "style": "primary"
+          },
+          {
+            "label": "Talk to a human →",
+            "href": "/talk-to-sales",
+            "style": "secondary"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "hero-word-blur-in",
+        "reducedMotionFallback": "static-visible"
+      }
+    },
+    {
+      "id": "n3",
+      "section": "features.product-tabs",
+      "variant": "default",
+      "content": {
+        "tabs": [
+          {
+            "title": "Work",
+            "description": "Plan projects, assign work items, and track progress across teams.",
+            "media": {
+              "assetRole": "product-video",
+              "alt": "Work board walkthrough",
+              "src": "/assets/hero-loop.v6.1264.h264.mp4"
+            }
+          },
+          {
+            "title": "Wiki",
+            "description": "Build and maintain your org-wide knowledge base.",
+            "media": {
+              "assetRole": "product-screenshot",
+              "alt": "Wiki pages",
+              "src": "/assets/still-wiki.v6.webp"
+            }
+          },
+          {
+            "title": "Plane AI",
+            "description": "Draft, analyze, plan with Plane AI.",
+            "media": {
+              "assetRole": "product-screenshot",
+              "alt": "Plane AI",
+              "src": "/assets/still-ai.v6.webp"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "video-segment-tabs",
+        "reducedMotionFallback": "manual-play-button"
+      }
+    },
+    {
+      "id": "n4",
+      "section": "proof.logo-wall",
+      "variant": "grid",
+      "content": {
+        "logos": [
+          {
+            "assetRole": "customer-logo",
+            "alt": "Sony",
+            "src": "/assets/sony.svg"
+          },
+          {
+            "assetRole": "customer-logo",
+            "alt": "Dolby",
+            "src": "/assets/dolby.svg"
+          }
+        ],
+        "caption": "Trusted by teams at"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n5",
+      "section": "features.tabbed-showcase",
+      "variant": "tabs-below-media",
+      "content": {
+        "title": "AI that works because it knows your context",
+        "tabs": [
+          {
+            "title": "Answers from across your workspace",
+            "body": "Ask anything about cycles, projects and docs.",
+            "media": {
+              "assetRole": "product-screenshot",
+              "alt": "Hierarchy view",
+              "src": "/assets/hierarchy.webp"
+            }
+          }
+        ],
+        "eyebrow": "Plane AI"
+      },
+      "motion": {
+        "pattern": "auto-advance-tabs",
+        "reducedMotionFallback": "manual-tabs-first-active"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n6",
+      "section": "proof.story-cards",
+      "variant": "home",
+      "content": {
+        "cards": [
+          {
+            "title": "Why FortyAU replaced Monday and Trello with Plane",
+            "logo": {
+              "assetRole": "customer-logo",
+              "alt": "FortyAU",
+              "src": "/assets/40au.svg"
+            },
+            "href": "/customers/fortyau"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "card-hover-scale",
+        "reducedMotionFallback": "no-scale"
+      }
+    },
+    {
+      "id": "n7",
+      "section": "features.steps",
+      "variant": "week-columns",
+      "content": {
+        "title": "Two Fortune 10 companies chose Plane for their Jira migration.",
+        "steps": [
+          {
+            "label": "WEEK 1",
+            "title": "Discovery and set-up."
+          },
+          {
+            "label": "WEEK 2",
+            "title": "Run in parallel"
+          },
+          {
+            "label": "WEEK 3",
+            "title": "Cut over and onboard"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n8",
+      "section": "features.bento",
+      "variant": "home-capabilities",
+      "content": {
+        "title": "Flexible features for every project, and all teams",
+        "cards": [
+          {
+            "title": "Every view your team needs",
+            "media": {
+              "assetRole": "product-screenshot",
+              "alt": "Views",
+              "src": "/assets/view.webp"
+            }
+          },
+          {
+            "title": "Cycles and sprints"
+          }
+        ],
+        "eyebrow": "Core Capabilities"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n9",
+      "section": "features.media-showcase",
+      "variant": "dark-columns",
+      "content": {
+        "title": "Self-host without compromise, on-prem and air-gapped",
+        "media": {
+          "assetRole": "product-screenshot",
+          "alt": "Self-hosted admin",
+          "src": "/assets/self-hosted.webp"
+        },
+        "columns": [
+          {
+            "title": "Prime CLI",
+            "body": "Install and upgrade with single commands."
+          },
+          {
+            "title": "Docker and Kubernetes",
+            "body": "Deploy with Docker or Helm charts."
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n10",
+      "section": "cta.app-download",
+      "variant": "store-cards",
+      "content": {
+        "platforms": [
+          {
+            "label": "Download for iOS",
+            "icon": {
+              "assetRole": "app-store-mark",
+              "alt": "App Store",
+              "src": "/assets/appstore.svg"
+            },
+            "action": {
+              "label": "Download for iOS",
+              "href": "https://apps.apple.com/in/app/plane/id6657986465"
+            }
+          },
+          {
+            "label": "Download for Android",
+            "icon": {
+              "assetRole": "app-store-mark",
+              "alt": "Google Play",
+              "src": "/assets/playstore.svg"
+            },
+            "action": {
+              "label": "Download for Android",
+              "href": "https://play.google.com/store/apps/details?id=com.plane.so"
+            }
+          }
+        ],
+        "title": "Your entire workspace on your mobile"
+      },
+      "motion": {
+        "pattern": "card-hover-scale",
+        "reducedMotionFallback": "no-scale"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n11",
+      "section": "features.integrations",
+      "variant": "home-apps",
+      "content": {
+        "title": "Extend Plane with apps, agents, and your own integrations",
+        "cards": [
+          {
+            "title": "Build your own",
+            "link": {
+              "label": "Read the docs →",
+              "href": "https://developers.plane.so/dev-tools/agents/building-an-agent"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n12",
+      "section": "features.card-grid",
+      "variant": "image-columns",
+      "content": {
+        "cards": [
+          {
+            "title": "Fully committed uptime SLA",
+            "link": {
+              "label": "Go to status.plane.so →",
+              "href": "https://status.plane.so/"
+            }
+          }
+        ],
+        "title": "Enterprise-grade security, compliance, and control"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n13",
+      "section": "features.developer-showcase",
+      "variant": "default",
+      "content": {
+        "title": "Every setting versioned, reviewed, and deployed from your terminal.",
+        "featureTitle": "Plane Compose for Projects-as-Code",
+        "featureBody": "Define projects in YAML and deploy from your terminal.",
+        "featureMedia": {
+          "assetRole": "product-screenshot",
+          "alt": "Projects as code",
+          "src": "/assets/project-as-code.webp"
+        },
+        "linkCards": [
+          {
+            "title": "MCP Server",
+            "href": "https://developers.plane.so/dev-tools/mcp-server"
+          }
+        ],
+        "eyebrow": "Loved by developers and ProjectOps admins"
+      },
+      "motion": {
+        "pattern": "card-hover-scale",
+        "reducedMotionFallback": "no-scale"
+      },
+      "style": {
+        "theme": "dark",
+        "surface": "surface.page"
+      }
+    },
+    {
+      "id": "n14",
+      "section": "cta.banner",
+      "variant": "image-bg",
+      "content": {
+        "title": "Next-gen project management starts here",
+        "actions": [
+          {
+            "label": "Get started free",
+            "href": "https://app.plane.so/sign-up/",
+            "style": "primary-on-dark"
+          },
+          {
+            "label": "Talk to a migration expert",
+            "href": "/talk-to-sales",
+            "style": "secondary-on-dark"
+          }
+        ],
+        "background": {
+          "assetRole": "decorative-artwork",
+          "alt": "CTA background",
+          "src": "/assets/cta-bg.webp"
+        }
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n15",
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-wordmark",
+          "alt": "Plane",
+          "src": "/assets/logo-light.svg"
+        },
+        "linkGroups": [
+          {
+            "heading": "Product",
+            "links": [
+              {
+                "label": "Wiki",
+                "href": "/wiki"
+              }
+            ]
+          }
+        ],
+        "badges": [
+          {
+            "assetRole": "compliance-badge",
+            "alt": "SOC 2",
+            "src": "/assets/soc-2.svg"
+          }
+        ],
+        "wordmark": {
+          "assetRole": "brand-wordmark",
+          "alt": "Plane wordmark",
+          "src": "/assets/footer-brand-wordmark.svg"
+        }
+      },
+      "motion": {
+        "pattern": "sticky-reveal",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ],
+  "runtime": [
+    {
+      "section": "runtime.mega-menu",
+      "retrievalEligible": false,
+      "attachedTo": "n1"
+    },
+    {
+      "section": "runtime.mobile-nav",
+      "retrievalEligible": false,
+      "attachedTo": "n1"
+    }
+  ]
+}

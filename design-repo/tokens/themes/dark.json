@@ -1,0 +1,58 @@
+{
+  "theme": "dark",
+  "evidence": [
+    "site/src/components/plans/plans.css:40-66",
+    "site/tailwind.config.js:19-28"
+  ],
+  "resolves": {
+    "text.primary": "{color.neutral.200}",
+    "text.secondary": "{color.neutral.350}",
+    "text.tertiary": "{color.neutral.400}",
+    "text.placeholder": "{color.neutral.450}",
+    "text.accent": "{color.blue.400}",
+    "text.inverse": "{color.neutral.930}",
+    "text.on-color": "{color.neutral.200}",
+    "surface.page": "{color.neutral.920}",
+    "surface.subtle": "{color.neutral.880}",
+    "surface.layer": "{color.neutral.870}",
+    "surface.layer-hover": "{color.neutral.850}",
+    "surface.card": "{color.neutral.870}",
+    "surface.raised": "{color.neutral.850}",
+    "surface.inverse": "{color.neutral.45}",
+    "surface.inverse-hover": "{color.neutral.200}",
+    "surface.inverse-active": "{color.neutral.350}",
+    "surface.footer-reveal": "{color.neutral.885}",
+    "border.subtle": "{color.neutral.820}",
+    "border.subtle-1": "{color.neutral.800}",
+    "border.strong": "{color.neutral.750}",
+    "border.strong-1": "{color.neutral.700}",
+    "border.neutral": "{color.neutral.850}",
+    "border.tab": "{color.neutral.800}",
+    "action.primary.bg": "{color.neutral.45}",
+    "action.primary.hover": "{color.neutral.200}",
+    "action.primary.active": "{color.neutral.350}",
+    "action.primary.text": "{color.neutral.930}",
+    "action.secondary.bg": "{color.neutral.850}",
+    "action.secondary.hover": "{color.neutral.820}",
+    "action.secondary.text": "{color.neutral.350}",
+    "action.secondary.border": "{color.neutral.750}",
+    "icon.primary": "{color.neutral.200}",
+    "icon.tertiary": "{color.neutral.400}",
+    "overlay.scrim": "{color.alpha.scrim}",
+    "state.hover-transparent": "{color.alpha.hover-on-dark}"
+  },
+  "unsupportedRoles": [
+    "surface.chip-mention",
+    "surface.stage-frame",
+    "surface.stage-window"
+  ],
+  "variants": {
+    "inner-pages": {
+      "note": "Inner-page builders use #0e0f10 for the dark section surface instead of the homepage #0f0f10.",
+      "evidence": "site/src/components/solutions/Blocks.jsx:8",
+      "resolves": {
+        "surface.page": "{color.neutral.930}"
+      }
+    }
+  }
+}

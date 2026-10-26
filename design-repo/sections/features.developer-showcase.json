@@ -1,0 +1,141 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.developer-showcase",
+  "title": "Developer showcase",
+  "category": "FEATURES",
+  "description": "Dark section: header, one split feature card (image + h3 + link) and two link cards with corner artwork.",
+  "source": {
+    "id": "src:developers:30",
+    "file": "site/src/components/Developers.jsx",
+    "tag": "export default function Developers",
+    "lines": "30-108",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "features.developer-showcase",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "featureTitle": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "featureBody": {
+        "type": "text",
+        "maxWords": 40,
+        "required": true,
+        "copyBasis": "placeholder-length"
+      },
+      "featureMedia": {
+        "type": "media",
+        "required": true
+      },
+      "featureLink": {
+        "type": "link",
+        "required": false
+      },
+      "linkCards": {
+        "type": "items",
+        "maxItems": 4,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "href": {
+            "type": "href",
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "card-hover-scale",
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "card-hover-scale": "no-scale",
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "media-swap",
+      "detail": "Mobile image variants (different aspect ratio) are used below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot",
+      "decorative-artwork"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 1108,
+      "max": 1108
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

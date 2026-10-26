@@ -1,0 +1,138 @@
+{
+  "policyVersion": "1.0.0",
+  "pageSpecTokenFields": {
+    "node.style.theme": {
+      "allowedValues": [
+        "light",
+        "dark"
+      ],
+      "mustBeIn": "section contract themes"
+    },
+    "node.style.surface": {
+      "allowedTokens": [
+        "surface.card",
+        "surface.chip-mention",
+        "surface.footer-reveal",
+        "surface.inverse",
+        "surface.inverse-active",
+        "surface.inverse-hover",
+        "surface.layer",
+        "surface.layer-hover",
+        "surface.page",
+        "surface.raised",
+        "surface.stage-frame",
+        "surface.stage-window",
+        "surface.subtle"
+      ],
+      "resolveIn": "tokens/themes/<theme>.json resolves"
+    },
+    "node.style.paddingY": {
+      "allowedTokens": [
+        "layout.section.padding-y",
+        "layout.section.padding-y.compact"
+      ]
+    },
+    "node.style.headingFont": {
+      "allowedTokens": [
+        "font.family.display",
+        "font.family.body"
+      ]
+    }
+  },
+  "themeTokenCompatibility": {
+    "light": [
+      "action.primary.active",
+      "action.primary.bg",
+      "action.primary.hover",
+      "action.primary.text",
+      "action.secondary.bg",
+      "action.secondary.border",
+      "action.secondary.hover",
+      "action.secondary.text",
+      "border.neutral",
+      "border.strong",
+      "border.strong-1",
+      "border.subtle",
+      "border.subtle-1",
+      "border.tab",
+      "icon.primary",
+      "icon.tertiary",
+      "overlay.scrim",
+      "state.hover-transparent",
+      "surface.card",
+      "surface.chip-mention",
+      "surface.inverse",
+      "surface.inverse-active",
+      "surface.inverse-hover",
+      "surface.layer",
+      "surface.layer-hover",
+      "surface.page",
+      "surface.raised",
+      "surface.stage-frame",
+      "surface.stage-window",
+      "surface.subtle",
+      "text.accent",
+      "text.inverse",
+      "text.on-color",
+      "text.placeholder",
+      "text.primary",
+      "text.secondary",
+      "text.tertiary"
+    ],
+    "dark": [
+      "action.primary.active",
+      "action.primary.bg",
+      "action.primary.hover",
+      "action.primary.text",
+      "action.secondary.bg",
+      "action.secondary.border",
+      "action.secondary.hover",
+      "action.secondary.text",
+      "border.neutral",
+      "border.strong",
+      "border.strong-1",
+      "border.subtle",
+      "border.subtle-1",
+      "border.tab",
+      "icon.primary",
+      "icon.tertiary",
+      "overlay.scrim",
+      "state.hover-transparent",
+      "surface.card",
+      "surface.footer-reveal",
+      "surface.inverse",
+      "surface.inverse-active",
+      "surface.inverse-hover",
+      "surface.layer",
+      "surface.layer-hover",
+      "surface.page",
+      "surface.raised",
+      "surface.subtle",
+      "text.accent",
+      "text.inverse",
+      "text.on-color",
+      "text.placeholder",
+      "text.primary",
+      "text.secondary",
+      "text.tertiary"
+    ]
+  },
+  "rawValueRestrictions": {
+    "color": {
+      "reject": "raw hex / rgb() / rgba() / hsl() / oklch() values anywhere in node.style",
+      "pattern": "(?i)(#[0-9a-f]{3,8}\\b|\\b(rgb|rgba|hsl|hsla|oklch)\\s*\\()"
+    },
+    "spacing": {
+      "reject": "raw lengths (px, rem, em, %, vh, vw) instead of spacing/layout tokens",
+      "pattern": "(?i)^-?[0-9.]+\\s*(px|rem|em|%|vh|vw)$"
+    },
+    "fontFamily": {
+      "reject": "font names that are not catalog fontFamily tokens, and catalog fonts whose status is loaded-unused",
+      "unsupportedTokens": [
+        "font.family.serif"
+      ]
+    }
+  },
+  "unknownTokenRule": "Any node.style value that is not a token path in tokens/llm/token-catalog.json is rejected (TOKEN_UNKNOWN).",
+  "overrides": "PageSpecs carry exactly one per-instance styling object, node.style {theme, surface, paddingY, headingFont}. It is grounded in the real per-instance props of the page builders (feature Shell bg s1/s2/dark, plan blocks bg/dark, solution tone) and the Inter-vs-Satoshi heading choice. There is no other per-instance token override: colours, type sizes, radii and motion are owned by the section/component contracts."
+}

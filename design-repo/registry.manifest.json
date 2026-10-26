@@ -1,0 +1,78 @@
+{
+  "repositoryId": "plane-clone.design-repo",
+  "repositoryVersion": "1.0.0",
+  "pageSpecVersion": "1.0.0",
+  "allowlistVersion": "1.0.0",
+  "versionFieldNote": "allowlistVersion is machine-checked (verify_all fails if it differs from tokens/llm/component-allowlist.json). pageSpecVersion is machine-checked against the const in schema/pagespec.schema.json and every example. repositoryVersion and every contractVersion/catalogVersion/policyVersion field are documentation-only, hand-maintained markers that nothing enforces.",
+  "status": "design-review-pending",
+  "productionApproved": false,
+  "defaultTheme": "light",
+  "schemaValidatedThemes": [
+    "light",
+    "dark"
+  ],
+  "modes": [
+    "reference",
+    "generated"
+  ],
+  "sourceStack": {
+    "documentationOnly": true,
+    "clone": "React 18 + Vite 5 + Tailwind CSS v3 + react-router-dom v6 (file-based routes via import.meta.glob)",
+    "originalLiveSite": "Next.js + Tailwind CSS v4 (oklch colours)",
+    "note": "Recorded for provenance only; no token name, section id, schema field or validator rule depends on it."
+  },
+  "source": {
+    "liveSite": "https://plane.so",
+    "nature": "Real, live commercial company. All logos, wordmarks, customer logos, compliance badges, store marks, screenshots, videos, testimonials and named people are reference-only or blocked-for-generation (assets/asset-roles.json).",
+    "evidenceLocation": "Sibling folders of design-repo/ in the source project (site/, CLONE_SPEC.md, ASSET_MANIFEST.md, PAGES_BRIEF.md). Evidence only; not part of this package."
+  },
+  "counts": {
+    "tokens": 222,
+    "tokenFiles": 13,
+    "motionPatterns": 10,
+    "primitives": 17,
+    "components": 27,
+    "sections": 58,
+    "sectionsRetrievalEligible": 52,
+    "runtimeSections": 6,
+    "templates": 24,
+    "routes": 105,
+    "dynamicRoutes": 8,
+    "examples": 5,
+    "generatedExamples": 3,
+    "assetRoles": 26,
+    "generationSafeAssetRoles": 13,
+    "graphRules": 14
+  },
+  "entryPoints": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "pageSpecSchema": "schema/pagespec.schema.json",
+    "sectionContractSchema": "schema/section-contract.schema.json",
+    "semanticValidator": "schema/semantic_validate.py",
+    "adversarialTests": "schema/tests/adversarial_test.py",
+    "referenceExample": "schema/example.pagespec.json",
+    "examples": "schema/examples",
+    "templates": "templates/templates.json",
+    "routes": "templates/routes.json",
+    "compatibilityGraph": "compatibility/graph.json",
+    "sections": "sections",
+    "primitives": "primitives",
+    "components": "components",
+    "assetRoles": "assets/asset-roles.json",
+    "sourceBrandRegistry": "assets/source-brand.json",
+    "copyFingerprints": "assets/source-copy-fingerprints.json",
+    "tokenCatalog": "tokens/llm/token-catalog.json",
+    "tokenPolicy": "tokens/llm/token-policy.json",
+    "componentAllowlist": "tokens/llm/component-allowlist.json",
+    "motionPatterns": "tokens/00-foundation/motion-patterns.json",
+    "themeLight": "tokens/themes/light.json",
+    "themeDark": "tokens/themes/dark.json",
+    "measuredValues": "extraction/measured-values.json",
+    "verifyAll": "extraction/verify_all.py",
+    "wrapperGate": "extraction/wrapper_gate.py",
+    "proveDrift": "extraction/prove_drift.py",
+    "tokenCatalogBuilder": "extraction/build_token_catalog.py",
+    "measureTool": "extraction/measure_sections.mjs"
+  }
+}

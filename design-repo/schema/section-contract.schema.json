@@ -1,0 +1,501 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "section-contract.schema.json",
+  "title": "Section contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contractVersion",
+    "id",
+    "title",
+    "category",
+    "description",
+    "source",
+    "semantic",
+    "retrievalEligible",
+    "variants",
+    "themes",
+    "content",
+    "constraints",
+    "motion",
+    "responsive",
+    "assets",
+    "evidence"
+  ],
+  "properties": {
+    "contractVersion": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z]+\\.[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "COMPARISON",
+        "CONTENT",
+        "CTA",
+        "FAQ",
+        "FEATURES",
+        "HERO",
+        "INDEX",
+        "MEDIA",
+        "NAVIGATION",
+        "PRICING",
+        "RUNTIME",
+        "SHELL",
+        "SOCIAL_PROOF"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "file",
+        "tag",
+        "lines",
+        "alsoImplementedBy"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^src:"
+        },
+        "file": {
+          "type": "string",
+          "pattern": "^(site/|CLONE_SPEC\\.md|ASSET_MANIFEST\\.md|PAGES_BRIEF\\.md)"
+        },
+        "tag": {
+          "type": "string",
+          "minLength": 3
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^[0-9]+-[0-9]+$"
+        },
+        "alsoImplementedBy": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "file",
+              "tag",
+              "lines"
+            ],
+            "properties": {
+              "file": {
+                "type": "string",
+                "pattern": "^(site/|CLONE_SPEC\\.md|ASSET_MANIFEST\\.md|PAGES_BRIEF\\.md)"
+              },
+              "tag": {
+                "type": "string",
+                "minLength": 3
+              },
+              "lines": {
+                "type": "string",
+                "pattern": "^[0-9]+-[0-9]+$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "semantic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "COMPARISON",
+            "CONTENT",
+            "CTA",
+            "FAQ",
+            "FEATURES",
+            "HERO",
+            "INDEX",
+            "MEDIA",
+            "NAVIGATION",
+            "PRICING",
+            "RUNTIME",
+            "SHELL",
+            "SOCIAL_PROOF"
+          ]
+        }
+      }
+    },
+    "retrievalEligible": {
+      "type": "boolean"
+    },
+    "retrievalIneligibleReason": {
+      "type": "string",
+      "minLength": 30
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "themes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "light",
+          "dark"
+        ]
+      }
+    },
+    "content": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fields"
+      ],
+      "properties": {
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/field"
+          }
+        }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "onePerPage": {
+          "type": "boolean"
+        },
+        "mustBeFirst": {
+          "type": "boolean"
+        },
+        "mustBeLast": {
+          "type": "boolean"
+        },
+        "homeRouteOnly": {
+          "type": "boolean"
+        },
+        "noConsecutive": {
+          "type": "boolean"
+        }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPatterns",
+        "reducedMotionFallbacks"
+      ],
+      "properties": {
+        "allowedPatterns": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "none",
+              "hero-word-blur-in",
+              "video-segment-tabs",
+              "auto-advance-tabs",
+              "accordion-expand",
+              "card-hover-scale",
+              "color-transition",
+              "menu-fade-slide",
+              "sticky-reveal",
+              "logo-marquee"
+            ]
+          }
+        },
+        "reducedMotionFallbacks": {
+          "type": "object",
+          "additionalProperties": {
+            "enum": [
+              "instant-toggle",
+              "manual-play-button",
+              "manual-tabs-first-active",
+              "near-instant",
+              "no-scale",
+              "none",
+              "static-row",
+              "static-visible",
+              "unchanged"
+            ]
+          }
+        }
+      }
+    },
+    "responsive": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "minWidthPx",
+          "breakpoint",
+          "change",
+          "detail",
+          "evidence"
+        ],
+        "properties": {
+          "minWidthPx": {
+            "enum": [
+              640,
+              768,
+              1024,
+              1280,
+              1536
+            ]
+          },
+          "breakpoint": {
+            "enum": [
+              "sm",
+              "md",
+              "lg",
+              "xl",
+              "2xl"
+            ]
+          },
+          "change": {
+            "enum": [
+              "type-scale-switch",
+              "nav-mode",
+              "padding",
+              "grid-columns",
+              "alignment",
+              "media-swap",
+              "visibility",
+              "sticky",
+              "stack-to-row"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 10
+          },
+          "evidence": {
+            "type": "string",
+            "pattern": "^[^ ]+:[0-9]+(-[0-9]+)?$"
+          }
+        }
+      }
+    },
+    "assets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "referenceAssetRoles",
+        "generatedAssetRoles"
+      ],
+      "properties": {
+        "referenceAssetRoles": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "brand-wordmark",
+              "product-wordmark",
+              "customer-logo",
+              "competitor-logo",
+              "integration-logo",
+              "compliance-badge",
+              "app-store-mark",
+              "social-platform-icon",
+              "product-screenshot",
+              "product-video",
+              "decorative-artwork",
+              "person-photo",
+              "wallpaper-artwork",
+              "ui-icon",
+              "brand-mark-placeholder",
+              "logo-placeholder",
+              "fictional-avatar",
+              "rating-placeholder",
+              "generated-product-visual",
+              "generated-background",
+              "badge-placeholder",
+              "store-mark-placeholder",
+              "qr-placeholder",
+              "social-icon-generic"
+            ]
+          }
+        },
+        "generatedAssetRoles": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "brand-wordmark",
+              "product-wordmark",
+              "customer-logo",
+              "competitor-logo",
+              "integration-logo",
+              "compliance-badge",
+              "app-store-mark",
+              "social-platform-icon",
+              "product-screenshot",
+              "product-video",
+              "decorative-artwork",
+              "person-photo",
+              "wallpaper-artwork",
+              "ui-icon",
+              "brand-mark-placeholder",
+              "logo-placeholder",
+              "fictional-avatar",
+              "rating-placeholder",
+              "generated-product-visual",
+              "generated-background",
+              "badge-placeholder",
+              "store-mark-placeholder",
+              "qr-placeholder",
+              "social-icon-generic"
+            ]
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "measuredRouteCount",
+        "measuredHeightPx1440",
+        "copyBudgetNote"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "measured",
+            "documented-not-cloned",
+            "source-only"
+          ]
+        },
+        "measuredRouteCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "measuredHeightPx1440": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "copyBudgetNote": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "retrievalEligible": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "retrievalIneligibleReason"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "retrievalEligible": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "not": {
+          "required": [
+            "retrievalIneligibleReason"
+          ]
+        }
+      }
+    }
+  ],
+  "definitions": {
+    "field": {
+      "type": "object",
+      "required": [
+        "type",
+        "required"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "textList",
+            "cta",
+            "ctaList",
+            "media",
+            "mediaList",
+            "link",
+            "linkList",
+            "href",
+            "items",
+            "enum",
+            "integer"
+          ]
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "maxWords": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxItems": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "copyBasis": {
+          "enum": [
+            "real-copy",
+            "placeholder-length"
+          ]
+        },
+        "values": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "minimum": {
+          "type": "integer"
+        },
+        "maximum": {
+          "type": "integer"
+        },
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/field"
+          }
+        }
+      }
+    }
+  }
+}

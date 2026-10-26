@@ -1,0 +1,14 @@
+{
+  "id": "component.cta-row",
+  "title": "Action row",
+  "layer": "component",
+  "description": "Wrapping row of 1-2 buttons, 16px gap.",
+  "composedOf": [
+    "primitive.button"
+  ],
+  "source": {
+    "file": "site/src/components/features/primitives.jsx",
+    "tag": "export function Buttons",
+    "lines": "86-95"
+  }
+}

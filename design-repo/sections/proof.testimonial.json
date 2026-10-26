@@ -1,0 +1,95 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "proof.testimonial",
+  "title": "Single testimonial",
+  "category": "SOCIAL_PROOF",
+  "description": "One quote with attribution (name, role/company, logo) and an optional story link.",
+  "source": {
+    "id": "src:blocks:399",
+    "file": "site/src/components/plans/Blocks.jsx",
+    "tag": "export function Testimonial",
+    "lines": "399-447",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Testimonial({ b })",
+        "lines": "413-454"
+      },
+      {
+        "file": "site/src/components/collections/Customers.jsx",
+        "tag": "function Testimonial({ t })",
+        "lines": "60-86"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.testimonial",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "quote": {
+        "type": "text",
+        "maxWords": 50,
+        "required": true,
+        "copyBasis": "placeholder-length"
+      },
+      "name": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "role": {
+        "type": "text",
+        "maxWords": 8,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "logo": {
+        "type": "media",
+        "required": false
+      },
+      "link": {
+        "type": "link",
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [
+      "customer-logo",
+      "person-photo"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder",
+      "fictional-avatar"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 5,
+    "measuredHeightPx1440": {
+      "min": 370,
+      "max": 413
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

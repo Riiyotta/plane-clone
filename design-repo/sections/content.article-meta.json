@@ -1,0 +1,96 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.article-meta",
+  "title": "Article side facts / byline",
+  "category": "CONTENT",
+  "description": "Label/value facts beside a story or catalog item, or a closing signature line.",
+  "source": {
+    "id": "src:catalog:233",
+    "file": "site/src/components/collections/Catalog.jsx",
+    "tag": "function MetaGroup",
+    "lines": "233-240",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/Customers.jsx",
+        "tag": "export function CustomerStory",
+        "lines": "145-206"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "content.article-meta",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "customer-facts",
+    "catalog-facts",
+    "byline"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "items": {
+        "type": "items",
+        "maxItems": 8,
+        "required": true,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "value": {
+            "type": "text",
+            "maxWords": 12,
+            "required": true,
+            "copyBasis": "real-copy"
+          }
+        }
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "sticky",
+      "detail": "Article side column becomes sticky (top 96px, width 320) at >=1024; stacked above the body below.",
+      "evidence": "site/src/components/collections/BlogPost.jsx:132"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "customer-logo"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 4,
+    "measuredHeightPx1440": {
+      "min": 68,
+      "max": 1307
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

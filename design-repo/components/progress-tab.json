@@ -1,0 +1,16 @@
+{
+  "id": "component.progress-tab",
+  "title": "Progress tab",
+  "layer": "component",
+  "description": "Tab with title, body and progress line.",
+  "composedOf": [
+    "primitive.tab",
+    "primitive.progress-bar",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/Insight.jsx",
+    "tag": "export default function Insight",
+    "lines": "25-176"
+  }
+}

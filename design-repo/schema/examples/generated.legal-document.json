@@ -1,0 +1,221 @@
+{
+  "pageSpecVersion": "1.0.0",
+  "mode": "generated",
+  "template": "template.legal-document",
+  "route": "/legal/privacy",
+  "title": "Tallyfold privacy notice",
+  "brand": {
+    "name": "Tallyfold",
+    "domain": "tallyfold.example"
+  },
+  "theme": "light",
+  "nodes": [
+    {
+      "id": "n1",
+      "section": "shell.header",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-mark-placeholder",
+          "alt": "Tallyfold mark"
+        },
+        "navGroups": [
+          {
+            "label": "Platform"
+          },
+          {
+            "label": "Teams"
+          },
+          {
+            "label": "Learn"
+          }
+        ],
+        "actions": [
+          {
+            "label": "Watch a tour",
+            "href": "/tour",
+            "style": "link"
+          },
+          {
+            "label": "Open an account",
+            "href": "https://app.tallyfold.example/join",
+            "style": "primary"
+          }
+        ],
+        "links": [
+          {
+            "label": "Plans",
+            "href": "/plans"
+          },
+          {
+            "label": "Run it yourself",
+            "href": "/on-prem"
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "menu-fade-slide",
+        "reducedMotionFallback": "near-instant"
+      }
+    },
+    {
+      "id": "n2",
+      "section": "hero.page-header",
+      "variant": "legal",
+      "content": {
+        "title": "Privacy notice",
+        "subtitle": "Last updated 1 March 2026"
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n3",
+      "section": "nav.toc",
+      "variant": "minimap",
+      "content": {
+        "items": [
+          "1. Who we are",
+          "2. What we keep",
+          "3. Your choices"
+        ],
+        "title": "Contents"
+      },
+      "motion": {
+        "pattern": "color-transition",
+        "reducedMotionFallback": "unchanged"
+      }
+    },
+    {
+      "id": "n4",
+      "section": "content.prose-block",
+      "variant": "legal-preamble",
+      "content": {
+        "paragraphs": [
+          "This notice explains, in plain words, how Tallyfold handles the details you share with us while you use the service."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n5",
+      "section": "content.chapter",
+      "variant": "legal",
+      "content": {
+        "heading": "1. Who we are",
+        "paragraphs": [
+          "Tallyfold is a fictional planning service used here as sample content. Questions go to privacy@tallyfold.example."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n6",
+      "section": "content.chapter",
+      "variant": "legal",
+      "content": {
+        "heading": "2. What we keep",
+        "paragraphs": [
+          "We keep your name and email so you can sign in, and short usage records so we can fix problems."
+        ],
+        "subheadings": [
+          "2.1 Account details",
+          "2.2 Usage records"
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n7",
+      "section": "content.chapter",
+      "variant": "legal",
+      "content": {
+        "heading": "3. Your choices",
+        "paragraphs": [
+          "You can export or delete your data at any time from the account screen."
+        ]
+      },
+      "motion": {
+        "pattern": "none",
+        "reducedMotionFallback": "none"
+      }
+    },
+    {
+      "id": "n8",
+      "section": "shell.footer",
+      "variant": "default",
+      "content": {
+        "brandMark": {
+          "assetRole": "brand-mark-placeholder",
+          "alt": "Tallyfold mark"
+        },
+        "linkGroups": [
+          {
+            "heading": "Platform",
+            "links": [
+              {
+                "label": "Boards",
+                "href": "/boards"
+              },
+              {
+                "label": "Notebooks",
+                "href": "/notebooks"
+              }
+            ]
+          },
+          {
+            "heading": "Company",
+            "links": [
+              {
+                "label": "Terms",
+                "href": "/legal/terms"
+              },
+              {
+                "label": "Privacy",
+                "href": "/legal/privacy"
+              }
+            ]
+          }
+        ],
+        "badges": [
+          {
+            "assetRole": "badge-placeholder",
+            "alt": "Security reviewed"
+          }
+        ],
+        "downloadActions": [
+          {
+            "label": "Desktop app",
+            "href": "https://get.tallyfold.example/desktop",
+            "style": "secondary-on-dark"
+          }
+        ],
+        "socialLinks": [
+          {
+            "label": "Community",
+            "href": "https://community.tallyfold.example",
+            "icon": {
+              "assetRole": "social-icon-generic",
+              "alt": "Community link"
+            }
+          }
+        ]
+      },
+      "motion": {
+        "pattern": "sticky-reveal",
+        "reducedMotionFallback": "unchanged"
+      }
+    }
+  ]
+}

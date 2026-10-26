@@ -1,0 +1,14 @@
+{
+  "id": "component.pagination-control",
+  "title": "Pagination control",
+  "layer": "component",
+  "description": "Prev / numbered pages / next.",
+  "composedOf": [
+    "primitive.button"
+  ],
+  "source": {
+    "file": "site/src/components/collections/ui.jsx",
+    "tag": "export function Pagination",
+    "lines": "24-52"
+  }
+}

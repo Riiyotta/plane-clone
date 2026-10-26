@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "categories": [
+    "COMPARISON",
+    "CONTENT",
+    "CTA",
+    "FAQ",
+    "FEATURES",
+    "HERO",
+    "INDEX",
+    "MEDIA",
+    "NAVIGATION",
+    "PRICING",
+    "RUNTIME",
+    "SHELL",
+    "SOCIAL_PROOF"
+  ],
+  "note": "Rhythm/position rules JSON Schema cannot express. Every rule is enforced by schema/semantic_validate.py under the same id and was checked against all 105 measured route sequences (adversarial suite: real-route controls).",
+  "rules": [
+    {
+      "id": "SHELL_FIRST_LAST",
+      "severity": "error",
+      "description": "nodes[0] is shell.header and the last node is shell.footer; neither appears elsewhere.",
+      "exceptions": [],
+      "knownLiveDeviation": "Live hides/varies chrome on some pages (see README Known deviations); the clone and this repo render the standard shell everywhere."
+    },
+    {
+      "id": "ONE_HERO",
+      "severity": "error",
+      "description": "At most one HERO-category node per page. Templates with heroPolicy=required need exactly one of requiresOneOf.",
+      "exceptions": [
+        {
+          "templates": [
+            "template.pricing",
+            "template.blog-index",
+            "template.redirect"
+          ],
+          "reason": "hero-less templates (no measured route has a page opener section)"
+        }
+      ]
+    },
+    {
+      "id": "HERO_OPENS",
+      "severity": "error",
+      "description": "A HERO node is the first node after shell.header; only NAVIGATION sections in the opener slot (catalog sub-header) may precede it.",
+      "exceptions": []
+    },
+    {
+      "id": "SLOT_ORDER",
+      "severity": "error",
+      "description": "Nodes follow the template slot order shell-top < opener < body < shell-bottom.",
+      "exceptions": []
+    },
+    {
+      "id": "ONE_CTA_BANNER",
+      "severity": "error",
+      "description": "cta.banner appears at most once.",
+      "exceptions": []
+    },
+    {
+      "id": "CTA_BANNER_CLOSES",
+      "severity": "warn",
+      "description": "cta.banner is the last node before shell.footer.",
+      "exceptions": []
+    },
+    {
+      "id": "NO_ADJACENT_CTA",
+      "severity": "warn",
+      "description": "Two CTA-category nodes should not be adjacent, keyed on (section, variant).",
+      "exceptions": [
+        {
+          "pair": [
+            [
+              "cta.app-download",
+              "platform-list"
+            ],
+            [
+              "cta.app-download",
+              "qr-codes"
+            ]
+          ],
+          "reason": "download page lists per-platform downloads then QR codes (measured /download)"
+        }
+      ]
+    },
+    {
+      "id": "FAQ_TAIL",
+      "severity": "warn",
+      "description": "After faq.accordion only CTA-category nodes or the footer follow.",
+      "exceptions": []
+    },
+    {
+      "id": "MOTION_BUDGET",
+      "severity": "warn",
+      "description": "At most 3 auto-advancing motion patterns (video-segment-tabs, auto-advance-tabs, logo-marquee) per page.",
+      "exceptions": []
+    },
+    {
+      "id": "TEMPLATE_MEMBERSHIP",
+      "severity": "error",
+      "description": "Every node's section is in the declared template's node list, with a variant observed for that template.",
+      "exceptions": []
+    },
+    {
+      "id": "TEMPLATE_REQUIRED",
+      "severity": "error",
+      "description": "Every required template node is present.",
+      "exceptions": []
+    },
+    {
+      "id": "TEMPLATE_REPEAT",
+      "severity": "error",
+      "description": "A (section, variant) pair repeats only when the template node is repeatable; a section never exceeds its maxPerPage.",
+      "exceptions": []
+    },
+    {
+      "id": "ROUTE_TEMPLATE",
+      "severity": "error",
+      "description": "Reference-mode route must be one of the template routes (dynamic :params match any segment); generated routes are relative paths.",
+      "exceptions": []
+    },
+    {
+      "id": "HOME_ROUTE_ONLY",
+      "severity": "error",
+      "description": "Sections with constraints.homeRouteOnly only appear on route \"/\" in reference mode / template.home in generated mode.",
+      "exceptions": []
+    }
+  ]
+}

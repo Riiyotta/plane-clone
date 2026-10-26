@@ -1,0 +1,22 @@
+{
+  "id": "primitive.input",
+  "title": "Input field",
+  "layer": "primitive",
+  "description": "Bordered text input / search field.",
+  "variants": [
+    "search",
+    "text",
+    "textarea",
+    "number-stepper"
+  ],
+  "tokens": [
+    "border.neutral",
+    "radius.8",
+    "text.placeholder"
+  ],
+  "source": {
+    "file": "site/src/pages/blog/index.jsx",
+    "tag": "type=\"search\"",
+    "lines": "68-74"
+  }
+}

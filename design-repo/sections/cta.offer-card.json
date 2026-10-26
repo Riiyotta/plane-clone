@@ -1,0 +1,130 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "cta.offer-card",
+  "title": "Inline offer card",
+  "category": "CTA",
+  "description": "Mid-page or end-of-article conversion card (self-host offer, migration offer, trial/apply prompt) with 1-2 actions.",
+  "source": {
+    "id": "src:blocks:464",
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function SelfHost",
+    "lines": "464-496",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function CtaCard",
+        "lines": "620-648"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function CtaBox",
+        "lines": "583-613"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LSplitCta",
+        "lines": "158-193"
+      },
+      {
+        "file": "site/src/components/collections/ui.jsx",
+        "tag": "export function CtaCard",
+        "lines": "55-79"
+      },
+      {
+        "file": "site/src/components/collections/Catalog.jsx",
+        "tag": "function CatalogCta",
+        "lines": "58-90"
+      },
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function CtaCardOld",
+        "lines": "630-656"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "cta.offer-card",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "self-host",
+    "split",
+    "inline-banner",
+    "compact-card",
+    "apply"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "bullets": {
+        "type": "textList",
+        "maxItems": 6,
+        "maxWords": 10,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": true
+      },
+      "media": {
+        "type": "media",
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "decorative-artwork",
+      "product-screenshot"
+    ],
+    "generatedAssetRoles": [
+      "generated-background",
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 42,
+    "measuredHeightPx1440": {
+      "min": 216,
+      "max": 517
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

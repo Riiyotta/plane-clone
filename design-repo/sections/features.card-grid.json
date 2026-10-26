@@ -1,0 +1,193 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.card-grid",
+  "title": "Feature card grid",
+  "category": "FEATURES",
+  "description": "Header plus 2-12 same-size cards (icon/image, title, short body, optional link) describing capabilities or benefits.",
+  "source": {
+    "id": "src:blocks:423",
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function IconCards",
+    "lines": "423-442",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/Enterprise.jsx",
+        "tag": "export default function Enterprise",
+        "lines": "28-72"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function CardGrid",
+        "lines": "89-123"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function IconCards",
+        "lines": "500-523"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function CheckColumns",
+        "lines": "582-617"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Cards({ b })",
+        "lines": "330-365"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LCards",
+        "lines": "256-288"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LGrid",
+        "lines": "121-155"
+      },
+      {
+        "file": "site/src/components/company/Blocks.jsx",
+        "tag": "export function IconCardGrid",
+        "lines": "70-88"
+      },
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function ImageGrid",
+        "lines": "175-198"
+      },
+      {
+        "file": "site/src/components/compare/ComparisonPage.jsx",
+        "tag": "function Cards({ items })",
+        "lines": "300-333"
+      },
+      {
+        "file": "site/src/components/features/Agents.jsx",
+        "tag": "function ReadyMade()",
+        "lines": "156-230"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "features.card-grid",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "icon-cards",
+    "image-cards",
+    "check-columns",
+    "image-columns",
+    "carousel",
+    "text-cards"
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "cards": {
+        "type": "items",
+        "maxItems": 12,
+        "required": true,
+        "fields": {
+          "icon": {
+            "type": "media",
+            "required": false
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 10,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "media": {
+            "type": "media",
+            "required": false
+          },
+          "link": {
+            "type": "link",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none",
+      "card-hover-scale"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none",
+      "card-hover-scale": "no-scale"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "alignment",
+      "detail": "Centered section headers become left aligned below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "ui-icon",
+      "product-screenshot",
+      "compliance-badge"
+    ],
+    "generatedAssetRoles": [
+      "ui-icon",
+      "generated-product-visual",
+      "badge-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 50,
+    "measuredHeightPx1440": {
+      "min": 497,
+      "max": 1105
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

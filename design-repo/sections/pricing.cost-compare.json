@@ -1,0 +1,108 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "pricing.cost-compare",
+  "title": "Cost comparison",
+  "category": "PRICING",
+  "description": "Side-by-side per-seat price comparison of two products with a billing toggle.",
+  "source": {
+    "id": "src:comparisonpage:213",
+    "file": "site/src/components/compare/ComparisonPage.jsx",
+    "tag": "export function PricingCompare",
+    "lines": "213-274",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "pricing.cost-compare",
+    "category": "PRICING"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "plans": {
+        "type": "items",
+        "maxItems": 3,
+        "required": true,
+        "fields": {
+          "name": {
+            "type": "text",
+            "maxWords": 4,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "price": {
+            "type": "text",
+            "maxWords": 6,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "note": {
+            "type": "text",
+            "maxWords": 12,
+            "required": false,
+            "copyBasis": "real-copy"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 8,
+    "measuredHeightPx1440": {
+      "min": 741,
+      "max": 741
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

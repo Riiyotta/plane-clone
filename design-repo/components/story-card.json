@@ -1,0 +1,16 @@
+{
+  "id": "component.story-card",
+  "title": "Story card",
+  "layer": "component",
+  "description": "Logo, story title and read link; hover scale 1.01.",
+  "composedOf": [
+    "primitive.logo-slot",
+    "primitive.body-text",
+    "primitive.text-link"
+  ],
+  "source": {
+    "file": "site/src/components/Stories.jsx",
+    "tag": "export default function Stories",
+    "lines": "50-86"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "runtime.mega-menu",
+  "title": "Desktop mega-menu panel",
+  "category": "RUNTIME",
+  "description": "Full-bleed dropdown under the header (fade + 8px slide, 220ms) over a rgba(9,11,11,.3) scrim; content swaps between triggers in ~230ms.",
+  "source": {
+    "id": "src:megamenucontent:51",
+    "file": "site/src/components/header/MegaMenuContent.jsx",
+    "tag": "export function ProductMenu",
+    "lines": "51-103",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/header/MegaMenuContent.jsx",
+        "tag": "export function SolutionsMenu",
+        "lines": "105-125"
+      },
+      {
+        "file": "site/src/components/header/MegaMenuContent.jsx",
+        "tag": "export function ResourcesMenu",
+        "lines": "127-174"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "runtime.mega-menu",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Hover-opened navigation overlay attached to the header; it is runtime UI, not page content, and must not be retrieved as a section.",
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "panels": {
+        "type": "items",
+        "maxItems": 3,
+        "required": true,
+        "fields": {
+          "trigger": {
+            "type": "text",
+            "maxWords": 2,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "groups": {
+            "type": "items",
+            "maxItems": 4,
+            "required": true,
+            "fields": {
+              "heading": {
+                "type": "text",
+                "maxWords": 3,
+                "required": false,
+                "copyBasis": "real-copy"
+              },
+              "items": {
+                "type": "items",
+                "maxItems": 10,
+                "required": true,
+                "fields": {
+                  "title": {
+                    "type": "text",
+                    "maxWords": 4,
+                    "required": true,
+                    "copyBasis": "real-copy"
+                  },
+                  "description": {
+                    "type": "text",
+                    "maxWords": 8,
+                    "required": false,
+                    "copyBasis": "real-copy"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "menu-fade-slide"
+    ],
+    "reducedMotionFallbacks": {
+      "menu-fade-slide": "near-instant"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "nav-mode",
+      "detail": "Desktop header (58px, mega-menu triggers) at >=1024; mobile header (66px) with menu drawer below.",
+      "evidence": "CLONE_SPEC.md:19"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "ui-icon",
+      "decorative-artwork",
+      "integration-logo",
+      "competitor-logo"
+    ],
+    "generatedAssetRoles": [
+      "ui-icon",
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

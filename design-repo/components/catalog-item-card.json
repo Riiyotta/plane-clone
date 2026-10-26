@@ -1,0 +1,16 @@
+{
+  "id": "component.catalog-item-card",
+  "title": "Catalog item card",
+  "layer": "component",
+  "description": "App/template card with icon, name, description and category.",
+  "composedOf": [
+    "primitive.logo-slot",
+    "primitive.badge",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/collections/Catalog.jsx",
+    "tag": "function ItemCard",
+    "lines": "96-132"
+  }
+}

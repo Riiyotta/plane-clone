@@ -1,0 +1,125 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "cta.banner",
+  "title": "Closing CTA banner",
+  "category": "CTA",
+  "description": "Final conversion band before the footer: dark artwork or dark panel, h1-size title, two actions.",
+  "source": {
+    "id": "src:cta:2",
+    "file": "site/src/components/Cta.jsx",
+    "tag": "export default function Cta",
+    "lines": "2-22",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/features/blocks.jsx",
+        "tag": "export function CtaBanner",
+        "lines": "541-562"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function CtaBanner",
+        "lines": "772-804"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Cta({ b })",
+        "lines": "564-581"
+      },
+      {
+        "file": "site/src/components/compare/ComparisonPage.jsx",
+        "tag": "export function DarkCta",
+        "lines": "335-363"
+      },
+      {
+        "file": "site/src/components/compare/LegacyComparisonPage.jsx",
+        "tag": "export function BannerCta",
+        "lines": "336-367"
+      },
+      {
+        "file": "site/src/components/features/Agents.jsx",
+        "tag": "function FinalCta()",
+        "lines": "355-379"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "cta.banner",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "image-bg",
+    "dark-panel"
+  ],
+  "themes": [
+    "dark"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 12,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": true
+      },
+      "background": {
+        "type": "media",
+        "required": false
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "decorative-artwork"
+    ],
+    "generatedAssetRoles": [
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 44,
+    "measuredHeightPx1440": {
+      "min": 220,
+      "max": 540
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

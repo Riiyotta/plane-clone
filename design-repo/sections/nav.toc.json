@@ -1,0 +1,101 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "nav.toc",
+  "title": "Table of contents",
+  "category": "NAVIGATION",
+  "description": "Heading index for long-form pages: floating minimap (legal, fixed, xl+), sticky side column (article, guide) or an in-flow anchor index (manifesto). Shares vertical space with the body; it is not a content section.",
+  "source": {
+    "id": "src:legalpage:6",
+    "file": "site/src/components/collections/LegalPage.jsx",
+    "tag": "function LegalToc",
+    "lines": "6-63",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/BlogPost.jsx",
+        "tag": "function TocList",
+        "lines": "45-68"
+      },
+      {
+        "file": "site/src/components/collections/Changelog.jsx",
+        "tag": "function EntryToc",
+        "lines": "114-152"
+      },
+      {
+        "file": "site/src/pages/manifesto.jsx",
+        "tag": "export default function Manifesto",
+        "lines": "39-148"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "nav.toc",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "minimap",
+    "blog-sidebar",
+    "guide-sidebar",
+    "anchor-index"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "items": {
+        "type": "textList",
+        "maxItems": 40,
+        "maxWords": 12,
+        "required": true,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1280,
+      "breakpoint": "xl",
+      "change": "visibility",
+      "detail": "Floating minimap table of contents shows only at >=1280.",
+      "evidence": "site/src/components/collections/LegalPage.jsx:32"
+    },
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "sticky",
+      "detail": "Article side column becomes sticky (top 96px, width 320) at >=1024; stacked above the body below.",
+      "evidence": "site/src/components/collections/BlogPost.jsx:132"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 13,
+    "measuredHeightPx1440": {
+      "min": 102,
+      "max": 788
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

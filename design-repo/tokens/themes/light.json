@@ -1,0 +1,49 @@
+{
+  "theme": "light",
+  "evidence": [
+    "site/src/components/plans/plans.css:7-37",
+    "site/tailwind.config.js:14-33"
+  ],
+  "resolves": {
+    "text.primary": "{color.neutral.850}",
+    "text.secondary": "{color.neutral.650}",
+    "text.tertiary": "{color.neutral.600}",
+    "text.placeholder": "{color.neutral.500}",
+    "text.accent": "{color.blue.600}",
+    "text.inverse": "{color.neutral.0}",
+    "text.on-color": "{color.neutral.25}",
+    "surface.page": "{color.neutral.0}",
+    "surface.subtle": "{color.neutral.25}",
+    "surface.layer": "{color.neutral.50}",
+    "surface.layer-hover": "{color.neutral.100}",
+    "surface.card": "{color.neutral.40}",
+    "surface.raised": "{color.neutral.0}",
+    "surface.inverse": "{color.neutral.950}",
+    "surface.inverse-hover": "{color.neutral.850}",
+    "surface.inverse-active": "{color.neutral.650}",
+    "surface.stage-frame": "{color.sand.200}",
+    "surface.stage-window": "{color.neutral.60}",
+    "surface.chip-mention": "{color.indigo.100}",
+    "border.subtle": "{color.neutral.150}",
+    "border.subtle-1": "{color.neutral.200}",
+    "border.strong": "{color.neutral.250}",
+    "border.strong-1": "{color.neutral.300}",
+    "border.neutral": "{color.neutral.100}",
+    "border.tab": "{color.neutral.210}",
+    "action.primary.bg": "{color.neutral.950}",
+    "action.primary.hover": "{color.neutral.850}",
+    "action.primary.active": "{color.neutral.650}",
+    "action.primary.text": "{color.neutral.0}",
+    "action.secondary.bg": "{color.neutral.0}",
+    "action.secondary.hover": "{color.neutral.25}",
+    "action.secondary.text": "{color.neutral.650}",
+    "action.secondary.border": "{color.neutral.250}",
+    "icon.primary": "{color.neutral.850}",
+    "icon.tertiary": "{color.neutral.500}",
+    "overlay.scrim": "{color.alpha.scrim}",
+    "state.hover-transparent": "{color.alpha.hover-on-light}"
+  },
+  "unsupportedRoles": [
+    "surface.footer-reveal"
+  ]
+}

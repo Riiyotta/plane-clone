@@ -1,0 +1,134 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "hero.article-header",
+  "title": "Article / entry header",
+  "category": "HERO",
+  "description": "Opener of a single long-form item: title, category/date/author meta, optional cover image or action. Only the header; the body is split into content.chapter nodes.",
+  "source": {
+    "id": "src:blogpost:91",
+    "file": "site/src/components/collections/BlogPost.jsx",
+    "tag": "export default function BlogPost",
+    "lines": "91-185",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/Changelog.jsx",
+        "tag": "export function ChangelogDetail",
+        "lines": "180-275"
+      },
+      {
+        "file": "site/src/components/collections/Customers.jsx",
+        "tag": "export function CustomerStory",
+        "lines": "145-206"
+      },
+      {
+        "file": "site/src/components/collections/Careers.jsx",
+        "tag": "export function JobPage",
+        "lines": "301-326"
+      },
+      {
+        "file": "site/src/components/collections/Catalog.jsx",
+        "tag": "export function CatalogDetail",
+        "lines": "242-323"
+      },
+      {
+        "file": "site/src/components/plans/Whitepaper.jsx",
+        "tag": "aria-label=\"The Plane Self-Hosting Guide\"",
+        "lines": "375-383"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "hero.article-header",
+    "category": "HERO"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "blog",
+    "changelog",
+    "customer-story",
+    "job",
+    "catalog-item",
+    "guide"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "category": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 20,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "subtitle": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "meta": {
+        "type": "textList",
+        "maxItems": 4,
+        "maxWords": 8,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "media": {
+        "type": "media",
+        "required": false
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot",
+      "customer-logo",
+      "decorative-artwork"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "logo-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 7,
+    "measuredHeightPx1440": {
+      "min": 208,
+      "max": 820
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

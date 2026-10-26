@@ -1,0 +1,62 @@
+{
+  "group": "layout",
+  "tokens": {
+    "layout.container.max-width.xl": {
+      "value": "1344px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:25",
+      "sourceSyntax": "max-w 84rem"
+    },
+    "layout.container.max-width.2xl": {
+      "value": "1536px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:29",
+      "sourceSyntax": "max-w 96rem"
+    },
+    "layout.container.padding-x.base": {
+      "value": "{space.4}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:28"
+    },
+    "layout.container.padding-x.sm": {
+      "value": "{space.8}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:27"
+    },
+    "layout.container.padding-x.xl": {
+      "value": "{space.11}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:25"
+    },
+    "layout.content-width.1440": {
+      "value": "1256px",
+      "type": "size",
+      "source": "CLONE_SPEC.md:25"
+    },
+    "layout.section.padding-y": {
+      "value": "{space.20}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:342"
+    },
+    "layout.section.padding-y.compact": {
+      "value": "{space.16}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:342"
+    },
+    "layout.section.stack-gap": {
+      "value": "{space.11}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:411"
+    },
+    "layout.grid.gap": {
+      "value": "{space.6}",
+      "type": "spacing",
+      "source": "CLONE_SPEC.md:166"
+    },
+    "layout.grid.columns.max": {
+      "value": "6",
+      "type": "count",
+      "source": "CLONE_SPEC.md:346"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "primitive.progress-bar",
+  "title": "Progress bar",
+  "layer": "primitive",
+  "description": "2px progress line on the active tab.",
+  "variants": [
+    "scale",
+    "width"
+  ],
+  "tokens": [
+    "tab.progress.height",
+    "motion.duration.progress-tick"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "- Progress bar: `span.absolute",
+    "lines": "325-325"
+  }
+}

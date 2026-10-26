@@ -1,0 +1,16 @@
+{
+  "id": "component.bento-card",
+  "title": "Bento card",
+  "layer": "component",
+  "description": "Text + media card spanning bento cells.",
+  "composedOf": [
+    "primitive.heading",
+    "primitive.body-text",
+    "primitive.image"
+  ],
+  "source": {
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "function BentoCardV4",
+    "lines": "201-225"
+  }
+}

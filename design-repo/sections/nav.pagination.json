@@ -1,0 +1,60 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "nav.pagination",
+  "title": "Pagination",
+  "category": "NAVIGATION",
+  "description": "Prev / page numbers / next control under an index list.",
+  "source": {
+    "id": "src:ui:24",
+    "file": "site/src/components/collections/ui.jsx",
+    "tag": "export function Pagination",
+    "lines": "24-52",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "nav.pagination",
+    "category": "NAVIGATION"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "pageCount": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 99,
+        "required": true
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "color-transition"
+    ],
+    "reducedMotionFallbacks": {
+      "color-transition": "unchanged"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 2,
+    "measuredHeightPx1440": {
+      "min": 35,
+      "max": 35
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

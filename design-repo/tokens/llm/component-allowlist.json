@@ -1,0 +1,550 @@
+{
+  "allowlistVersion": "1.0.0",
+  "note": "Closed list of what a generator may emit. Parity with sections/, primitives/, components/ and with the PageSpec node schema is checked by extraction/verify_all.py.",
+  "nodeSettableProperties": [
+    "id",
+    "section",
+    "variant",
+    "style",
+    "content",
+    "motion",
+    "retrievalEligible"
+  ],
+  "sections": {
+    "comparison.feature-table": {
+      "category": "COMPARISON",
+      "variants": [
+        "matrix",
+        "why-table",
+        "compact"
+      ],
+      "retrievalEligible": true
+    },
+    "content.article-meta": {
+      "category": "CONTENT",
+      "variants": [
+        "customer-facts",
+        "catalog-facts",
+        "byline"
+      ],
+      "retrievalEligible": true
+    },
+    "content.changelog-entry": {
+      "category": "CONTENT",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "content.chapter": {
+      "category": "CONTENT",
+      "variants": [
+        "legal",
+        "article",
+        "job",
+        "customer-story",
+        "changelog",
+        "guide",
+        "principle",
+        "letter",
+        "catalog"
+      ],
+      "retrievalEligible": true
+    },
+    "content.featured-post": {
+      "category": "CONTENT",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "content.launch-drop": {
+      "category": "CONTENT",
+      "variants": [
+        "drop-row",
+        "day-grid"
+      ],
+      "retrievalEligible": true
+    },
+    "content.principles": {
+      "category": "CONTENT",
+      "variants": [
+        "sticky-scroll"
+      ],
+      "retrievalEligible": true
+    },
+    "content.process-steps": {
+      "category": "CONTENT",
+      "variants": [
+        "hiring",
+        "enrollment"
+      ],
+      "retrievalEligible": true
+    },
+    "content.prose-block": {
+      "category": "CONTENT",
+      "variants": [
+        "default",
+        "scroll-story",
+        "legal-preamble",
+        "article-intro",
+        "split-image",
+        "timeline"
+      ],
+      "retrievalEligible": true
+    },
+    "content.related-posts": {
+      "category": "CONTENT",
+      "variants": [
+        "blog",
+        "changelog"
+      ],
+      "retrievalEligible": true
+    },
+    "content.timeline-milestone": {
+      "category": "CONTENT",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "content.value-cards": {
+      "category": "CONTENT",
+      "variants": [
+        "culture",
+        "eligibility",
+        "terms",
+        "program-tracks",
+        "program-benefits",
+        "commitments"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.app-download": {
+      "category": "CTA",
+      "variants": [
+        "store-cards",
+        "platform-list",
+        "qr-codes"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.banner": {
+      "category": "CTA",
+      "variants": [
+        "image-bg",
+        "dark-panel"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.contact-form": {
+      "category": "CTA",
+      "variants": [
+        "split-with-intro"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.contact-options": {
+      "category": "CTA",
+      "variants": [
+        "card-grid"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.demo-player": {
+      "category": "CTA",
+      "variants": [
+        "video-with-chapters"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.event-signup": {
+      "category": "CTA",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "cta.offer-card": {
+      "category": "CTA",
+      "variants": [
+        "self-host",
+        "split",
+        "inline-banner",
+        "compact-card",
+        "apply"
+      ],
+      "retrievalEligible": true
+    },
+    "faq.accordion": {
+      "category": "FAQ",
+      "variants": [
+        "split",
+        "stacked"
+      ],
+      "retrievalEligible": true
+    },
+    "features.bento": {
+      "category": "FEATURES",
+      "variants": [
+        "home-capabilities",
+        "grid"
+      ],
+      "retrievalEligible": true
+    },
+    "features.card-grid": {
+      "category": "FEATURES",
+      "variants": [
+        "icon-cards",
+        "image-cards",
+        "check-columns",
+        "image-columns",
+        "carousel",
+        "text-cards"
+      ],
+      "retrievalEligible": true
+    },
+    "features.developer-showcase": {
+      "category": "FEATURES",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "features.integrations": {
+      "category": "FEATURES",
+      "variants": [
+        "home-apps",
+        "connected-tools"
+      ],
+      "retrievalEligible": true
+    },
+    "features.media-showcase": {
+      "category": "FEATURES",
+      "variants": [
+        "dark-columns",
+        "wide-image"
+      ],
+      "retrievalEligible": true
+    },
+    "features.product-demo": {
+      "category": "FEATURES",
+      "variants": [
+        "terminal"
+      ],
+      "retrievalEligible": true
+    },
+    "features.product-tabs": {
+      "category": "FEATURES",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "features.split-rows": {
+      "category": "FEATURES",
+      "variants": [
+        "alternating",
+        "single",
+        "card-stack"
+      ],
+      "retrievalEligible": true
+    },
+    "features.steps": {
+      "category": "FEATURES",
+      "variants": [
+        "week-columns",
+        "numbered"
+      ],
+      "retrievalEligible": true
+    },
+    "features.tabbed-showcase": {
+      "category": "FEATURES",
+      "variants": [
+        "tabs-below-media",
+        "tabs",
+        "side-tabs",
+        "top-tabs",
+        "accordion"
+      ],
+      "retrievalEligible": true
+    },
+    "hero.article-header": {
+      "category": "HERO",
+      "variants": [
+        "blog",
+        "changelog",
+        "customer-story",
+        "job",
+        "catalog-item",
+        "guide"
+      ],
+      "retrievalEligible": true
+    },
+    "hero.comparison": {
+      "category": "HERO",
+      "variants": [
+        "logo-pair",
+        "split"
+      ],
+      "retrievalEligible": true
+    },
+    "hero.home": {
+      "category": "HERO",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "hero.marketing": {
+      "category": "HERO",
+      "variants": [
+        "centered",
+        "centered-media",
+        "split-media",
+        "editorial",
+        "event"
+      ],
+      "retrievalEligible": true
+    },
+    "hero.page-header": {
+      "category": "HERO",
+      "variants": [
+        "default",
+        "legal",
+        "catalog",
+        "notice",
+        "index"
+      ],
+      "retrievalEligible": true
+    },
+    "index.listing": {
+      "category": "INDEX",
+      "variants": [
+        "card-grid",
+        "row-list",
+        "link-list",
+        "category-cards",
+        "catalog-grid",
+        "resource-columns",
+        "comparison-cards",
+        "tool-picker"
+      ],
+      "retrievalEligible": true
+    },
+    "media.gallery": {
+      "category": "MEDIA",
+      "variants": [
+        "desktop",
+        "mobile"
+      ],
+      "retrievalEligible": true
+    },
+    "nav.catalog-subheader": {
+      "category": "NAVIGATION",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "nav.filter-bar": {
+      "category": "NAVIGATION",
+      "variants": [
+        "tabs-search",
+        "category-sidebar"
+      ],
+      "retrievalEligible": true
+    },
+    "nav.pagination": {
+      "category": "NAVIGATION",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "nav.toc": {
+      "category": "NAVIGATION",
+      "variants": [
+        "minimap",
+        "blog-sidebar",
+        "guide-sidebar",
+        "anchor-index"
+      ],
+      "retrievalEligible": true
+    },
+    "pricing.cost-compare": {
+      "category": "PRICING",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "pricing.plan-tiers": {
+      "category": "PRICING",
+      "variants": [
+        "plans",
+        "editions"
+      ],
+      "retrievalEligible": true
+    },
+    "pricing.savings-calculator": {
+      "category": "PRICING",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "proof.compliance-badges": {
+      "category": "SOCIAL_PROOF",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "proof.logo-wall": {
+      "category": "SOCIAL_PROOF",
+      "variants": [
+        "grid",
+        "strip",
+        "strip-with-quote",
+        "band",
+        "row"
+      ],
+      "retrievalEligible": true
+    },
+    "proof.stats": {
+      "category": "SOCIAL_PROOF",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "proof.story-cards": {
+      "category": "SOCIAL_PROOF",
+      "variants": [
+        "home",
+        "index-grid"
+      ],
+      "retrievalEligible": true
+    },
+    "proof.testimonial": {
+      "category": "SOCIAL_PROOF",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "proof.testimonial-wall": {
+      "category": "SOCIAL_PROOF",
+      "variants": [
+        "masonry",
+        "quote-grid"
+      ],
+      "retrievalEligible": true
+    },
+    "runtime.cookie-consent": {
+      "category": "RUNTIME",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.detail-drawer": {
+      "category": "RUNTIME",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.lightbox": {
+      "category": "RUNTIME",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.mega-menu": {
+      "category": "RUNTIME",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.mobile-nav": {
+      "category": "RUNTIME",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false
+    },
+    "runtime.tooltip": {
+      "category": "RUNTIME",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": false
+    },
+    "shell.footer": {
+      "category": "SHELL",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    },
+    "shell.header": {
+      "category": "SHELL",
+      "variants": [
+        "default"
+      ],
+      "retrievalEligible": true
+    }
+  },
+  "primitives": [
+    "primitive.badge",
+    "primitive.body-text",
+    "primitive.button",
+    "primitive.check-item",
+    "primitive.divider",
+    "primitive.eyebrow",
+    "primitive.heading",
+    "primitive.icon",
+    "primitive.icon-box",
+    "primitive.image",
+    "primitive.input",
+    "primitive.logo-slot",
+    "primitive.mention-chip",
+    "primitive.progress-bar",
+    "primitive.tab",
+    "primitive.text-link",
+    "primitive.video"
+  ],
+  "components": [
+    "component.accordion-item",
+    "component.bento-card",
+    "component.catalog-item-card",
+    "component.comparison-row",
+    "component.cta-row",
+    "component.feature-card",
+    "component.footer-link-group",
+    "component.form-field",
+    "component.link-card",
+    "component.logo-tile",
+    "component.media-stage",
+    "component.nav-menu-item",
+    "component.pagination-control",
+    "component.plan-card",
+    "component.post-card",
+    "component.post-row",
+    "component.price-display",
+    "component.progress-tab",
+    "component.quote-block",
+    "component.role-row",
+    "component.section-header",
+    "component.social-button",
+    "component.stat-block",
+    "component.step-column",
+    "component.store-card",
+    "component.story-card",
+    "component.toc-list"
+  ]
+}

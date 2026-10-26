@@ -1,0 +1,19 @@
+{
+  "id": "primitive.text-link",
+  "title": "Arrow text link",
+  "layer": "primitive",
+  "description": "Inline link with trailing arrow; underline on hover.",
+  "variants": [
+    "default",
+    "on-dark"
+  ],
+  "tokens": [
+    "font.size.500",
+    "text.primary"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "| Text link | 0 | 16/24 430",
+    "lines": "150-150"
+  }
+}

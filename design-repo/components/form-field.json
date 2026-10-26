@@ -1,0 +1,14 @@
+{
+  "id": "component.form-field",
+  "title": "Form field",
+  "layer": "component",
+  "description": "Label + input/textarea/stepper.",
+  "composedOf": [
+    "primitive.input"
+  ],
+  "source": {
+    "file": "site/src/pages/talk-to-sales.jsx",
+    "tag": "function SalesForm",
+    "lines": "48-88"
+  }
+}

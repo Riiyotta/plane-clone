@@ -1,0 +1,115 @@
+{
+  "group": "motion",
+  "tokens": {
+    "motion.duration.fast": {
+      "value": "150ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:614"
+    },
+    "motion.duration.tab": {
+      "value": "200ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:615"
+    },
+    "motion.duration.menu": {
+      "value": "220ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:610"
+    },
+    "motion.duration.menu-swap": {
+      "value": "230ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:612"
+    },
+    "motion.duration.base": {
+      "value": "300ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:621"
+    },
+    "motion.duration.feature-accordion": {
+      "value": "400ms",
+      "type": "duration",
+      "source": "site/src/components/features/blocks.jsx:680"
+    },
+    "motion.duration.hero-fade": {
+      "value": "900ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:608"
+    },
+    "motion.duration.hero-word": {
+      "value": "1000ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:607"
+    },
+    "motion.duration.progress-tick": {
+      "value": "50ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:380"
+    },
+    "motion.duration.tab-cycle": {
+      "value": "6000ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:379"
+    },
+    "motion.duration.video-segment": {
+      "value": "16000ms",
+      "type": "duration",
+      "source": "CLONE_SPEC.md:335"
+    },
+    "motion.easing.standard": {
+      "value": "cubic-bezier(.4,0,.2,1)",
+      "type": "easing",
+      "source": "CLONE_SPEC.md:614"
+    },
+    "motion.easing.emphasized": {
+      "value": "cubic-bezier(.32,.72,0,1)",
+      "type": "easing",
+      "source": "site/tailwind.config.js:47"
+    },
+    "motion.easing.ease-out": {
+      "value": "ease-out",
+      "type": "easing",
+      "source": "site/src/components/features/blocks.jsx:524"
+    },
+    "motion.easing.linear": {
+      "value": "linear",
+      "type": "easing",
+      "source": "CLONE_SPEC.md:619"
+    },
+    "motion.easing.ease-in-out": {
+      "value": "ease-in-out",
+      "type": "easing",
+      "source": "CLONE_SPEC.md:624"
+    },
+    "motion.delay.hero-word-base": {
+      "value": "80ms",
+      "type": "delay",
+      "source": "CLONE_SPEC.md:291"
+    },
+    "motion.delay.hero-word-step": {
+      "value": "70ms",
+      "type": "delay",
+      "source": "CLONE_SPEC.md:291"
+    },
+    "motion.delay.hero-subtitle": {
+      "value": "720ms",
+      "type": "delay",
+      "source": "CLONE_SPEC.md:293"
+    },
+    "motion.delay.hero-actions": {
+      "value": "840ms",
+      "type": "delay",
+      "source": "CLONE_SPEC.md:293"
+    },
+    "motion.scale.hover-card": {
+      "value": "1.01",
+      "type": "scale",
+      "source": "CLONE_SPEC.md:621"
+    },
+    "motion.scale.hover-store-card": {
+      "value": "1.05",
+      "type": "scale",
+      "source": "CLONE_SPEC.md:622"
+    }
+  }
+}

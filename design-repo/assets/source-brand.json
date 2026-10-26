@@ -1,0 +1,113 @@
+{
+  "version": "1.0.0",
+  "sourceBrand": "Plane (plane.so)",
+  "note": "Patterns grepped from the real source (site/src, CLONE_SPEC.md, ASSET_MANIFEST.md, customer/blog/testimonial data). Used by GENERATED_MODE_* rules in schema/semantic_validate.py. Spelling variants without diacritics are added deliberately.",
+  "patterns": {
+    "brand": [
+      "\\bPlane\\b",
+      "\\bPLANE\\b",
+      "\\bplane\\.so\\b",
+      "(?i)\\bmakeplane\\b",
+      "(?i)\\bplanepowers\\b",
+      "\\bPlane ?AI\\b",
+      "\\bPlane Compose\\b",
+      "\\bPlane/One\\b",
+      "\\bPrime CLI\\b",
+      "\\bGod Mode\\b",
+      "\\bEnterprise Grid\\b",
+      "@Plane\\b"
+    ],
+    "domain": [
+      "(?i)(^|[^a-z0-9-])([a-z0-9-]+\\.)*plane\\.so\\b",
+      "(?i)\\bsenja\\.io\\b"
+    ],
+    "store": [
+      "(?i)apps\\.apple\\.com",
+      "(?i)play\\.google\\.com",
+      "(?i)\\bgo\\.plane\\.so\\b",
+      "(?i)\\bApp Store\\b",
+      "(?i)\\bGoogle Play\\b",
+      "(?i)\\bPlay Store\\b",
+      "(?i)testflight",
+      "(?i)id6657986465",
+      "(?i)com\\.plane\\.so"
+    ],
+    "social": [
+      "(?i)linkedin\\.com/company/planepowers",
+      "(?i)github\\.com/makeplane",
+      "(?i)(twitter|x)\\.com/planepowers",
+      "(?i)discord\\.(com|gg)/invite/A92xrEGCge",
+      "(?i)youtube\\.com/@planepowers"
+    ],
+    "cta": [
+      "(?i)\\b(get|try|download|self-host|install|add|switch to|start with|book)\\s+plane\\b",
+      "(?i)\\btalk to a human\\b",
+      "(?i)\\btalk to a migration expert\\b",
+      "(?i)\\bget pro at this price\\b",
+      "(?i)\\bget business at this price\\b"
+    ],
+    "customers": [
+      "(?i)\\bSony\\b",
+      "(?i)\\bAramco\\b",
+      "(?i)\\bDolby\\b",
+      "(?i)\\bAccenture\\b",
+      "\\bAmazon\\b",
+      "(?i)\\bEssor\\b",
+      "(?i)\\bFortyAU\\b",
+      "(?i)\\b40AU\\b",
+      "(?i)\\bHypersonica\\b",
+      "(?i)\\bRuby\\ Labs\\b",
+      "(?i)\\bRépublique\\ Française\\b",
+      "(?i)\\bRepublique\\ Francaise\\b",
+      "(?i)\\bGovernment\\ of\\ Lithuania\\b",
+      "(?i)\\bMirador\\ Therapeutics\\b",
+      "(?i)\\bTexelis\\b",
+      "(?i)\\bOptiGRÜN\\b",
+      "(?i)\\bOptiGRUN\\b",
+      "(?i)\\bStark\\ Bank\\b",
+      "(?i)\\bPower\\ Integrations\\b",
+      "(?i)\\bMinimalArt\\b",
+      "\\bVATES\\b",
+      "\\bINITS\\b",
+      "(?i)\\bFoxSense\\b",
+      "(?i)\\bGobbleCube\\b",
+      "(?i)\\bGroupThink\\ Labs\\b",
+      "\\bRever\\b",
+      "(?i)\\bCapital\\ Land\\b",
+      "\\bDatum\\b"
+    ],
+    "people": [
+      "(?i)\\bDuane\\ Arnett\\b",
+      "(?i)\\bMarc\\ Ungeschikts\\b",
+      "(?i)\\bClay\\ Risser\\b",
+      "(?i)\\bBogDrakonov\\b",
+      "(?i)\\bAnmol\\ Singh\\ Bhatia\\b",
+      "(?i)\\bBhavesh\\ Raja\\b",
+      "(?i)\\bDevanshu\\ Arora\\b",
+      "(?i)\\bDheeraj\\ Kumar\\ Ketireddy\\b",
+      "(?i)\\bHenit\\ Chobisa\\b",
+      "(?i)\\bNikhil\\ Chacko\\b",
+      "(?i)\\bOm\\ Lakhe\\b",
+      "(?i)\\bSatyasai\\ Vallampati\\b",
+      "(?i)\\bSneha\\ Kanojia\\b",
+      "(?i)\\bSriram\\ Veeraghanta\\b",
+      "(?i)\\bSurya\\ Prashanth\\b",
+      "(?i)\\bVamsi\\ Krishna\\b",
+      "(?i)\\bVihar\\ Kurama\\b"
+    ],
+    "rating": [
+      "(?i)\\b[0-5](\\.[0-9])?\\s*/\\s*5\\b",
+      "★",
+      "(?i)\\bG2\\b",
+      "(?i)\\bcapterra\\b",
+      "(?i)\\btrustpilot\\b",
+      "(?i)\\bproduct hunt\\b",
+      "(?i)\\b[0-9.]+\\s*stars?\\b"
+    ],
+    "assetPath": [
+      "^/assets/",
+      "(?i)(^|/)(logo-with-wordmark|logo-light|footer-brand-wordmark|hero-loop|stage-texture|cta-bg|still-(work|wiki|ai))"
+    ]
+  },
+  "allowedGeneratedUrl": "^(/[^/].*|/|#.*|mailto:[^@]+@([a-z0-9-]+\\.)+(example|invalid)|https://([a-z0-9-]+\\.)*[a-z0-9-]+\\.(example|invalid)(/.*)?)$"
+}

@@ -1,0 +1,61 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "runtime.cookie-consent",
+  "title": "Cookie consent banner (live only)",
+  "category": "RUNTIME",
+  "description": "Bottom-left consent card with accept-all / accept-required actions on the live site. Not cloned.",
+  "source": {
+    "id": "src:clone_spec:271",
+    "file": "CLONE_SPEC.md",
+    "tag": "A cookie banner (bottom-left card",
+    "lines": "271-271",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "runtime.cookie-consent",
+    "category": "RUNTIME"
+  },
+  "retrievalEligible": false,
+  "retrievalIneligibleReason": "Third-party consent UI shown on the live site only; the clone deliberately does not reproduce it and generators must not emit it as content.",
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "message": {
+        "type": "text",
+        "maxWords": 40,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": true
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "documented-not-cloned",
+    "measuredRouteCount": 0,
+    "measuredHeightPx1440": null,
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

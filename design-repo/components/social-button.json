@@ -1,0 +1,14 @@
+{
+  "id": "component.social-button",
+  "title": "Social button",
+  "layer": "component",
+  "description": "50x50 bordered icon button.",
+  "composedOf": [
+    "primitive.icon"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "- Right (gap 16): 5 social buttons, 50x50",
+    "lines": "589-589"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "component.section-header",
+  "title": "Section header",
+  "layer": "component",
+  "description": "Eyebrow + title + intro + actions; centered, left or two-column.",
+  "composedOf": [
+    "primitive.eyebrow",
+    "primitive.heading",
+    "primitive.body-text",
+    "primitive.button"
+  ],
+  "source": {
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function SectionHeader",
+    "lines": "103-153"
+  }
+}

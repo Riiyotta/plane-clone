@@ -1,0 +1,14 @@
+{
+  "id": "component.logo-tile",
+  "title": "Logo tile",
+  "layer": "component",
+  "description": "84px (64px mobile) cell holding one logo at 75% opacity.",
+  "composedOf": [
+    "primitive.logo-slot"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "- Each `li`: `flex h-[84px] items-center",
+    "lines": "347-347"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "component.link-card",
+  "title": "Link card",
+  "layer": "component",
+  "description": "Linked card with title row arrow and corner artwork; hover scale 1.01.",
+  "composedOf": [
+    "primitive.heading",
+    "primitive.body-text",
+    "primitive.icon"
+  ],
+  "source": {
+    "file": "site/src/components/Developers.jsx",
+    "tag": "export default function Developers",
+    "lines": "30-108"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "component.media-stage",
+  "title": "Media stage",
+  "layer": "component",
+  "description": "Textured frame holding a product window.",
+  "composedOf": [
+    "primitive.video",
+    "primitive.image"
+  ],
+  "source": {
+    "file": "site/src/components/Products.jsx",
+    "tag": "export default function Products",
+    "lines": "67-390"
+  }
+}

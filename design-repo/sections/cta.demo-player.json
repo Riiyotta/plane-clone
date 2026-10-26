@@ -1,0 +1,92 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "cta.demo-player",
+  "title": "Demo video player",
+  "category": "CTA",
+  "description": "Recorded product demo with a chapter list and a collapsible transcript.",
+  "source": {
+    "id": "src:view-demo:29",
+    "file": "site/src/pages/view-demo.jsx",
+    "tag": "export default function ViewDemo",
+    "lines": "29-154",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "cta.demo-player",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "video-with-chapters"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "media": {
+        "type": "media",
+        "required": true
+      },
+      "chapters": {
+        "type": "textList",
+        "maxItems": 12,
+        "maxWords": 8,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "transcriptLabel": {
+        "type": "text",
+        "maxWords": 4,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "stack-to-row",
+      "detail": "Video and chapter list side by side in a viewport-height stage at >=1024; stacked below.",
+      "evidence": "site/src/components/company/company.css:23"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-video"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 842,
+      "max": 842
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

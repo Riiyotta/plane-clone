@@ -1,0 +1,17 @@
+{
+  "id": "primitive.video",
+  "title": "Video",
+  "layer": "primitive",
+  "description": "Muted looping inline video; fades in when playing.",
+  "variants": [
+    "loop-muted"
+  ],
+  "tokens": [
+    "motion.duration.base"
+  ],
+  "source": {
+    "file": "site/src/components/Products.jsx",
+    "tag": "<video",
+    "lines": "279-291"
+  }
+}

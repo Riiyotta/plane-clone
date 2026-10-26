@@ -1,0 +1,18 @@
+{
+  "id": "primitive.check-item",
+  "title": "Check list item",
+  "layer": "primitive",
+  "description": "Check icon + short line.",
+  "variants": [
+    "default"
+  ],
+  "tokens": [
+    "icon.size.16",
+    "text.secondary"
+  ],
+  "source": {
+    "file": "CLONE_SPEC.md",
+    "tag": "- List (`space-y-2`): items `flex items-start gap-3`",
+    "lines": "419-419"
+  }
+}

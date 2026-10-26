@@ -1,0 +1,18 @@
+{
+  "id": "primitive.logo-slot",
+  "title": "Logo slot",
+  "layer": "primitive",
+  "description": "Slot for the brand mark; filled with brand-mark-placeholder in generated pages.",
+  "variants": [
+    "wordmark",
+    "mark"
+  ],
+  "tokens": [
+    "radius.8"
+  ],
+  "source": {
+    "file": "site/src/components/Header.jsx",
+    "tag": "logo-with-wordmark.svg",
+    "lines": "76-76"
+  }
+}

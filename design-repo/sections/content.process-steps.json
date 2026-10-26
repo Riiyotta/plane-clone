@@ -1,0 +1,109 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.process-steps",
+  "title": "Non-product process steps",
+  "category": "CONTENT",
+  "description": "Sequential steps of a hiring or program-enrollment process.",
+  "source": {
+    "id": "src:careers:224",
+    "file": "site/src/components/collections/Careers.jsx",
+    "tag": "{/* How hiring works */}",
+    "lines": "224-240",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "content.process-steps",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "hiring",
+    "enrollment"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "steps": {
+        "type": "items",
+        "maxItems": 6,
+        "required": true,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 3,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "title": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 3,
+    "measuredHeightPx1440": {
+      "min": 532,
+      "max": 945
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

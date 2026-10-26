@@ -1,0 +1,115 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "content.value-cards",
+  "title": "Value / terms cards",
+  "category": "CONTENT",
+  "description": "Editorial card grid about the organisation or a program (culture, eligibility, terms) - not product capabilities.",
+  "source": {
+    "id": "src:careers:47",
+    "file": "site/src/components/collections/Careers.jsx",
+    "tag": "function CardGrid({ cards, seed })",
+    "lines": "47-73",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "content.value-cards",
+    "category": "CONTENT"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "culture",
+    "eligibility",
+    "terms",
+    "program-tracks",
+    "program-benefits",
+    "commitments"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "cards": {
+        "type": "items",
+        "maxItems": 9,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "body": {
+            "type": "text",
+            "maxWords": 50,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "icon": {
+            "type": "media",
+            "required": false
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "ui-icon"
+    ],
+    "generatedAssetRoles": [
+      "ui-icon"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 5,
+    "measuredHeightPx1440": {
+      "min": 466,
+      "max": 877
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

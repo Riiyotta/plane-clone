@@ -1,0 +1,112 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "proof.story-cards",
+  "title": "Customer story cards",
+  "category": "SOCIAL_PROOF",
+  "description": "Grid of linked customer-story cards (dark artwork card, quote card, logo cards); cards scale 1.01 on hover.",
+  "source": {
+    "id": "src:stories:50",
+    "file": "site/src/components/Stories.jsx",
+    "tag": "export default function Stories",
+    "lines": "50-86",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/Customers.jsx",
+        "tag": "function StoryGrid",
+        "lines": "46-58"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.story-cards",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "home",
+    "index-grid"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "cards": {
+        "type": "items",
+        "maxItems": 6,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 18,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "logo": {
+            "type": "media",
+            "required": false
+          },
+          "linkLabel": {
+            "type": "text",
+            "maxWords": 4,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "href": {
+            "type": "href",
+            "required": false
+          },
+          "quote": {
+            "type": "text",
+            "maxWords": 40,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "attribution": {
+            "type": "text",
+            "maxWords": 6,
+            "required": false,
+            "copyBasis": "real-copy"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "card-hover-scale"
+    ],
+    "reducedMotionFallbacks": {
+      "card-hover-scale": "no-scale"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "grid-columns",
+      "detail": "Card rows stay single-column until 1024 (lg grids).",
+      "evidence": "CLONE_SPEC.md:654"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "customer-logo",
+      "decorative-artwork"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder",
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 2,
+    "measuredHeightPx1440": {
+      "min": 714,
+      "max": 822
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

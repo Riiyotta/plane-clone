@@ -1,0 +1,101 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "features.product-tabs",
+  "title": "Product video tabs",
+  "category": "FEATURES",
+  "description": "Framed product stage (texture frame + window) playing one segmented video, with three tabs below whose 2px progress bars follow the video.",
+  "source": {
+    "id": "src:products:67",
+    "file": "site/src/components/Products.jsx",
+    "tag": "export default function Products",
+    "lines": "67-390",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "features.product-tabs",
+    "category": "FEATURES"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "tabs": {
+        "type": "items",
+        "maxItems": 3,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 3,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 14,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "media": {
+            "type": "media",
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "video-segment-tabs",
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "video-segment-tabs": "manual-play-button",
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Product tabs 3 columns at >=768, one column below.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "type-scale-switch",
+      "detail": "Display type switches at 768: h1 36->58px, h2 32->44px, Inter heading 24->32px.",
+      "evidence": "CLONE_SPEC.md:18"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-video",
+      "product-screenshot",
+      "decorative-artwork"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 867,
+      "max": 867
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

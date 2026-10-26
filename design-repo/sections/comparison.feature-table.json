@@ -1,0 +1,145 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "comparison.feature-table",
+  "title": "Feature comparison table",
+  "category": "COMPARISON",
+  "description": "Rows of features against 2-5 columns (products or plans) with check/cross/text cells, grouped by category.",
+  "source": {
+    "id": "src:featuretable:21",
+    "file": "site/src/components/compare/FeatureTable.jsx",
+    "tag": "export default function FeatureTable",
+    "lines": "21-96",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function CompareTable",
+        "lines": "652-701"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LTable",
+        "lines": "197-253"
+      },
+      {
+        "file": "site/src/components/plans/Pricing.jsx",
+        "tag": "function Features({ yearly })",
+        "lines": "596-691"
+      },
+      {
+        "file": "site/src/components/compare/LegacyComparisonPage.jsx",
+        "tag": "function WhyTable",
+        "lines": "181-190"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "comparison.feature-table",
+    "category": "COMPARISON"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "matrix",
+    "why-table",
+    "compact"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 6,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 16,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 45,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "actions": {
+        "type": "ctaList",
+        "maxItems": 2,
+        "required": false
+      },
+      "columns": {
+        "type": "textList",
+        "maxItems": 5,
+        "maxWords": 4,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "rows": {
+        "type": "items",
+        "maxItems": 120,
+        "required": true,
+        "fields": {
+          "group": {
+            "type": "text",
+            "maxWords": 5,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "feature": {
+            "type": "text",
+            "maxWords": 12,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "values": {
+            "type": "textList",
+            "maxItems": 5,
+            "maxWords": 8,
+            "required": true,
+            "copyBasis": "real-copy"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "visibility",
+      "detail": "Wide tables scroll horizontally below 768; plan header row is sticky on the pricing matrix.",
+      "evidence": "site/src/components/plans/Pricing.jsx:596"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "competitor-logo",
+      "ui-icon"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder",
+      "ui-icon"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 13,
+    "measuredHeightPx1440": {
+      "min": 669,
+      "max": 5852
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

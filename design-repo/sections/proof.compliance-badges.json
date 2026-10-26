@@ -1,0 +1,83 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "proof.compliance-badges",
+  "title": "Compliance and certification row",
+  "category": "SOCIAL_PROOF",
+  "description": "Statement of audits/certifications with badge marks. Real certification marks are never reproduced in generated pages.",
+  "source": {
+    "id": "src:pricing:746",
+    "file": "site/src/components/plans/Pricing.jsx",
+    "tag": "function Compliance()",
+    "lines": "746-772",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/pages/security.jsx",
+        "tag": "export default function Security",
+        "lines": "9-74"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "proof.compliance-badges",
+    "category": "SOCIAL_PROOF"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "default"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 14,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 40,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "badges": {
+        "type": "mediaList",
+        "maxItems": 6,
+        "required": true
+      },
+      "link": {
+        "type": "link",
+        "required": false
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none"
+    }
+  },
+  "responsive": [],
+  "assets": {
+    "referenceAssetRoles": [
+      "compliance-badge"
+    ],
+    "generatedAssetRoles": [
+      "badge-placeholder"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 2,
+    "measuredHeightPx1440": {
+      "min": 262,
+      "max": 356
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

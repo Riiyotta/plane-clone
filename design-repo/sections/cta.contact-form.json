@@ -1,0 +1,127 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "cta.contact-form",
+  "title": "Sales contact form",
+  "category": "CTA",
+  "description": "Viewport-height split: intro card (title, trust caption, logo marquee, support note) and a lead form.",
+  "source": {
+    "id": "src:talk-to-sales:123",
+    "file": "site/src/pages/talk-to-sales.jsx",
+    "tag": "export default function TalkToSales",
+    "lines": "123-166",
+    "alsoImplementedBy": []
+  },
+  "semantic": {
+    "id": "cta.contact-form",
+    "category": "CTA"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "split-with-intro"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 8,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 30,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "fields": {
+        "type": "items",
+        "maxItems": 8,
+        "required": true,
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxWords": 8,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "kind": {
+            "type": "enum",
+            "values": [
+              "text",
+              "email",
+              "number",
+              "textarea",
+              "select"
+            ],
+            "required": true
+          }
+        }
+      },
+      "submitLabel": {
+        "type": "text",
+        "maxWords": 4,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "trustCaption": {
+        "type": "text",
+        "maxWords": 8,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "logos": {
+        "type": "mediaList",
+        "maxItems": 12,
+        "required": false
+      },
+      "supportNote": {
+        "type": "text",
+        "maxWords": 20,
+        "required": false,
+        "copyBasis": "real-copy"
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "logo-marquee",
+      "none"
+    ],
+    "reducedMotionFallbacks": {
+      "logo-marquee": "static-row",
+      "none": "none"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "stack-to-row",
+      "detail": "Intro card and form sit side by side in one viewport-height band at >=1024; stacked (form first) below.",
+      "evidence": "site/src/pages/talk-to-sales.jsx:136"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "customer-logo",
+      "decorative-artwork"
+    ],
+    "generatedAssetRoles": [
+      "logo-placeholder",
+      "generated-background"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 1,
+    "measuredHeightPx1440": {
+      "min": 842,
+      "max": 842
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

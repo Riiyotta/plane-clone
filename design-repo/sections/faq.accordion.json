@@ -1,0 +1,121 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "faq.accordion",
+  "title": "FAQ accordion",
+  "category": "FAQ",
+  "description": "Header and question rows; one answer open at a time (first open by default). Answers on inner pages are placeholder text.",
+  "source": {
+    "id": "src:blocks:499",
+    "file": "site/src/components/features/blocks.jsx",
+    "tag": "export function Faq",
+    "lines": "499-538",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function Faq",
+        "lines": "730-769"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function Faq({ b })",
+        "lines": "525-560"
+      },
+      {
+        "file": "site/src/components/plans/Legacy.jsx",
+        "tag": "export function LFaq",
+        "lines": "370-399"
+      },
+      {
+        "file": "site/src/components/collections/Careers.jsx",
+        "tag": "function Faq({ items })",
+        "lines": "75-97"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "faq.accordion",
+    "category": "FAQ"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "split",
+    "stacked"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "eyebrow": {
+        "type": "text",
+        "maxWords": 3,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "title": {
+        "type": "text",
+        "maxWords": 10,
+        "required": true,
+        "copyBasis": "real-copy"
+      },
+      "body": {
+        "type": "text",
+        "maxWords": 30,
+        "required": false,
+        "copyBasis": "placeholder-length"
+      },
+      "items": {
+        "type": "items",
+        "maxItems": 15,
+        "required": true,
+        "fields": {
+          "question": {
+            "type": "text",
+            "maxWords": 20,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "answer": {
+            "type": "text",
+            "maxWords": 80,
+            "required": true,
+            "copyBasis": "placeholder-length"
+          }
+        }
+      }
+    }
+  },
+  "constraints": {
+    "onePerPage": true
+  },
+  "motion": {
+    "allowedPatterns": [
+      "accordion-expand"
+    ],
+    "reducedMotionFallbacks": {
+      "accordion-expand": "instant-toggle"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "stack-to-row",
+      "detail": "Header left / questions right at >=1024; stacked below.",
+      "evidence": "site/src/components/features/blocks.jsx:323"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [],
+    "generatedAssetRoles": []
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 30,
+    "measuredHeightPx1440": {
+      "min": 451,
+      "max": 1093
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}

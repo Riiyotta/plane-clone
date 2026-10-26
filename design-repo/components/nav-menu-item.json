@@ -1,0 +1,15 @@
+{
+  "id": "component.nav-menu-item",
+  "title": "Menu item",
+  "layer": "component",
+  "description": "Icon + title + description link in the mega-menu.",
+  "composedOf": [
+    "primitive.icon",
+    "primitive.body-text"
+  ],
+  "source": {
+    "file": "site/src/components/header/MegaMenuContent.jsx",
+    "tag": "export function MenuItem",
+    "lines": "10-20"
+  }
+}

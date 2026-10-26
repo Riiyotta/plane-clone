@@ -1,0 +1,154 @@
+{
+  "contractVersion": "1.0.0",
+  "id": "index.listing",
+  "title": "Index listing",
+  "category": "INDEX",
+  "description": "Linked list or grid of child items (posts, roles, apps, templates, child pages, resources).",
+  "source": {
+    "id": "src:blogcards:41",
+    "file": "site/src/components/collections/BlogCards.jsx",
+    "tag": "export function PostCard",
+    "lines": "41-59",
+    "alsoImplementedBy": [
+      {
+        "file": "site/src/components/collections/BlogCards.jsx",
+        "tag": "export function PostRow",
+        "lines": "62-90"
+      },
+      {
+        "file": "site/src/components/collections/Catalog.jsx",
+        "tag": "function ItemCard",
+        "lines": "96-132"
+      },
+      {
+        "file": "site/src/components/solutions/Blocks.jsx",
+        "tag": "function IndexCards",
+        "lines": "617-645"
+      },
+      {
+        "file": "site/src/components/collections/Careers.jsx",
+        "tag": "function RoleRow",
+        "lines": "99-117"
+      },
+      {
+        "file": "site/src/components/collections/LegalPage.jsx",
+        "tag": "export const LEGAL_LINKS",
+        "lines": "103-115"
+      },
+      {
+        "file": "site/src/components/plans/Blocks.jsx",
+        "tag": "export function ResourceColumns",
+        "lines": "705-726"
+      }
+    ]
+  },
+  "semantic": {
+    "id": "index.listing",
+    "category": "INDEX"
+  },
+  "retrievalEligible": true,
+  "variants": [
+    "card-grid",
+    "row-list",
+    "link-list",
+    "category-cards",
+    "catalog-grid",
+    "resource-columns",
+    "comparison-cards",
+    "tool-picker"
+  ],
+  "themes": [
+    "light"
+  ],
+  "content": {
+    "fields": {
+      "title": {
+        "type": "text",
+        "maxWords": 10,
+        "required": false,
+        "copyBasis": "real-copy"
+      },
+      "items": {
+        "type": "items",
+        "maxItems": 60,
+        "required": true,
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxWords": 16,
+            "required": true,
+            "copyBasis": "real-copy"
+          },
+          "description": {
+            "type": "text",
+            "maxWords": 30,
+            "required": false,
+            "copyBasis": "placeholder-length"
+          },
+          "meta": {
+            "type": "text",
+            "maxWords": 10,
+            "required": false,
+            "copyBasis": "real-copy"
+          },
+          "media": {
+            "type": "media",
+            "required": false
+          },
+          "href": {
+            "type": "href",
+            "required": true
+          }
+        }
+      }
+    }
+  },
+  "constraints": {},
+  "motion": {
+    "allowedPatterns": [
+      "none",
+      "card-hover-scale"
+    ],
+    "reducedMotionFallbacks": {
+      "none": "none",
+      "card-hover-scale": "no-scale"
+    }
+  },
+  "responsive": [
+    {
+      "minWidthPx": 768,
+      "breakpoint": "md",
+      "change": "grid-columns",
+      "detail": "Multi-column grids collapse to one column below 768.",
+      "evidence": "CLONE_SPEC.md:653"
+    },
+    {
+      "minWidthPx": 1024,
+      "breakpoint": "lg",
+      "change": "grid-columns",
+      "detail": "Card rows stay single-column until 1024 (lg grids).",
+      "evidence": "CLONE_SPEC.md:654"
+    }
+  ],
+  "assets": {
+    "referenceAssetRoles": [
+      "product-screenshot",
+      "integration-logo",
+      "competitor-logo"
+    ],
+    "generatedAssetRoles": [
+      "generated-product-visual",
+      "logo-placeholder",
+      "ui-icon"
+    ]
+  },
+  "evidence": {
+    "level": "measured",
+    "measuredRouteCount": 14,
+    "measuredHeightPx1440": {
+      "min": 380,
+      "max": 3638
+    },
+    "copyBudgetNote": "maxWords on real-copy fields bounds the measured real headings/labels; placeholder-length fields (inner-page paragraphs, long-form bodies, most FAQ answers) are sized from the clone placeholder character counts (ph(n): median 105, p90 162, max 636 chars), not from real copy."
+  }
+}
